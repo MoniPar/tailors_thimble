@@ -172,6 +172,33 @@ MEDIA_URL = ‘/media/’
 DEFAULT_FILE_STORAGE = ‘cloudinary_storage.storage.MediaHashedCloudinaryStorage’
 ```
 
+### Setup the Templates Directory
+1. In settings.py scroll down to the TEMPLATES variable and add the following to the value of DIRS, in order to have templates in every app.
+```
+'DIRS': [
+    os.path.join(BASE_DIR, 'templates'),
+],
+```
+### Add the Heroku Host Name
+In settings.py scroll to ALLOWED_HOSTS and add the Heroku host name.  This should be the Heroku app name created earlier followed by `.herokuapp.com`.  Add in `’localhost’` so that it can be run locally.
+```
+ALLOWED_HOSTS = [‘heroku-app-name.herkuapp.com’, ‘localhost’]
+```
+
+### Create the Directories and the Process File
+1. Create the media, static and templates directories at the top level next to the manage.py file. 
+2. At the same level create a new file called ‘Procfile’ with a capital ‘P’.  This tells Heroku how to run this project.  
+3. Add the following code, including the name of your project directory. 
+```
+web: gunicorn tailors_thimble.wsgi
+```
+‘web’ tells Heroku that this a process that should accept HTTP traffic.
+‘gunicorn’ is the server used.
+‘wsgi’, stands for web services gateway interface and is a standard that allows Python services to integrate with web servers.
+4. Save everything and push to GitHub. 
+
+
+
 
 [Back To Top](#table-of-contents)
 
