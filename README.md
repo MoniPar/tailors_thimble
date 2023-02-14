@@ -182,7 +182,7 @@ DEFAULT_FILE_STORAGE = ‘cloudinary_storage.storage.MediaHashedCloudinaryStorag
 ### Add the Heroku Host Name
 In settings.py scroll to ALLOWED_HOSTS and add the Heroku host name.  This should be the Heroku app name created earlier followed by `.herokuapp.com`.  Add in `’localhost’` so that it can be run locally.
 ```
-ALLOWED_HOSTS = [‘heroku-app-name.herkuapp.com’, ‘localhost’]
+ALLOWED_HOSTS = [‘heroku-app-name.herokuapp.com’, ‘localhost’]
 ```
 
 ### Create the Directories and the Process File
@@ -197,6 +197,12 @@ web: gunicorn tailors_thimble.wsgi
 ‘wsgi’, stands for web services gateway interface and is a standard that allows Python services to integrate with web servers.
 4. Save everything and push to GitHub. 
 
+### First Deployment
+1. Go back to the Heroku dashboard and click on the ‘Deploy’ tab.  
+2. For deployment method, select ‘GitHub’ and search for the project’s repository from the list. 
+3. Select and then click on ‘Deploy Branch’.  
+4. When the build log is complete it should say that the app has been successfully deployed.
+5. Click on the ‘Open App’ button to view it and the Django “The install worked successfully!” page, should be displayed. 
 
 
 
