@@ -156,6 +156,22 @@ else:
 3. Also add the SECRET_KEY with the value of the secret key added to the env.py file. 
 4. If using gitpod another key needs to be added in order for the deployment to succeed.  This is PORT with the value of 8000.
 
+### Cloudinary Setup
+1. Go to your [Cloudinary](https://cloudinary.com) account's dashboard and click on the ‘API environment variable’ to copy to clipboard.  This is used to connect your app to your Cloudinary account.  Add this to the env.py file in your workspace using CLOUDINARY_URL as the variable name.  Remember to remove the first part of the URL (CLOUDINARY_URL=) as this will give you a failed deployment.  
+2. Copy and paste this value into the Heroku config vars with the key CLOUDINARY_URL.
+3. In Heroku add one more temporary variable to help get the project deployed without static files.  This needs to be removed before deploying the full project.  Use DISABLE_COLLECTSTATIC as the key and ‘1’ as the value.
+4. Go to settings.py and add the Cloudinary libraries in the list of INSTALLED_APPS.  Place ‘cloudinary_storage’ above the ‘django.contrib.staticfiles’ and ‘cloudinary’ just above the main app.
+5. Scroll down the the STATIC_URL variable and add the following to instruct Django to use Cloudinary to store media and static files.
+```
+STATICFILES_STORAGE = ‘cloudinary_storage.storage.StaticHashedCloudinaryStorage’
+STATICFILES_DIRS = [os.path.join(BASE_DIR, ‘static’)]
+STATIC_ROOT = os.path.join(BASE_DIR, ‘staticfiles’)
+
+
+MEDIA_URL = ‘/media/’
+DEFAULT_FILE_STORAGE = ‘cloudinary_storage.storage.MediaHashedCloudinaryStorage’
+```
+
 
 [Back To Top](#table-of-contents)
 
