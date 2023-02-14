@@ -64,6 +64,7 @@ _____
 * [Gunicorn 20.1.0](https://gunicorn.org/) - A Python WSGI HTTP server compatible with Django and used to run the project on Heroku.
 * [PostgreSQL 0.5.0](https://www.postgresql.org/) - A powerful, open-source object-relational database system.
 * [Pyscopg2 2.9.5](https://www.psycopg.org/docs/) - A PostgreSQL database adapter for Python.
+* [Cloudinary](https://cloudinary.com/) - A storage for media.
 
 [Back To Top](#table-of-contents)
 
