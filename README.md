@@ -67,6 +67,7 @@ _____
 * [Cloudinary](https://cloudinary.com/) - A persistent file store for media.
 * [Heroku](https://www.heroku.com) - A cloud platform as a service.
 * [SQLite3](https://docs.python.org/3/library/sqlite3.html) - The database provided by Django, used during development.
+* [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - A Framework for building responsive, mobile-fist sites.
 
 [Back To Top](#table-of-contents)
 
@@ -74,7 +75,36 @@ ____
 
 ## Testing
 
+### First Deployment Bug
+
+Problem: When the skeleton project was complete and first deployment was tried on Heroku, the Build Log stated "https://tailors-thimbles.herokuapp.com/ deployed to Heroku", however when the "Open App" button was clicked the django success page did not load.  Instead a "Not Found The requested resource was not found on this server".
+
+Solution: After unsuccessful web searches, some settings were reconfigured in settings.py. I narrowed down the cause to either of the following two factors:
+**Factor 1** 
+```
+DEBUG = 'DEVELOPMENT' in os.environ
+```
+was changed back to `DEBUG = True` and removed from env.py
+
+**Factor 2**
+```
+TEMPLATES = [
+    'DIRS': os.path.join(BASE_DIR, 'templates')
+]
+```
+was changed to: 
+
+```
+TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATES = [
+    ...
+    'DIRS': [TEMPLATES_DIR], 
+    ...
+]
+```
+
 ### Development Bugs
+
 
 [Back To Top](#table-of-contents)
 
@@ -173,11 +203,11 @@ DEFAULT_FILE_STORAGE = ‘cloudinary_storage.storage.MediaHashedCloudinaryStorag
 ```
 
 ### Setup the Templates Directory
-1. In settings.py scroll down to the TEMPLATES variable and add the following to the value of DIRS, in order to have templates in every app.
+1. In settings.py, add the following under BASE_DIR 
+`TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")`
+then scroll down to the TEMPLATES variable and add the following to the value of DIRS:
 ```
-'DIRS': [
-    os.path.join(BASE_DIR, 'templates'),
-],
+'DIRS': [TEMPLATES_DIR],
 ```
 ### Add the Heroku Host Name
 In settings.py scroll to ALLOWED_HOSTS and add the Heroku host name.  This should be the Heroku app name created earlier followed by `.herokuapp.com`.  Add in `’localhost’` so that it can be run locally.
@@ -211,6 +241,14 @@ web: gunicorn tailors_thimble.wsgi
 ____
 
 ## Credits
+
+### Code
+
+* Footer adapted from [Responsive Bootstrap Footer by idesignSMF](https://tinyurl.com/3wrta8p5)
+
+### Media
+
+* Tailor's Thimble logo and favicon designed by [Austen Donohoe @ Circle Strafe Media](https://www.circlestrafemedia.com/)
 
 [Back To Top](#table-of-contents)
 

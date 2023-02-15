@@ -1,0 +1,125 @@
+/* 10px of 16px (browser's font size) 1rem = 10px  */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+li { list-style-type: none;}
+a {text-decoration: none;}
+
+/* ----------- */
+/*  Navigation */
+/* ----------- */
+
+.navbar {
+    background-color: #abbfcc;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+/* ----------- */
+/*    Footer   */
+/* ----------- */
+/* adapted from Responsive Bootstrap Footer by idesignSMF https://tinyurl.com/3wrta8p5 */
+footer {
+    padding: 1.5em 0 1em;
+    color: #f0f9ff;
+    background-color: #282d32;
+    text-align: center;
+}
+
+footer .item {
+    padding: 0;
+    margin-bottom: 1.25em;
+}
+
+footer h4 {
+    margin-bottom: 0.9375em;
+    font-weight: bold;
+} 
+
+footer .table {
+    max-width: 30em;
+}
+
+footer .text {
+    opacity: 0.6;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul {
+    padding: 0;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+  
+footer ul a {
+    color: inherit;
+    opacity: 0.6;
+}
+  
+footer ul a:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+footer .item.social > a {
+    font-size: 1.6rem;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin: 0 .5em; 
+    color: #fff;
+    opacity: 0.65;
+}
+  
+footer .item.social > a:hover {
+    opacity: 1;
+}
+  
+footer .copyright {
+    padding-top: 1rem;
+    opacity: 0.65;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+footer .copyright a {
+    color: inherit;
+}
+
+footer .copyright a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
+
+@media only screen and (min-width: 768px) {
+    footer .d-flex {
+        align-items: center;
+    }
+}
