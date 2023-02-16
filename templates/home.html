@@ -1,4 +1,94 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Home Page</h2>
+<div class="container-fluid hero-container mb-4">
+    <div class="opaque-overlay">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron">
+                <div class="container text-light">
+                    <h1 class="mb-4">Tailor's Thimble</h1>
+                    <p class="lead mb-3">For All Your Bespoke Tailoring Needs</p>
+                    
+                        <a class="btn btn-lg btn--hero mt-3" role="button" href="#">Schedule Appointment</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-4 m-lg-auto p-lg-4">
+    <div class="row">
+        <article class="col-lg-6 text-center mb-4 art-1">
+            <h2>Our Philosophy</h2>
+            <p>Tailor's Thimble offers an individualised service and experienced craftmanship.
+                We expertly hand-craft every garment to suit your personal style. Our mission is 
+                to make this process as streamlined as possible at every step.    
+            </p>
+        </article>
+        <article class="col-lg-6 text-center mt-4 mt-lg-0 mb-4 art-2">
+            <div class="row d-flex">
+                <div class="col-md-4 d-none d-sm-block pr-0">
+                    <img class="img-fluid rounded" style="max-width:100px; height:auto;"  
+                    src="https://res.cloudinary.com/aperlae/image/upload/c_mfit,q_auto,w_900/v1674595675/tailors-thimble-images/pexels-tima-miroshnichenko-6766299_b9pv08.webp"
+                    alt="Joe the Tailor wearing a white beard, rolled up sleeves and a measuring tape hanging around his neck.">
+                </div>
+                
+                <div class="col-md-8 art-2--text">
+                    <h2>Established 1977</h2>
+                    <p>With over 40 years of experience in the tailoring trade, Joe has established
+                        Tailor's Thimble as a centre of excellence for your bespoke tailoring needs.
+                    </p>
+                    <a role="button" class="btn btn-lg btn-link btn--more" href="{% url 'about-page' %}">
+                        Find out more <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                
+            </div>
+        </article>
+    </div>
+</div>
+<div class="container mt-4 mb-4 services-container">
+    <div class="row justify-content-center m-auto">
+        <div class="col-12">
+            <div class="text-center col-md-10 m-auto">
+                <h2>Our Services</h2>
+                <p>All our garments are uniquely tailored for your precise measurements, lifestyle
+                    and personality.  We cater for all occasions and for both male and female clientele.
+                </p>
+            </div>
+            <div class="mt-4 mb-4 d-lg-flex">
+                <div class="d-flex d-lg-block col-sm-12 col-md-8 col-lg-4 m-md-auto align-items-center">
+                    <div class="col-sm-8 mb-3">
+                        <img src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1676531837/tailors-thimble-images/wedcoupcustw1000h1250_qeh9vf.webp" 
+                        class="service-img d-block shadow-sm w-100 alt="Smiling Couple in Wedding Attire">
+                    </div>
+                    <div class="col-sm-4 col-lg-8">
+                        <p class="service-caption">Bridal Dresses & Grooms' Suits</p>
+                    </div>
+                </div>
+                <div class="d-flex d-lg-block col-md-8 col-lg-4 m-md-auto align-items-center">
+                    <div class="col-sm-4 col-lg-8">
+                        <p class="service-caption text-right text-lg-center">Cocktail & Evening Dresses</p>
+                    </div>
+                    <div class="col-sm-8 mb-3">
+                        <img src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1676531843/tailors-thimble-images/cocktail1000x1250_ca74lc.webp" 
+                        class="service-img shadow-sm w-100" alt="Lady in Evening Attire">
+                    </div>
+                </div>
+                <div class="d-flex d-lg-block col-md-8 col-lg-4 m-md-auto align-items-center">
+                    <div class="col-sm-8">
+                        <img src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1676532313/tailors-thimble-images/comgirl1000x1250_bivvw6.webp" 
+                        class="service-img shadow-sm w-100" alt="Girl in communion dress">
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="service-caption">Holy Communion</p>
+                    </div>
+                </div>
+            </div>
+            <a role="button" class="btn btn-lg btn-link btn--more" href="{% url 'services-page' %}">
+                More Services <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+    </div>
+</div>
+
 {% endblock content%}

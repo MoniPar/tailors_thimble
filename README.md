@@ -248,7 +248,14 @@ ____
 
 ### Media
 
-* Tailor's Thimble logo and favicon designed by [Austen Donohoe @ Circle Strafe Media](https://www.circlestrafemedia.com/)
+* Tailor's Thimble logo and favicon designed by [Austen Donohoe | Circle Strafe Media](https://www.circlestrafemedia.com/)
+* Home Page Hero Image [Heng Films | Unsplash](https://unsplash.com/@hengfilms)
+* Tailor Images [Tima Miroshnichenko | Pexels](https://www.pexels.com/collections/tailor-lzw9l6f/)
+* Services Wedding Photo by [Євгенія Височина](https://unsplash.com/@eugenivy_now?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/wedding-couple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+* Evening Wear Photo by [Chalo Garcia](https://unsplash.com/es/@photosbychalo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/cocktail-dress?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+* Girl in Communion Dress Photo by [Becerra Govea Photo](https://www.pexels.com/photo/a-pretty-girl-in-white-dress-leaning-on-the-wall-5906115/)
+
+    
 
 [Back To Top](#table-of-contents)
 

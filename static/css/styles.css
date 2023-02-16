@@ -10,11 +10,42 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Titillium Web', sans-serif;
-    letter-spacing: 0.15em;
 }
 
-li { list-style-type: none;}
-a {text-decoration: none;}
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1em;
+}
+
+h4 { letter-spacing: 0.15em; }
+li { list-style-type: none; }
+a {text-decoration: none; }
+
+/* Buttons */
+
+.btn--hero {
+    background-color: #68cfdd;
+    border-color: #68cffd;
+    font-weight: 600;
+}
+
+.btn--hero:hover {
+    background-color: #409c88;
+    border-color: #409c88;
+    color: #bed6ee;
+}
+
+.btn--more {
+    float: right;
+}
 
 /* ----------- */
 /*  Navigation */
@@ -31,6 +62,58 @@ a {text-decoration: none;}
 .navbar-collapse {
     text-align: center;
 }
+
+/* -------- */
+/*   Hero   */
+/* -------- */
+
+.hero-container {
+    height: 60vh;
+
+    background: url("https://res.cloudinary.com/aperlae/image/upload/c_scale,w_2000/v1674513454/tailors-thimble-images/heng-films-mpdIPhYqZ4Y-unsplash_wdhii5.webp") no-repeat top center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.jumbotron {
+    max-width: 27rem;
+    background-color: transparent;
+    margin-top: 5em;
+}
+
+.lead {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+/* SERVICES */
+.service-img {
+    border-radius: 10px;
+    max-width: 25rem;
+}
+
+.service-caption {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
 
 /* ----------- */
 /*    Footer   */
@@ -119,6 +202,30 @@ footer .copyright a:hover {
 /* ------------- */
 
 @media only screen and (min-width: 768px) {
+
+    /* HOME PAGE */
+
+    .art-1 {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .art-2 {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .art-2--text {
+        text-align: left;
+    }
+
+    .service-caption {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    /* FOOTER */
+
     footer .d-flex {
         align-items: center;
     }
