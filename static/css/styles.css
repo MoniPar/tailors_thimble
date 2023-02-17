@@ -6,6 +6,7 @@ html {
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 1.6rem;
+    margin-top: 11rem;
 }
 
 h1, h2, h3, h4 {
@@ -47,12 +48,23 @@ a {text-decoration: none; }
     float: right;
 }
 
+.section-container {
+    margin: 4em 0;
+}
+
+/* Forms */
+
+.form-group .form-check-label {
+    padding-left: .5em;
+}
+
 /* ----------- */
 /*  Navigation */
 /* ----------- */
 
 .navbar {
     background-color: #9ed1e0;
+    padding-right: 2.5em;
 }
 
 .navbar-toggler {
@@ -81,7 +93,6 @@ a {text-decoration: none; }
     justify-content: center;
 
     position: relative;
-    margin-top: 5rem;
 }
 
 .opaque-overlay {
@@ -96,13 +107,16 @@ a {text-decoration: none; }
 .jumbotron {
     max-width: 27rem;
     background-color: transparent;
-    margin-top: 5em;
+    margin-bottom: 5rem;
 }
 
 .lead {
     font-size: 1.2em;
     line-height: 1.2;
 }
+
+
+
 
 /* SERVICES */
 .service-img {

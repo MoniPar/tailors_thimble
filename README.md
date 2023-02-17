@@ -106,6 +106,45 @@ TEMPLATES = [
 ### Development Bugs
 
 
+* **Django-allauth**
+
+Problem: Django-allauth was installed and configured and the allauth directory was copied into the base templates file within a folder called 'allauth'.  When the 'signin' and 'signup' templates were edited, no change was being rendered. The base.html file wasn't being extended either as the pages showed without the website's navigation and footer.  
+
+Solution: The templates directory in settings.py had to be configured back to how it was before First Deployment.
+```
+...
+'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth')
+        ],
+...
+```
+and the following was again removed from the top of settings.py
+```
+TEMPLATES = [
+    'DIRS': os.path.join(BASE_DIR, 'templates')
+]
+```
+Hoping that this won't be problematic when the project is deployed again!
+
+* **Crispy Forms**
+
+Problem: After installing and configuring Crispy and adding it to the template.  The following error was being thrown.
+![Template Not Found Error](documentation/cripsyerror1.png)
+Solution: A new version of Crispy has come out so it was installed with `pip3 install crispy-bootstrap5` and the following were added in settings.py.
+```
+INSTALLED_APPS = (
+    ...
+    'crispy_forms',
+    'crispy_bootstrap5',
+    ...
+)
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+```
+
+
 [Back To Top](#table-of-contents)
 
 ____
