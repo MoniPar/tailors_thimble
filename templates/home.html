@@ -28,7 +28,7 @@
         </article>
         <article class="col-lg-6 text-center mt-4 mt-lg-0 mb-4 art-2">
             <div class="row d-flex">
-                <div class="col-md-4 d-none d-sm-block pr-0">
+                <div class="col-md-4 d-none d-sm-block pr-0 mb-3">
                     <img class="img-fluid rounded" style="max-width:100px; height:auto;"  
                     src="https://res.cloudinary.com/aperlae/image/upload/c_mfit,q_auto,w_900/v1674595675/tailors-thimble-images/pexels-tima-miroshnichenko-6766299_b9pv08.webp"
                     alt="Joe the Tailor wearing a white beard, rolled up sleeves and a measuring tape hanging around his neck.">
@@ -57,7 +57,7 @@
                 </p>
             </div>
             <div class="mt-4 mb-4 d-lg-flex">
-                <div class="d-flex d-lg-block col-sm-12 col-md-8 col-lg-4 m-md-auto align-items-center">
+                <div class="d-flex d-lg-block col-md-8 col-lg-4 m-md-auto align-items-center">
                     <div class="col-sm-8 mb-3">
                         <img src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1676531837/tailors-thimble-images/wedcoupcustw1000h1250_qeh9vf.webp" 
                         class="service-img d-block shadow-sm w-100 alt="Smiling Couple in Wedding Attire">
@@ -85,8 +85,10 @@
                     </div>
                 </div>
             </div>
-            <a role="button" class="btn btn-lg btn-link btn--more" href="{% url 'services-page' %}">
-                More Services <i class="fa-solid fa-chevron-right"></i></a>
+            <div class="col-12 col-md-10">
+                <a role="button" class="btn btn-lg btn-link btn--more" href="{% url 'services-page' %}">
+                    More Services <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
         </div>
     </div>
 </div>

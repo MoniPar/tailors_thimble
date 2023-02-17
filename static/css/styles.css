@@ -32,8 +32,8 @@ a {text-decoration: none; }
 /* Buttons */
 
 .btn--hero {
-    background-color: #68cfdd;
-    border-color: #68cffd;
+    background-color: #9ed1e0;
+    border-color: #9ed1e0;
     font-weight: 600;
 }
 
@@ -52,7 +52,7 @@ a {text-decoration: none; }
 /* ----------- */
 
 .navbar {
-    background-color: #abbfcc;
+    background-color: #9ed1e0;
 }
 
 .navbar-toggler {
@@ -81,6 +81,7 @@ a {text-decoration: none; }
     justify-content: center;
 
     position: relative;
+    margin-top: 5rem;
 }
 
 .opaque-overlay {
@@ -106,7 +107,7 @@ a {text-decoration: none; }
 /* SERVICES */
 .service-img {
     border-radius: 10px;
-    max-width: 25rem;
+    max-width: 20rem;
 }
 
 .service-caption {
