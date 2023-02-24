@@ -34,8 +34,6 @@ a {text-decoration: none; }
     margin: 4em 0;
 }
 
-
-
 /* Buttons */
 
 .btn--hero {
@@ -54,7 +52,6 @@ a {text-decoration: none; }
     float: right;
 }
 
-
 /* Alerts */
 
 .alert {
@@ -72,6 +69,27 @@ a {text-decoration: none; }
     height: 8rem
 }
 
+.app-card {
+    border: 2px solid #d0b49f;
+    margin: auto;
+}
+
+.app-card .card-title {
+    background-color: #e4c4c8;
+    font-weight: 700;
+    padding: 1em 2em;
+}
+
+.app-card .card-details {
+    padding: 1.2em 1.75em .25em;
+}
+
+.app-card .card-footer {
+    background-color: transparent;
+    border-top: 1px solid #e0b49f;
+    padding: 1em 2em .5em;
+}
+
 /* Forms */
 
 .form-group .form-check-label {
@@ -83,7 +101,7 @@ a {text-decoration: none; }
 /* ----------- */
 
 .navbar {
-    background-color: #9ed1e0;
+    background-color: #e2e6e7;
     padding-right: 2.5em;
 }
 

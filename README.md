@@ -144,6 +144,15 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 ```
 
+* **Appointments**
+
+Problem: Calling the "human-readable" value of the field CHOICES with the following, in either models.py or views.py wasn't working:
+```
+def __str__(self):
+    return self.get_type_display() 
+```
+Solution: The only way it worked was by using `{{ appointment.get_type_display }}` in the template. 
+
 
 [Back To Top](#table-of-contents)
 

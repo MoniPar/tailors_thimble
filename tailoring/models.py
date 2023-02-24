@@ -39,10 +39,16 @@ class Appointment(models.Model):
     user = models.ForeignKey(
         User, related_name='appointment', on_delete=models.CASCADE)
     type = models.CharField(
-        max_length=15, choices=TYPE_CHOICES, default='CONSULTATION')
+        max_length=15, choices=TYPE_CHOICES, default='Consultation')
     date = models.DateField()
     time = models.CharField(
-        max_length=8, choices=TIME_CHOICES, default='AM1')
+        max_length=8, choices=TIME_CHOICES, default='8:30 AM')
     comments = models.TextField()
     submitted = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        """
+        Returns a string representation
+        """
+        return f'{self.user}'
