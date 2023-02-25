@@ -146,13 +146,20 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 * **Appointments**
 
-Problem: Calling the "human-readable" value of the field CHOICES with the following, in either models.py or views.py wasn't working:
-```
-def __str__(self):
-    return self.get_type_display() 
-```
-Solution: The only way it worked was by using `{{ appointment.get_type_display }}` in the template. 
+    * Human Readable Choices
 
+        Problem: Calling the "human-readable" value of the field CHOICES with the following, in either models.py or views.py wasn't working:
+        ```
+        def __str__(self):
+            return self.get_type_display() 
+        ```
+        Solution: The only way it worked was by using `{{ appointment.get_type_display }}` in the template. 
+
+    * Passing Choices to forms.py
+
+        Problem: In order to override the ModelForm for the CreateView in `forms.py` to make the Custom AppointmentCreate form, the constants/sequences for the 'type' and 'time' choicefields had to be passed to `forms.py`. Various ways were tried in doing so: First, by copying and pasting the sequences into the `forms.py` file. This worked but there was a lot of repeated code between the `models.py` and `forms.py` files.  A second attempt was tried by removing them from the `models.py` file altogether and doing migrations again without the `choices=CHOICES` argument in the 'type'and 'time' fields.  This also worked, however I wasn't too sure this was the correct way of doing things especially when [Django Documentation](https://docs.djangoproject.com/en/4.1/ref/models/fields/#field-choices) recommends that they should be defined in the Model Class.
+
+        Solution: Eventually, I came about a solution in [this Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1676326871471269), which recommended to create a `constants.py` file and adding the constants to it then importing them to wherever they were needed.     
 
 [Back To Top](#table-of-contents)
 

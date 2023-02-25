@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import (
-    ListView, DetailView,
+    ListView, DetailView, CreateView,
 )
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,
 )
 from .models import Appointment
+from .forms import AppointmentForm
 
 
 class Home(View):
@@ -33,7 +34,7 @@ class Services(View):
         return render(request, 'services.html', {'title': 'Services'})
 
 
-class AppointmentList(ListView):
+class AppointmentList(LoginRequiredMixin, ListView):
     """
     Defines the logic for the User's Appointments page
     """
@@ -43,9 +44,24 @@ class AppointmentList(ListView):
     paginate_by = 6
 
 
-class AppointmentDetail(DetailView):
+class AppointmentDetail(LoginRequiredMixin, DetailView):
     """
     Defines the logic for each appointment
     """
     model = Appointment
-    
+
+
+class AppointmentCreate(LoginRequiredMixin, CreateView):
+    """
+    Defines the logic for the appointment form
+    """
+    model = Appointment
+    form_class = AppointmentForm
+
+    def form_valid(self, form):
+        """
+        Adds the logged in user before form is submitted
+        """
+        form.instance.user = self.request.user
+
+        return super().form_valid(form)
