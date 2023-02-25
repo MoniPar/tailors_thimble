@@ -23,7 +23,7 @@
                     <div class="card-footer">
                         <small><i>If you need to reschedule, use the update button below.  We require 24 hours to confirm rescheduling.</i></small>
                         <div class="mt-2 text-center">
-                            <a href="#" 
+                            <a href="{% url 'appointment-update' object.id %}" 
                                 role="button" class="btn btn-outline-primary mr-4">Update</a>
                             <a href="#" 
                                 role="button" class="btn btn-outline-primary">Delete</a>

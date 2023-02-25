@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import (
-    ListView, DetailView, CreateView,
+    ListView, DetailView, CreateView, UpdateView
 )
 from django.contrib.auth.mixins import (
-    LoginRequiredMixin,
+    LoginRequiredMixin, UserPassesTestMixin
 )
 from .models import Appointment
 from .forms import AppointmentForm
@@ -43,17 +43,33 @@ class AppointmentList(LoginRequiredMixin, ListView):
     ordering = ['submitted']
     paginate_by = 6
 
+    def get_queryset(self):
+        """
+        Returns objects that belong to the current user
+        """
+        return Appointment.objects.filter(user=self.request.user)
 
-class AppointmentDetail(LoginRequiredMixin, DetailView):
+
+class AppointmentDetail(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     """
     Defines the logic for each appointment
     """
     model = Appointment
 
+    def test_func(self):
+        """
+        UserPassesTestMixin runs this method to check if user
+        is the user who created the appointment
+        """
+        appointment = self.get_object()
+        if self.request.user == appointment.user:
+            return True
+        return False
+
 
 class AppointmentCreate(LoginRequiredMixin, CreateView):
     """
-    Defines the logic for the appointment form
+    Defines the logic for the AppointmentForm
     """
     model = Appointment
     form_class = AppointmentForm
@@ -65,3 +81,30 @@ class AppointmentCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
 
         return super().form_valid(form)
+
+
+class AppointmentUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    Defines the logic for the Update AppointmentForm
+    """
+    model = Appointment
+    form_class = AppointmentForm
+    template_name = 'tailoring/appointment_update.html'
+
+    def form_valid(self, form):
+        """
+        Adds the logged in user before form is submitted
+        """
+        form.instance.user = self.request.user
+
+        return super().form_valid(form)
+
+    def test_func(self):
+        """
+        UserPassesTestMixin runs this method to check if user
+        is the user who created the appointment
+        """
+        appointment = self.get_object()
+        if self.request.user == appointment.user:
+            return True
+        return False
