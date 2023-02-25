@@ -33,7 +33,7 @@ class AppointmentForm(ModelForm):
             )
     comments = forms.CharField(
                     required=False,
-                    max_length=225,
+                    max_length=150,
                     widget=forms.Textarea(
                         attrs={'class': 'form-control',
                                'rows': 4}

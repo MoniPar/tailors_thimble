@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views import View
+from django.urls import reverse_lazy
 from django.views.generic import (
-    ListView, DetailView, CreateView, UpdateView
+    ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from django.contrib.auth.mixins import (
     LoginRequiredMixin, UserPassesTestMixin
@@ -101,8 +102,26 @@ class AppointmentUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         """
-        UserPassesTestMixin runs this method to check if user
-        is the user who created the appointment
+        UserPassesTestMixin runs this method to check if the current
+        logged in user matches the user who created the appointment
+        """
+        appointment = self.get_object()
+        if self.request.user == appointment.user:
+            return True
+        return False
+
+
+class AppointmentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    Handles the logic for deleting posts
+    """
+    model = Appointment
+    success_url = reverse_lazy('appointments')
+
+    def test_func(self):
+        """
+        UserPassesTestMixin runs this method to check if the current
+        logged in user matches the user who created the appointment
         """
         appointment = self.get_object()
         if self.request.user == appointment.user:
