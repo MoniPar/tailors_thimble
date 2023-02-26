@@ -14,7 +14,7 @@ class Appointment(admin.ModelAdmin):
     list_filter = (
         'date', 'type', 'approved'
     )
-    search_fields = ('user_username', 'type', 'date')
+    search_fields = ('user__username', 'type', 'date')
     actions = ['approve_appointments']
 
     def approve_appointments(self, request, queryset):

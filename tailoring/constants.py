@@ -1,3 +1,4 @@
+EMPTY = ''
 CONSULTATION = 'CON'
 DETAILS = 'DD'
 FABRICS = 'FAB'
@@ -11,6 +12,7 @@ PM2 = 'PM2'
 PM3 = 'PM3'
 
 TYPE_CHOICES = [
+    (EMPTY, '------'),
     (CONSULTATION, 'Consultation'),
     (DETAILS, 'Details & Design'),
     (FABRICS, 'Fabrics'),
@@ -19,6 +21,7 @@ TYPE_CHOICES = [
     (PICKUP, 'Pick-up')
 ]
 TIME_CHOICES = [
+    (EMPTY, '------'),
     (AM1, '8:30 AM'),
     (AM4, '11:30 AM'),
     (PM1, '4:00 PM'),

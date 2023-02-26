@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.urls import reverse_lazy
+from django.contrib import messages
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
@@ -80,8 +81,18 @@ class AppointmentCreate(LoginRequiredMixin, CreateView):
         Adds the logged in user before form is submitted
         """
         form.instance.user = self.request.user
-
+        messages.success(self.request,
+                         'Your appointment has been created successfully!')
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        """
+        Overrides the form_invalid method to add error alerts
+        """
+        messages.error(self.request,
+                       'Sorry an error occurred while creating your appointment.'
+                       ' Please try again!')
+        return super().form_invalid(form)
 
 
 class AppointmentUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -97,8 +108,18 @@ class AppointmentUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         Adds the logged in user before form is submitted
         """
         form.instance.user = self.request.user
-
+        messages.success(self.request,
+                         'Your appointment has been updated successfully!')
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        """
+        Overrides the form_invalid method to add error alerts
+        """
+        messages.error(self.request,
+                       'Sorry an error occurred while updating your appointment.'
+                       ' Please try again!')
+        return super().form_invalid(form)
 
     def test_func(self):
         """
@@ -127,3 +148,11 @@ class AppointmentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == appointment.user:
             return True
         return False
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Dispays an alert on successful deletion
+        """
+        messages.success(self.request,
+                         'Your appointment has been deleted.')
+        return super(AppointmentDelete, self).delete(request, *args, **kwargs)

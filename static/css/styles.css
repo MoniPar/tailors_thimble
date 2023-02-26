@@ -71,7 +71,7 @@ a {text-decoration: none; }
 
 .app-card {
     border: 2px solid #d0b49f;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .app-card .card-title {
@@ -91,6 +91,10 @@ a {text-decoration: none; }
 }
 
 /* Forms */
+
+.form-control {
+    font-size: 1.6rem;
+}
 
 .form-group .form-check-label {
     padding-left: .5em;
