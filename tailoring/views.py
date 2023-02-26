@@ -43,7 +43,7 @@ class AppointmentList(LoginRequiredMixin, ListView):
     model = Appointment
     context_object_name = 'appointments'
     ordering = ['submitted']
-    paginate_by = 6
+    # paginate_by = 6
 
     def get_queryset(self):
         """
@@ -90,8 +90,8 @@ class AppointmentCreate(LoginRequiredMixin, CreateView):
         Overrides the form_invalid method to add error alerts
         """
         messages.error(self.request,
-                       'Sorry an error occurred while creating your appointment.'
-                       ' Please try again!')
+                       'Sorry an error occurred while creating your '
+                       'appointment. Please try again!')
         return super().form_invalid(form)
 
 
@@ -117,8 +117,8 @@ class AppointmentUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         Overrides the form_invalid method to add error alerts
         """
         messages.error(self.request,
-                       'Sorry an error occurred while updating your appointment.'
-                       ' Please try again!')
+                       'Sorry an error occurred while updating your '
+                       'appointment. Please try again!')
         return super().form_invalid(form)
 
     def test_func(self):
