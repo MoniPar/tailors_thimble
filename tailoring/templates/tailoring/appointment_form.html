@@ -3,33 +3,54 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+{% if user.profile.event %}
+  <div class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 mt-4 offset-md-2 offset-lg-3">
+        <h2>Schedule an Appointment</h2>
+        <p>Thank you for your interest.<br>Please fill in the form below, 
+          specifying in the comment box any other requirements.
+          We may get in touch to change your appointment if your deadline 
+          is sooner than our minimum window.
+        </p>
+        <p class="border-bottom mb-3">Use our guidelines on the 
+          <a href="#">Process </a>to select the appropriate
+          type of appointment for your booking.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-lg-6 mt-2 mb-4 offset-md-2 offset-lg-3">
+        <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            {{ form|crispy }}
+          </fieldset>
+            <div class="form-group">
+              <button class="btn btn-primary mb-2" type="submit">Submit</button>
+            </div>    
+        </form>
+      </div>
+    </div>
+  </div>
+{% else %}
 <div class="container mt-4 mb-4">
   <div class="row">
-    <div class="col-md-8 col-lg-6 mt-4 offset-md-2 offset-lg-3">
-      <h2>Schedule an Appointment</h2>
-      <p>Thank you for your interest.<br>Please fill in the form below, 
-        specifying in the comment box any other requirements.
-        We may get in touch to change your appointment if your deadline 
-        is sooner than our minimum window.
-      </p>
-      <p class="border-bottom mb-3">Use our guidelines on the 
-        <a href="#">Process </a>to select the appropriate
-        type of appointment for your booking.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 col-lg-6 mt-2 mb-4 offset-md-2 offset-lg-3">
-      <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-          {{ form|crispy }}
-        </fieldset>
-          <div class="form-group">
-            <button class="btn btn-primary mb-2" type="submit">Submit</button>
-          </div>    
-      </form>
-    </div>
+      <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+          <div class="card-body error-msg">
+              <div class="border-bottom mb-4">
+                <h2>Oops sorry {{ user.username }}</h2>
+                <p>Before you make an appointment, we need to know a few things about 
+                  the outfit you need.
+                </p>    
+                <p>We would appreciate if you could please head 
+                  back to your <a class="link-txt" href="{% url 'profile'  %}"><strong>Profile Page</strong></a>  
+                  and fill in your requirements.
+                </p>
+              </div>    
+          </div>
+      </div>
   </div>
 </div>
+{% endif %}
 {% endblock %}
