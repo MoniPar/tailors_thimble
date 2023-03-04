@@ -32,17 +32,25 @@ class UserProfileForm(forms.ModelForm):
     their profile information.
     """
     phone = forms.CharField(
-                        max_length=16,
+                        min_length=8,
+                        max_length=15,
                         required=True,
                         widget=forms.TextInput(
-                            attrs={'class': 'form-control'}
+                            attrs={'class': 'form-control',
+                                   'pattern': '^[+][0-9]+',
+                                   'placeholder': '+xxxxxxxxxxx',
+                                   'title': 'Country code followed by phone'
+                                            ' number'}
                         )
     )
     event = forms.CharField(
                         max_length=50,
                         required=True,
                         widget=forms.TextInput(
-                            attrs={'class': 'form-control'}
+                            attrs={'class': 'form-control',
+                                   'placeholder': 'E.g. Wedding',
+                                   'title': 'The type of event you need the'
+                                   ' outfit for'}
                         )
     )
     event_date = forms.DateField(
@@ -56,7 +64,11 @@ class UserProfileForm(forms.ModelForm):
                         required=True,
                         widget=forms.Textarea(
                             attrs={'class': 'form-control',
-                                   'rows': 4}
+                                   'rows': 4,
+                                   'placeholder': 'Examples: Bridal Gown, '
+                                   'Mother of the Bride, 3x Bridesmaids',
+                                   'title': 'The type of outfit/s you are '
+                                   'looking to have done'}
                         )
     )
 

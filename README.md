@@ -161,6 +161,16 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
         Solution: Eventually, I came about a solution in [this Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1676326871471269), which recommended to create a `constants.py` file and adding the constants to it then importing them to wherever they were needed.     
 
+
+### Bugs Remaining
+
+* **Profile**
+
+    * Phone field validation
+
+    Problem: Issue with this regex `^[+][0-9\\s]+` is that it lets more than one whitespace in so user can submit a number like this "+33     333".  
+    Temporary solution: After several searches and attempts at moving the '\\s' around, I decided to go with no white space at all and used '^[+][0-9]+'.
+
 [Back To Top](#table-of-contents)
 
 ____
