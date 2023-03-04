@@ -9,11 +9,11 @@
 <div class="container mb-4">
   <div class="row">
     <div class="col-md-8 col-lg-6 mt-4 offset-md-2">
-      <h1>{% trans "Sign In" %}</h1>
+      <h1>{% trans "Login" %}</h1>
       <p>Welcome back to Tailor's Thimble!</p>
       <small class="border-bottom mb-3">{% blocktrans %}
-        If you have not created an account yet, then please
-        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+        If you have not created an account yet, please
+        <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}
       </small>
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
@@ -25,7 +25,7 @@
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-            <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+            <button class="primaryAction btn btn-primary" type="submit">{% trans "Login" %}</button>
           </form>
         </div>
       </div>

@@ -34,21 +34,30 @@ a {text-decoration: none; }
     margin: 4em 0;
 }
 
+.link-txt {
+    color: #472002;
+}
+
+.link-txt:hover {
+    color: #ad5410;
+}
+
 /* Buttons */
 
 .btn--hero {
-    background-color: #9ed1e0;
-    border-color: #9ed1e0;
+    background-color:  #E4D4C8;
+    border: none;
+    padding: 1rem;
     font-weight: 600;
 }
 
 .btn--hero:hover {
-    background-color: #409c88;
-    border-color: #409c88;
-    color: #bed6ee;
+    background-color: #D0B49F;
+    color: #201A1E;
 }
 
 .btn--more {
+    color: #201A1E;
     float: right;
 }
 
@@ -100,6 +109,13 @@ a {text-decoration: none; }
     padding-left: .5em;
 }
 
+.error-msg {
+    background-color: rgba(208, 180, 159, .6);
+    border: 4px dashed rgba(209, 138, 84, 0.9);
+    border-radius: 5px;
+    padding: 1.5em 2em;
+}
+
 /* ----------- */
 /*  Navigation */
 /* ----------- */
@@ -121,10 +137,7 @@ a {text-decoration: none; }
 /*   Hero   */
 /* -------- */
 
-.hero-container {
-    height: 60vh;
-
-    background: url("https://res.cloudinary.com/aperlae/image/upload/c_scale,w_2000/v1674513454/tailors-thimble-images/heng-films-mpdIPhYqZ4Y-unsplash_wdhii5.webp") no-repeat top center fixed; 
+.cta-container { 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -135,6 +148,11 @@ a {text-decoration: none; }
     justify-content: center;
 
     position: relative;
+}
+
+.hero-img {
+    height: 60vh;
+    background: url("https://res.cloudinary.com/aperlae/image/upload/c_scale,w_2000/v1674513454/tailors-thimble-images/heng-films-mpdIPhYqZ4Y-unsplash_wdhii5.webp") no-repeat top center fixed;
 }
 
 .opaque-overlay {
@@ -149,7 +167,7 @@ a {text-decoration: none; }
 .jumbotron {
     max-width: 27rem;
     background-color: transparent;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .lead {
@@ -158,23 +176,74 @@ a {text-decoration: none; }
 }
 
 
+/* --------- */
+/*   About   */
+/* --------- */
+.about-img {
+    width: 100%;
+    max-width: 40rem;
+}
 
+.about {
+    height: 35vh;
+    background: url("https://res.cloudinary.com/aperlae/image/upload/q_auto/v1677706773/tailors-thimble-images/about-cta1_ajfd1a.webp") no-repeat center center;
+}
 
-/* SERVICES */
+.cta-txt {
+    margin-top: 3rem;
+}
+
+/* ---------- */
+/*  Services  */
+/* ---------- */
+
+/* OUR SERVICES */
 .service-img {
+    /* width: 12rem; */
+    max-width: 100%;
+    height: auto;
+    /* height: 15rem; */
     border-radius: 10px;
-    max-width: 20rem;
 }
 
 .service-caption {
-    font-size: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
 }
 
+.important {
+    max-width: 40rem;
+    background-color: #D0B49F;
+    border: 1px solid #d48140;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* BESPOKE PROCESS */
+.list-group-item {
+    padding: 0.5rem 1.25rem;
+}
+
+.list-group-item.active {
+    background-color: #201A1E;
+    border: none;
+    color: #E2E6E7;
+}
+
+.process-img {
+    width: 70%;
+    border-radius: 5px;
+}
+
+.process-txt {
+    line-height: 1.2;
+    margin-top: .5rem;
+}
 
 /* ----------- */
 /*    Footer   */
 /* ----------- */
+
 /* adapted from Responsive Bootstrap Footer by idesignSMF https://tinyurl.com/3wrta8p5 */
 footer {
     padding: 1.5em 0 1em;
@@ -260,6 +329,13 @@ footer .copyright a:hover {
 
 @media only screen and (min-width: 768px) {
 
+    /* html {
+        font-size: 70%;
+    } */
+
+    body {
+        margin-top: 10rem;
+    }
     /* HOME PAGE */
 
     .art-1 {
@@ -276,14 +352,20 @@ footer .copyright a:hover {
         text-align: left;
     }
 
-    .service-caption {
+    /* .service-caption {
         font-size: 1.8rem;
         line-height: 1.3;
-    }
+    } */
 
     /* FOOTER */
 
     footer .d-flex {
         align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .process-img {
+        width: 90%;
     }
 }
