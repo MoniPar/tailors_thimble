@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-4 mb-4">
+<div class="container section-container">
     <div class="row">
         <div class="col-12">
             <div class="text-center col-md-10 m-auto">
@@ -10,7 +10,7 @@
                     both male and female clientele.
                 </p>
             </div>
-            <div class="row">
+            <div class="row section-container">
                 <div class="col-12 d-md-flex col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                     <div class="d-flex align-items-center d-md-block">
                         <div class="col-sm-8 col-md-12 col-lg-10">
@@ -102,7 +102,7 @@
             advance to avoid disappointment!!
         </strong></p>
     </div>
-    <div class="row">
+    <div class="row section-container">
         <div class="mt-4 col-sm-12 col-md-4 text-center text-md-left">
             <div class="list-group" id="list-tab" role="tablist">
               <a class="list-group-item list-group-item-action active" id="list-con-list" data-toggle="list" href="#list-con" role="tab" aria-controls="consultation">Consultation</a>
@@ -199,7 +199,7 @@
         </div>
     </div>
 </div>
-<div class="container cta-container about mt-4 mb-4">
+<div class="container cta-container cta--about-img mt-4 mb-4">
     <div class="opaque-overlay">&nbsp;</div>
     <div class="row">
         <div class="col">
@@ -207,11 +207,10 @@
                 <div class="container text-light text-center">
                     <h2 class="mb-4">The Perfect Fit</h1>
                     <p class="lead mb-3">For all your occasions</p>
-                        <a class="btn btn-lg btn--hero mt-3" role="button" href="{% url 'appointments' %}">Schedule Appointment</a>
+                    <a class="btn btn-lg btn-secondary mt-3" role="button" href="{% url 'appointments' %}">Schedule Appointment</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 {% endblock content %}

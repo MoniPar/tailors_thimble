@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">    
+<div class="container section-container">    
     <div class="row">
-        <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3 mt-4 mb-4">
-            <div class="card app-card mb-2 rounded shadow" style="min-width: 28rem;">
+        <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+            <div class="card app-card mb-2 rounded shadow">
                 <div class="card-body">
                     <h4 class="card-title text-center">{{ object.get_type_display }}</h4>
                     <div class="card-details mb-3">
@@ -24,9 +24,9 @@
                         <small><i>If you need to reschedule, use the update button below.  We require 24 hours to confirm rescheduling.</i></small>
                         <div class="mt-2 text-center">
                             <a href="{% url 'appointment-update' object.id %}" 
-                                role="button" class="btn btn-outline-primary mr-4">Update</a>
+                                role="button" class="btn btn-primary mr-4">Update</a>
                             <a href="{% url 'appointment-delete' object.id %}" 
-                                role="button" class="btn btn-outline-primary">Delete</a>
+                                role="button" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             <div class="col-md-8 col-lg-6 mt-3 offset-md-2 offset-lg-3">
                 <div class="row justify-content-center mb-4">
                     <a href="{% url 'appointments' %}" role="button"
-                        class="btn btn-outline-primary">Back to Appointments</a>
+                        class="btn btn-outline-primary shadow">Back to Appointments</a>
                 </div>
             </div>
         </div>

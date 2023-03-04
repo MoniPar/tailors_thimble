@@ -4,34 +4,40 @@
 
 {% block content %}
 {% if user.profile.event %}
-  <div class="container mt-4 mb-4">
+  <div class="container section-container">
     <div class="row">
-      <div class="col-md-8 col-lg-6 mt-4 offset-md-2 offset-lg-3">
-        <h2>Schedule an Appointment</h2>
-        <p>Thank you for your interest.<br>Please fill in the form below, 
-          specifying in the comment box any other requirements.
-          We may get in touch to change your appointment if your deadline 
-          is sooner than our minimum window.
-        </p>
-        <p class="border-bottom mb-3">Use our guidelines on the 
-          <a href="{% url 'services-page' %}#process" target="_blank" 
+      <div class="card form--app-card rounded shadow col-10 col-md-8 col-lg-6 m-auto">
+        <div class="text-center col-lg-10 m-auto">
+          <h2>Schedule an Appointment</h2>
+          <p>Thank you for your interest.<br>Please fill in the form below, 
+            specifying in the comment box any other requirements.
+            We may get in touch to change your appointment if your deadline 
+            is sooner than our minimum window.
+          </p>
+          <p class="border-bottom mb-3">Use our guidelines on the 
+            <a href="{% url 'services-page' %}#process" target="_blank" 
             aria-label="The Bespoke Process (opens in a new tab)">Process </a>to select the appropriate
-          type of appointment for your booking.
-        </p>
+            type of appointment for your booking.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-lg-6 mt-2 offset-md-2 offset-lg-3">
+            <form method="POST">
+              {% csrf_token %}
+              <fieldset class="form-group">
+                {{ form|crispy }}
+              </fieldset>
+                <div class="form-group">
+                  <button class="btn btn-primary mb-2" type="submit">Submit</button>
+                </div>    
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-8 col-lg-6 mt-2 mb-4 offset-md-2 offset-lg-3">
-        <form method="POST">
-          {% csrf_token %}
-          <fieldset class="form-group">
-            {{ form|crispy }}
-          </fieldset>
-            <div class="form-group">
-              <button class="btn btn-primary mb-2" type="submit">Submit</button>
-            </div>    
-        </form>
-      </div>
+    <div class="text-center mt-3 mb-4">
+      <a class="btn btn-lg btn-outline-primary shadow" role="button" 
+        href="{% url 'appointments' %}">Back to Appointments</a>
     </div>
   </div>
 {% else %}

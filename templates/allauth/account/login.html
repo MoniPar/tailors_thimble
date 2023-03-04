@@ -6,17 +6,20 @@
 
 {% block content %}
 
-<div class="container mb-4">
+<div class="container section-container">
   <div class="row">
-    <div class="col-md-8 col-lg-6 mt-4 offset-md-2">
-      <h1>{% trans "Login" %}</h1>
+    <div class="card user-card rounded shadow col-10 col-lg-8 m-auto">
+      <div class="offset-1">
+        <h1>{% trans "Login" %}</h1>
       <p>Welcome back to Tailor's Thimble!</p>
-      <small class="border-bottom mb-3">{% blocktrans %}
+      <p class="border-bottom mb-3 small">{% blocktrans %}
         If you have not created an account yet, please
         <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}
-      </small>
+      </p>
+      </div>
+      
       <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-md-2 col-lg-6">
           <form class="login" method="POST" action="{% url 'account_login' %}">
             {% csrf_token %}
             <fieldset class="form-group">

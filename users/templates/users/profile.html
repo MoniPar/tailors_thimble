@@ -2,40 +2,38 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container">
+<div class="container section-container">
     <div class="row">
-        <div class="col-md-8 col-lg-6 mt-3 offset-md-2 offset-lg-3">
+        <div class="col-md-10 col-lg-8 m-auto">
             <div class="card rounded shadow">
                 <div class="card-header text-center border-bottom">
                     <img class="card-img-top rounded"
-                        src="https://res.cloudinary.com/aperlae/image/upload/c_fill,q_auto,w_963/v1675617960/tailors-thimble-images/pexels-engin-akyurt-1487834_ymj7j2.webp" 
-                        alt="green fabric"/>
+                        src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1677934375/tailors-thimble-images/profilesilk_kckyst.webp" 
+                        alt="Wrinkled champagne coloured silk cloth"/>
                     <h2>{{ user.username }}'s Profile</h2>
                     <div class="d-flex justify-content-center">
                         <p>{{ user.first_name }} {{ user.last_name }}</p>
                     </div>
                     <p>{{ user.email }}</p>
-                    <p class="text-center">Please update your profile by filling in the
-                        following information before proceeding to book an appointment.
+                    <p class="text-center small col-lg-10 m-auto">In order to facilitate your appointments, we require some
+                        information about your occasion. Please update your profile before proceeding 
+                        to book a consultation.
                     </p>
                 </div>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-lg-6 mt-2 offset-md-2">
-                            <form method="POST" enctype="form-data" class="card-body">
-                                {% csrf_token %}
-                                <fieldset class="form-group">
-                                    {{ profile_form|crispy }}
-                                </fieldset>
-                                <div class="form-group">
-                                    <button class="btn btn-outline-primary" type="submit">Update</button>
-                                </div>
-                            </form>
+                <div class="col-md-8 col-lg-6 mt-2 offset-md-2 offset-lg-3">
+                    <form method="POST" enctype="form-data" class="card-body">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            {{ profile_form|crispy }}
+                        </fieldset>
+                        <div class="form-group">
+                            <button class="btn btn-outline-primary shadow-sm" type="submit">Update</button>
                         </div>
-                    </div>
-                </div>
-                
+                    </form>
+                </div>                
+            </div>
+            <div class="text-center mt-3 mb-4">
+                <a class="btn btn-lg btn-primary shadow" role="button" href="{% url 'appointments' %}">Appointments</a>
             </div>  
         </div>
     </div>
