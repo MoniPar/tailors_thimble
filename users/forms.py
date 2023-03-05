@@ -3,6 +3,7 @@ from allauth.account.forms import SignupForm
 from django.forms.widgets import NumberInput
 from django.contrib.auth.models import User
 from .models import Profile
+import datetime
 
 
 class CustomSignupForm(SignupForm):
@@ -32,7 +33,7 @@ class UserProfileForm(forms.ModelForm):
     their profile information.
     """
     phone = forms.CharField(
-                        min_length=8,
+                        min_length=12,
                         max_length=15,
                         required=True,
                         widget=forms.TextInput(
@@ -71,6 +72,20 @@ class UserProfileForm(forms.ModelForm):
                                    'looking to have done'}
                         )
     )
+
+    def clean_event_date(self):
+        """
+        Validation for the event_date
+        """
+        date = self.cleaned_data['event_date']
+        # Only dates from today are accepted
+        if date < date.today():
+            raise forms.ValidationError("Your date is in the past!")
+        # Only dates at least 30 days from today are accepted
+        if date <= date.today() + datetime.timedelta(days=30):
+            raise forms.ValidationError("Sorry your event date is sooner than"
+                                        " our 30-day minimum window!")
+        return date
 
     class Meta:
         model = Profile
