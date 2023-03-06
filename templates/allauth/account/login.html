@@ -10,11 +10,11 @@
   <div class="row">
     <div class="card user-card rounded shadow col-10 col-lg-8 m-auto">
       <div class="offset-1">
-        <h1>{% trans "Login" %}</h1>
+        <h2>{% trans "Login" %}</h2>
       <p>Welcome back to Tailor's Thimble!</p>
       <p class="border-bottom mb-3 small">{% blocktrans %}
         If you have not created an account yet, please
-        <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}
+        <a class="link-txt" href="{{ signup_url }}">register</a> first.{% endblocktrans %}
       </p>
       </div>
       
@@ -28,7 +28,7 @@
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-            <button class="primaryAction btn btn-primary" type="submit">{% trans "Login" %}</button>
+            <button class="primaryAction btn btn-lg btn-primary" type="submit">{% trans "Login" %}</button>
           </form>
         </div>
       </div>

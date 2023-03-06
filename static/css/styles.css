@@ -6,7 +6,7 @@ html {
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 1.6rem;
-    margin-top: 10.85rem;
+    margin-top: 11.5rem;
     background-color:  #f0ebe8;
     color: #201A1E;
 }
@@ -17,29 +17,27 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.3;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
 }
 
-h4 { letter-spacing: 0.15em; }
 li { list-style-type: none; }
-a {text-decoration: none; }
+a { text-decoration: none; }
 
 .section-container {
-    /* margin: 2em 0; */
     padding: 1.5em 0;
     margin: 0 auto;
 }
 
 .link-txt {
-    color: #472002;
+    color: #660646;
 }
 
 .link-txt:hover {
@@ -47,17 +45,19 @@ a {text-decoration: none; }
 }
 
 /* Buttons */
+
 .btn-primary {
     background-color: rgba(207, 152, 110, .6);
     color: #201A1E;
     font-weight: 600;
-    border: 1px solid #cf986e;
+    border-color: rgba(207, 152, 110, .6);
 }
 
 .btn-primary:hover {
     background-color: #fff;
     color: #cf986e;
-    border: 1px solid #cf986e;
+    font-weight: 600;
+    border-color: #cf986e;
 }
 
 .btn-primary:focus,
@@ -65,26 +65,27 @@ a {text-decoration: none; }
     box-shadow: 0 0 0 .2rem rgba(49, 22, 2, .6);
     background-color: #fff;
     color: #cf986e;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active {
     box-shadow: 0 0 0 .2rem rgba(209, 127, 64, .5);
     background-color: #cf986e;
     color: #fff;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
 }
 
-    .btn-outline-primary {
-    color: #bd8255;
+.btn-outline-primary {
+    color: #ad6127;
+    background-color: #fff;
     font-weight: 900;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
 }
 
 .btn-outline-primary:hover{
     background-color: #cf986e;
     color: #fff;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
 }
 
 .btn-outline-primary:focus,
@@ -92,20 +93,20 @@ a {text-decoration: none; }
     box-shadow: 0 0 0 .2rem rgba(49, 22, 2, .6);
     background-color: #cf986e;
     color: #fff;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active {
     box-shadow: 0 0 0 .2rem rgba(209, 127, 64, .5);
     background-color: #fff;
     color:  #cf986e;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
 }
 
 .btn-secondary {
     background-color: #E4D4C8;
     color: #201A1E;
-    border: 1px solid #e4cab7;
+    border-color: #e4cab7;
     padding: .75rem;
     font-weight: 600;
 }
@@ -113,7 +114,7 @@ a {text-decoration: none; }
 .btn-secondary:hover {
     background-color: #201A1E;
     color: #D0B49F;
-    border: 1px solid #201A1E;
+    border-color: #201A1E;
 }
 
 .btn-secondary:focus,
@@ -121,14 +122,26 @@ a {text-decoration: none; }
     box-shadow: 0 0 0 .2rem rgba(49, 22, 2, .6);
     background-color: #201A1E;
     color: #D0B49F;
-    border: 1px solid #201A1E;
+    border-color: #201A1E;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active {
     box-shadow: 0 0 0 .2rem rgba(209, 127, 64, .5);
     background-color: #E4D4C8;
     color:  #201A1E;
-    border: 1px solid #cf986e;
+    border-color: #cf986e;
+}
+
+.btn-danger {
+    background-color: #c7360a;
+    border-color: #c7360a;
+}
+
+.btn-danger:hover {
+    background-color: #fff;
+    color: #c7360a;
+    font-weight: 600;
+    border-color: #c7360a;
 }
 
 .btn--more {
@@ -139,12 +152,22 @@ a {text-decoration: none; }
 /* Alerts */
 
 .alert {
-    margin-bottom: 0;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color: #000;
+}
+
+.alert-success {
+    border: 1px solid #157b2c;
+}
+
+.alert-danger {
+    border: 1px solid #a82b39;
 }
 
 .alert-dismissible .close {
-    padding-top: .7rem;
     font-size: 2.5rem;
+    padding-bottom: .75rem;
 }
 
 /* Cards */
@@ -154,12 +177,8 @@ a {text-decoration: none; }
     padding: 3em 1.5em;
 }
 
-/* Profile */
-.card-img-top {
-    height: 8rem
-}
-
 /* Appointments */
+
 .form--app-card {
     padding: 2em 1em;
     border: .75px solid #ce7f43;
@@ -195,7 +214,7 @@ a {text-decoration: none; }
     padding-left: .5em;
 }
 
-.error-msg {
+.no-profile {
     background-color: rgba(208, 180, 159, .6);
     border: 4px dashed rgba(209, 138, 84, 0.9);
     border-radius: 5px;
@@ -208,7 +227,7 @@ a {text-decoration: none; }
 
 .navbar {
     background-color: #e2e6e7;
-    padding-right: 2.5em;
+    /* padding-right: 1.5em; */
 }
 
 .navbar-toggler {
@@ -218,6 +237,19 @@ a {text-decoration: none; }
 .navbar-collapse {
     text-align: center;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(77, 21, 58);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(77, 21, 58, .6);
+}
+
+.navbar-nav .active {
+    box-shadow: -1px 6px 93px 8px rgba(0,0,0,0.1) inset;
+    border-radius: 6px;
+} 
 
 /* -------- */
 /*   Hero   */
@@ -297,7 +329,7 @@ a {text-decoration: none; }
     margin-bottom: 0.5rem;
 }
 
-.important {
+.highlight {
     max-width: 50rem;
     background-color: #D0B49F;
     border: 1px solid #d48140;
@@ -348,9 +380,9 @@ footer .item {
     margin-bottom: 1.25em;
 }
 
-footer h4 {
-    margin-bottom: 0.9375em;
-    font-weight: bold;
+footer h3 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
 } 
 
 footer .table {
@@ -420,21 +452,15 @@ footer .copyright a:hover {
 /* ------------- */
 
 @media only screen and (min-width: 768px) {
-
-    /* html {
-        font-size: 70%;
-    } */
-
-    body {
-        margin-top: 10rem;
-    }
-    /* HOME PAGE */
-
+    
+    /* HOME PAGE */    
+    /* Our Philosophy */
     .art-1 {
         max-width: 70%;
         margin: 0 auto;
     }
 
+    /* Established 1977 */
     .art-2 {
         max-width: 80%;
         margin: auto;
@@ -450,14 +476,22 @@ footer .copyright a:hover {
     } */
 
     /* FOOTER */
-
     footer .d-flex {
         align-items: center;
     }
 }
 
 @media only screen and (min-width: 1024px) {
+
+    /* SERVICES */
     .process-img {
         width: 90%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
+    html {
+        font-size: 100%;
     }
 }

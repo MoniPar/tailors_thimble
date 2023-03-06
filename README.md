@@ -23,6 +23,7 @@ It provides the user value in learning about the business and the services it pr
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
     * [Development Bugs](#development-bugs)
+    * [Bugs Remaining](#bugs-remaining)
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [Acknowledgements](#acknowledgements)
@@ -74,6 +75,10 @@ _____
 ____
 
 ## Testing
+
+All testing information can be found in [TESTING.md](TESTING.md).
+
+
 
 ### First Deployment Bug
 
@@ -161,6 +166,19 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
         Solution: Eventually, I came about a solution in [this Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1676326871471269), which recommended to create a `constants.py` file and adding the constants to it then importing them to wherever they were needed.     
 
+
+* **Navbar**
+
+    * Active Tag on Bootstrap with Django 
+
+    Problem: The navbar active class was not working.  The active class should be applied to each link when clicked but I could see in devTools that it was stuck on home. 
+    
+    Solution: From the search I conducted I understood that because we are requesting the page as a url in django, we need to specify this request. The best way I found that made sense to me was to use 'if statements' in the base template itself.  This [Stackoverflow question](https://stackoverflow.com/questions/32931436/active-tag-on-bootstrap-with-django) suggested to check if the URL matches using `request.resolver_match.url_name`.  This is not a very DRY solution but it worked.  The following code shows how to add it to the home page link - it needs to be done so for each link in the navbar.
+    ```
+    <li class="nav-item {% if request.resolver_match.url_name == 'home-page' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'home-page' %}">Home<span class="sr-only">(current)</span></a>
+    </li>
+    ```
 
 ### Bugs Remaining
 
@@ -319,7 +337,11 @@ The following are links to the snippets of code I borrowed and adapted (cited in
 * Footer adapted from [Responsive Bootstrap Footer by idesignSMF](https://tinyurl.com/3wrta8p5)
 
 Other pages/questions I found useful:
-* [Linking an anchor tag](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
+
+* Active Tag on Bootstrap with Django [Stackoverflow Question](https://stackoverflow.com/questions/32931436/active-tag-on-bootstrap-with-django)
+* Change button active colour in Bootstrap 4 [Stackoverflow Question](https://stackoverflow.com/questions/49911051/how-to-change-button-active-color-in-bootstrap-4)
+* Validating Date 30 days into the future [Stackoverflow Question](https://tinyurl.com/yc6fcep4)
+* Linking an anchor tag in another page[Stackoverflow Question](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
 
 
 ### Media
@@ -336,8 +358,13 @@ Other pages/questions I found useful:
 * Evening Wear Photo [Chalo Garcia](https://unsplash.com/es/@photosbychalo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/cocktail-dress?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 * Girl in Communion Dress Photo [Becerra Govea Photo](https://www.pexels.com/photo/a-pretty-girl-in-white-dress-leaning-on-the-wall-5906115/)
 * Profile page header image [Artem Podrez | Pexels](https://www.pexels.com/photo/wrinkled-silk-cloth-7232394/)
+* Profile page header image [Anete Lusina | Pexels](https://www.pexels.com/photo/background-of-smooth-rippled-brown-silk-fabric-6331032/)
 
-    
+### Resources
+
+This is a list of free online resources, I found useful:
+
+* [TinyPNG](https://tinypng.com/) - compress photos/images
 
 [Back To Top](#table-of-contents)
 

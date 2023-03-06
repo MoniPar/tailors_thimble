@@ -16,7 +16,7 @@
                         {% for appointment in appointments %}
                             <div class="card app-card mb-4 mr-md-4 rounded shadow" style="min-width: 28rem;">
                                 <div class="card-body">
-                                    <h4 class="card-title text-center">{{ appointment.get_type_display }}</h4>
+                                    <h2 class="card-title text-center">{{ appointment.get_type_display }}</h2>
                                     <div class="card-details mb-3">
                                         <p><strong>Date: &emsp;&emsp;</strong>{{ appointment.date }}</p>
                                         <p><strong>Time: &emsp;&emsp;</strong>{{ appointment.get_time_display }}</p><hr/>
@@ -33,13 +33,16 @@
                 </div>
             </div>
         </div>    
-        <div class="container">
+        <div class="container section-container">
             <div class="row">
-                <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                <div class="card rounded shadow col-10 col-md-8 col-lg-6 m-auto">
                     <div class="card-body">
-                        <div class="border-bottom mb-4">
+                        <div class="text-center p-4">
+                            <h2 class="border-bottom">Welcome to your Appointments page {{ user.first_name }} {{ user.last_name }}!</h2>
                             <p>You have no appointments scheduled yet.</p>
-                            <p>Please use the Add Appointment button to schedule an appointment now.</p>
+                            <p>Please use the "Add Appointment" button above to schedule 
+                                your free consultation now.
+                            </p>
                         </div>    
                     </div>
                 </div>

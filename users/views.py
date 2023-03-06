@@ -58,6 +58,6 @@ class ProfileUpdateView(LoginRequiredMixin, View):
             }
             messages.error(request,
                            'An error has occurred while updating'
-                           'your profile. Please try again!')
+                           ' your profile. Please try again!')
 
             return render(request, self.template_name, context)

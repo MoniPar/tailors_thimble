@@ -28,40 +28,41 @@
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <div class="container">
                 <a href="{% url 'home-page' %}" class="navbar-brand mr-4">
-                    <img src="https://res.cloudinary.com/aperlae/image/upload/c_scale,q_auto,w_200/v1675371715/tailors-thimble-images/Tailors_Thimble_Logo_2_PNG_b5khze.png" 
-                        width="175" height="100" 
+                    <img src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1678033532/tailors-thimble-images/tt-logo_fplifu.png" 
+                        width="175" height="97" 
                         alt="A thimble designed with greyscale tones and Tailor's Thimble printed on the right.">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <!-- Navbar Left -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'home-page' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'home-page' %}">Home<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'about-page' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'about-page' %}">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'services-page' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'services-page' %}">Services</a>
                         </li>
                     </ul>
                     <!-- Navbar Right -->
                     <ul class="navbar-nav">
                         {% if user.is_authenticated %}
-                            <li class="nav-item">
+                            <li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
                                 <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                             </li>    
-                            <li class="nav-item">
+                            <li class="nav-item {% if request.resolver_match.url_name == 'account_logout' %}active{% endif %}">
                                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                             </li>
                         {% else %}
-                            <li class="nav-item">
+                            <li class="nav-item {% if request.resolver_match.url_name == 'account_signup' %}active{% endif %}">
                                 <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {% if request.resolver_match.url_name == 'account_login' %}active{% endif %}">
                                 <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                             </li>
                         {% endif %}
@@ -94,11 +95,11 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="col-md-4 item">
-                    <h4>Location</h4>
+                    <h3>Location</h3>
                     <address class="text">Tailor's Thimble<br>23, Strada Rjali<br>Valletta, Malta</address>
                 </div>
                 <div class="col-md-4 item">
-                    <h4>Opening Hours</h4>
+                    <h3>Opening Hours</h3>
                     <table class="table table-sm table-dark ml-2 mr-2 text">
                         <thead>
                             <tr>
@@ -121,7 +122,7 @@
                     </table>
                 </div>
                 <div class="col-md-4 item">
-                    <h4>Contact</h4>
+                    <h3>Contact</h3>
                     <ul>
                         <li>
                             <a href="tel:+356012345678" target="_blank" rel="noopener"
@@ -138,17 +139,21 @@
                 </div>
             </div>
                 <div class="col-12 item social">
-                    <h4>Follow us on</h4>
-                    <a href="https://www.facebook.com" target="_blank">
+                    <h3>Follow us on</h3>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                        aria-label="Tailor's Thimble Facebook page (opens in a new tab)">
                         <i class="icon fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com" target="_blank">
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                    aria-label="Tailor's Thimble Twitter page (opens in a new tab)">
                         <i class="icon fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                    aria-label="Tailor's Thimble Instagram page (opens in a new tab)">
                         <i class="icon fa-brands fa-instagram"></i></a>
                 </div>
             <p class="copyright">&copy; 2023 Tailor's Thimble by 
                 <a href="https://www.linkedin.com/in/monique-parnis" 
-                    target="_blank"> MoniPar</a>
+                    target="_blank" rel="noopener"
+                    aria-label="Website creator LinkedIn page (opens in a new tab)"> MoniPar</a>
             </p>
         </div>
     </footer>
