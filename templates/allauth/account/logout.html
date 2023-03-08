@@ -9,8 +9,8 @@
 <div class="container text-center section-container">
   <div class="row">
     <div class="card user-card rounded shadow col-10 col-md-8 col-lg-6 m-auto">
-      <h1>{% trans "Sign Out" %}</h1>
-      <h2 class="text-muted">{% trans 'Are you sure you want to sign out?' %}</h2>
+      <h2>{% trans "Sign Out" %}</h2>
+      <p class="text-muted">{% trans 'Are you sure you want to sign out?' %}</p>
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
           <form method="post" action="{% url 'account_logout' %}">
