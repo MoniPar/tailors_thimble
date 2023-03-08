@@ -343,6 +343,7 @@ a { text-decoration: none; }
 /* OUR SERVICES */
 .service-img {
     max-width: 100%;
+    width: 17rem;
     height: auto;
     border-radius: 10px;
 }

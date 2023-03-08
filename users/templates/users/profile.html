@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -9,7 +10,7 @@
                 <div class="card-header text-center border-bottom">
                     <img class="img-fluid rounded"
                         src="https://res.cloudinary.com/aperlae/image/upload/q_auto/v1678129577/tailors-thimble-images/profile-silk_vehyro.webp" 
-                        alt="Wrinkled champagne coloured silk cloth"/>
+                        alt="Golden brown silk fabric">
                     <h2>{{ user.username }}'s Profile</h2>
                     <div class="d-flex justify-content-center">
                         <p>{{ user.first_name }} {{ user.last_name }}</p>
@@ -21,7 +22,7 @@
                     </p>
                 </div>
                 <div class="col-md-8 col-lg-6 mt-2 offset-md-2 offset-lg-3">
-                    <form method="POST" enctype="form-data" class="card-body">
+                    <form method="POST" class="card-body">
                         {% csrf_token %}
                         <fieldset class="form-group">
                             {{ profile_form|crispy }}

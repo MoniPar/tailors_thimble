@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}View Appointment{% endblock %}
 {% block content %}
 
 <div class="container section-container">    
@@ -10,12 +11,14 @@
                     <div class="card-details mb-3">
                         <p><strong>Date: &emsp;&emsp;</strong>{{ object.date }}</p>
                         <p><strong>Time: &emsp;&emsp;</strong>{{ object.get_time_display }}</p>
-                        <hr/>
+                        <hr>
                         {% if object.approved %}
-                            <p>{{ object.user.first_name }}, your appointment has been confirmed! 
-                                We look forward to seeing you at:
+                            <div class="text-center">
+                                <p>{{ object.user.first_name }}, your appointment has been confirmed! 
+                                    We look forward to seeing you at:
+                                </p>
                                 <address>Tailor's Thimble,<br>23, Strada Rjali<br>Valletta, Malta</address>
-                            </p>
+                            </div>
                         {% else %}
                             <p>We will get in touch with you as soon as possible to confirm or reschedule your appointment.</p>
                         {% endif %}   

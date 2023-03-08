@@ -21,7 +21,7 @@
     <link rel="icon" href="https://res.cloudinary.com/aperlae/image/upload/e_negate,q_auto/v1675371709/tailors-thimble-images/Tailors_Thimble_Favicon_a1wy1s.jpg" type="image/x-icon">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
-    <title>Tailor's Thimble | {{ title }}</title>
+    <title>Tailor's Thimble | {{ title }}{% block title %}{% endblock %}</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header class="container-fluid p-0">

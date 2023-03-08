@@ -342,6 +342,8 @@ Other pages/questions I found useful:
 * Change button active colour in Bootstrap 4 [Stackoverflow Question](https://stackoverflow.com/questions/49911051/how-to-change-button-active-color-in-bootstrap-4)
 * Validating Date 30 days into the future [Stackoverflow Question](https://tinyurl.com/yc6fcep4)
 * Linking an anchor tag in another page[Stackoverflow Question](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
+* Dynamic Page Titles [Forge](https://www.forgepackages.com/guides/page-titles/)
+* HTML Form Enctype Attribute [GeeksForGeeks](https://www.geeksforgeeks.org/html-form-enctype-attribute/)
 
 
 ### Media
