@@ -11,7 +11,42 @@ _____
 
 ## Code Validation
 
+### HTML
 
+HTML code was tested using the [W3C Validator](https://validator.w3.org/) via text input.  The HTML code was copied and pasted in from each page of the website's source code.
+
+<details>
+<summary>Screenshots and results for all templates.</summary>
+<br>
+
+</details>
+
+[Back To Top](#table-of-contents)
+
+_____
+
+### CSS
+
+CSS code was tested using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) via text input. 
+
+<details>
+<summary>Screenshot with results for the styles.css file</summary>
+<br>
+
+</details>
+
+[Back To Top](#table-of-contents)
+
+_____
+
+### Python
+
+
+<details>
+<summary>Screenshots and results for all python files</summary>
+<br>
+
+</details>
 
 [Back To Top](#table-of-contents)
 
