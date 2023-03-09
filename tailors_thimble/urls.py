@@ -22,5 +22,4 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('profile/', views.ProfileUpdateView.as_view(), name='profile'),
     path('', include('tailoring.urls')),
-    # path('', include('users.urls'))
 ]
