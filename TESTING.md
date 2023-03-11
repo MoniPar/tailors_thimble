@@ -182,8 +182,6 @@ Long lines in `settings.py` and `env.py` were cleared using `# noqa`. These were
 
 ![All clear, no errors found](documentation/python-val-env.py.png)
 
-
-
 <br>
 
 </details>
@@ -298,6 +296,102 @@ _____
 
 ## Responsiveness Testing
 
+The website is responsive for screens with a mininum width of 320px and a maximum width of 2560px. Friends and family tested the website on their devices and all reported no issues with responsiveness.  Further manual tests were done using Chrome's DevTools.
+
+<details>
+<summary>Screenshots of website at different screen sizes.</summary>
+
+**NAVBAR & HOME HERO**
+
+        Mobile - iPhone 320px
+![Navbar & Home Hero on mobile](documentation/nav%2Bhero-iphone5_320.jpg)
+
+        Tablet - iPad Mini 768px
+![Navbar & Home Hero on tablet](documentation/nav%2Bhero-ipadmini_768.jpg)
+
+        Desktop - Nest Hub - 1024px
+![Navbar & Home Hero on desktop](documentation/nav%2Bhero-nesthub_1024.png)
+
+**FOOTER**
+
+        Mobile - Galaxy S9+ - 320px
+![Footer on mobile](documentation/footer-galaxys9_320.png)
+
+        Tablet - Surface Pro 7 - 912px
+![Footer on tablet](documentation/footer-surfacepro7_912.png)
+
+**HOME**
+
+        Mobile - Galaxy S9 - 320px
+![Home on mobile](documentation/home-galaxys9_320.png)
+
+        Tablet - iPad - 768px
+![Home on tablet](documentation/home-ipad_768.png)
+ 
+        Desktop - Nest Hub Pro - 1280px
+![Home on desktop](documentation/home-nesthubmax_1280.png)
+
+*Noted in bugs yet to fix*:- Slight issue with images not scaling up equally at screen-sizes > 1200px 
+
+**ABOUT**
+
+        Mobile - iPhone 12 Pro -390px
+![About on mobile](documentation/about-iphone12pro_390.png)
+
+        Mobile - Samsung Galaxy S20 Ultra - 412px
+![About Process on mobile](documentation/about-samsunggals20_412.png)
+
+        Tablet - iPad Air - 820px
+![About Process on tablet](documentation/about-ipadair_820.png)
+
+        Desktop - Nest Hub Pro - 1200px
+![About Process on desktop](documentation/about-nesthubpro_1200.png)
+
+**SERVICES**
+
+        Mobile - iPhone XR - 414px
+![Services on mobile](documentation/services-iphoneXR_414.png)
+
+        Tablet - Surface Pro 7 - 912px
+![Services on tablet](documentation/services-surfacepro7_912.png)
+
+        Desktop - Desktop - 1440px
+![Services on desktop](documentation/services-desktop_1440.png)
+
+**PROFILE**
+
+        Mobile - iPhone 12 Pro - 800px
+![Profile on mobile](documentation/profile-iphone12pro_380.png)
+
+        Tablet - iPad Pro - 1200px
+![Profile on tablet](documentation/profile-ipadpro_1024.png)
+
+**APPOINTMENTS**
+
+        Mobile - iPhone 6/7/8 - 375px
+![Appointments List on mobile](documentation/appts-iphone678_375.png)
+
+        Tablet - Surface Pro 7 - 912px
+![Appointments List on tablet](documentation/appts-surfacepro_812.png)
+
+        Desktop - Nest Hub Max - 1200px
+![Appointments List on desktop](documentation/appts-nesthubmax_1200.png)
+
+**ALL OTHER PAGES**
+
+All other pages have been tested with DevTools and results have been recorded in the table below which checks if the cards are clear and visible on mobile and if they are horizontally aligned on Tablet and Desktop.
+
+| Page | Mobile | Tablet | Desktop |
+| ---- | ------ | ------ | ------- |
+| Register | Yes | Yes | Yes |
+| Login | Yes | Yes | Yes |
+| Logout | Yes | Yes | Yes | 
+| Appt Detail | Yes | Yes | Yes |
+| Appt Create | Yes | Yes | Yes |
+| Appt Update | Yes | Yes | Yes |
+| Appt Delete | Yes | Yes | Yes |
+<br>
+</details>
 
 [Back To Top](#table-of-contents)
 
@@ -305,6 +399,19 @@ _____
 
 ## Browser Compatibilty Testing
 
+Website was tested on current Chrome, Firefox, Edge, Brave for compatibility.  It was also tested on Safari on an iPad running on iOS 12.5.7 and an iPhone on the latest iOS.  
+
+<details>
+<summary>Table of the results.</summary>
+
+| Intended | Chrome | Firefox | Edge | Brave | Safari iOS 12 | Safari iOS 15 |
+| -------- | ------ | ------- | ---- | ----- | ------------- | ------------- |
+| Appearance | Good | Good | Good | Good | Poor | Good |
+| Responsiveness | Good | Good | Good | Good | Fair | Good |
+
+The issue with using Safari on iOS 12 is that it doesn't support webp images, therefore all webP images were not visible.
+
+</details>
 
 [Back To Top](#table-of-contents)
 
