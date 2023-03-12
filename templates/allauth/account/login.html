@@ -8,30 +8,28 @@
 {% block content %}
 
 <div class="container section-container">
-  <div class="row">
-    <div class="card user-card rounded shadow col-10 col-lg-8 m-auto">
-      <div class="offset-1">
-        <h2>{% trans "Login" %}</h2>
-      <p>Welcome back to Tailor's Thimble!</p>
-      <p class="border-bottom mb-3 small">{% blocktrans %}
-        If you have not created an account yet, please
-        <a class="link-txt" href="{{ signup_url }}">register</a> first.{% endblocktrans %}
-      </p>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2 col-lg-6">
-          <form class="login" method="POST" action="{% url 'account_login' %}">
-            {% csrf_token %}
-            <fieldset class="form-group">
-              {{ form|crispy }}
-            </fieldset>
-            {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <button class="primaryAction btn btn-lg btn-primary" type="submit">{% trans "Login" %}</button>
-          </form>
-        </div>
+  <div class="card user-card rounded shadow col-10 col-lg-8 m-auto">
+    <div class="offset-1">
+      <h2>{% trans "Login" %}</h2>
+    <p>Welcome back to Tailor's Thimble!</p>
+    <p class="border-bottom mb-3 small">{% blocktrans %}
+      If you have not created an account yet, please
+      <a class="link-txt" href="{{ signup_url }}">register</a> first.{% endblocktrans %}
+    </p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2 col-lg-6">
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            {{ form|crispy }}
+          </fieldset>
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="primaryAction btn btn-lg btn-primary" type="submit">{% trans "Login" %}</button>
+        </form>
       </div>
     </div>
   </div>

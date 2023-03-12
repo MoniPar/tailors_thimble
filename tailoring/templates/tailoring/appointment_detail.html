@@ -3,34 +3,32 @@
 {% block content %}
 
 <div class="container section-container">    
-    <div class="row">
-        <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-            <div class="card app-card mb-2 rounded shadow">
-                <div class="card-body">
-                    <h4 class="card-title text-center">{{ object.get_type_display }}</h4>
-                    <div class="card-details mb-3">
-                        <p><strong>Date: &emsp;&emsp;</strong>{{ object.date }}</p>
-                        <p><strong>Time: &emsp;&emsp;</strong>{{ object.get_time_display }}</p>
-                        <hr>
-                        {% if object.approved %}
-                            <div class="text-center">
-                                <p>{{ object.user.first_name }}, your appointment has been confirmed! 
-                                    We look forward to seeing you at:
-                                </p>
-                                <address>Tailor's Thimble,<br>23, Strada Rjali<br>Valletta, Malta</address>
-                            </div>
-                        {% else %}
-                            <p>We will get in touch with you as soon as possible to confirm or reschedule your appointment.</p>
-                        {% endif %}   
-                    </div>
-                    <div class="card-footer">
-                        <small><i>If you need to reschedule, use the update button below.  We require 24 hours to confirm rescheduling.</i></small>
-                        <div class="mt-2 text-center">
-                            <a href="{% url 'appointment-update' object.id %}" 
-                                role="button" class="btn btn-lg btn-primary mr-4">Update</a>
-                            <a href="{% url 'appointment-delete' object.id %}" 
-                                role="button" class="btn btn-lg btn-danger">Delete</a>
+    <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+        <div class="card app-card mb-2 rounded shadow">
+            <div class="card-body">
+                <h4 class="card-title text-center">{{ object.get_type_display }}</h4>
+                <div class="card-details mb-3">
+                    <p><strong>Date: &emsp;&emsp;</strong>{{ object.date }}</p>
+                    <p><strong>Time: &emsp;&emsp;</strong>{{ object.get_time_display }}</p>
+                    <hr>
+                    {% if object.approved %}
+                        <div class="text-center">
+                            <p>{{ object.user.first_name }}, your appointment has been confirmed! 
+                                We look forward to seeing you at:
+                            </p>
+                            <address>Tailor's Thimble,<br>23, Strada Rjali<br>Valletta, Malta</address>
                         </div>
+                    {% else %}
+                        <p>We will get in touch with you as soon as possible to confirm or reschedule your appointment.</p>
+                    {% endif %}   
+                </div>
+                <div class="card-footer">
+                    <small><i>If you need to reschedule, use the update button below.  We require 24 hours to confirm rescheduling.</i></small>
+                    <div class="mt-2 text-center">
+                        <a href="{% url 'appointment-update' object.id %}" 
+                            role="button" class="btn btn-lg btn-primary mr-4">Update</a>
+                        <a href="{% url 'appointment-delete' object.id %}" 
+                            role="button" class="btn btn-lg btn-danger">Delete</a>
                     </div>
                 </div>
             </div>
