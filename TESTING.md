@@ -204,6 +204,10 @@ _____
 
 ![Passed](documentation/mobile-home.png)
 
+*Note*: After changing the service-img to scale up evenly for screens > 1200px, the test was run again and the performance dropped a little for mobile. Because of time constraints, it wasn't possible to investigate further at this time. 
+
+![Retest Lower Performance](documentation/mobile-home-retest.png)
+
 * Desktop
 
 ![Passed](documentation/desktop-home.png)
@@ -328,10 +332,8 @@ The website is responsive for screens with a mininum width of 320px and a maximu
         Tablet - iPad - 768px
 ![Home on tablet](documentation/home-ipad_768.png)
  
-        Desktop - Nest Hub Pro - 1280px
+        Desktop - Nest Hub Max - 1280px
 ![Home on desktop](documentation/home-nesthubmax_1280.png)
-
-*Noted in bugs yet to fix*:- Slight issue with images not scaling up equally at screen-sizes > 1200px 
 
 **ABOUT**
 

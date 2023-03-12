@@ -211,6 +211,17 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 </details>
 
 <details>
+<summary>Bugs encountered during Testing</summary>
+
+* **Services Images**
+
+    Problem: At screen sizes > 1200px images are not scaling up equally. I have checked that all images have the same classes, and tried adding some media queries with width specified, however the problem persists and can't pinpoint why this is happening.  This is effecting the images to center properly on the page. 
+    Possible Solution: I will need to re-write this section in order to make them scale up equally.  Possibly using flex-grow or having an image srcset to size up the images at the different screen size.
+    Solved: Due to another bug I noticed during responsiveness testing, I managed to solve this by giving them a larger column width at the different breakpoints and removing the 'row' element they were in.  This gave each of the columns an equal width and the images were then allowed to scale up equally.
+
+</details>
+
+<details>
 <summary>Bugs Remaining</summary>
 
 ### Bugs Remaining
@@ -222,10 +233,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
     Problem: Issue with this regex `^[+][0-9\\s]+` is that it lets more than one whitespace in so user can submit a number like this "+33     333".  
     Temporary solution: After several searches and attempts at moving the '\\s' around, I decided to go with no white space at all and used '^[+][0-9]+'.
 
-* **Services Images**
-
-    Problem: At screen sizes > 1200px images are not scaling up equally. I have checked that all images have the same classes, and tried adding some media queries with width specified, however the problem persists and can't pinpoint why this is happening.  This is effecting the images to center properly on the page. 
-    Possible Solution: I will need to re-write this section in order to make them scale up equally.  Possibly using flex-grow or having an image srcset to size up the images at the different screen size.
 
 </details>
 

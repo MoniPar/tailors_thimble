@@ -338,8 +338,7 @@ a { text-decoration: none; }
 
 /* OUR SERVICES */
 .service-img {
-    max-width: 100%;
-    width: 17rem;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -469,15 +468,6 @@ footer .copyright a:hover {
         margin-bottom: 1em;
     }
 
-    .service-caption {
-        font-size: 1.6rem;
-    }
-
-    .service-img {
-        width: 15rem;
-        height: auto;
-    }
-
     /* FOOTER */
 
     footer .d-flex {
@@ -496,10 +486,9 @@ footer .copyright a:hover {
     }
 
     /* SERVICES */
-
-    .service-img {
-        width: 18rem;
-        height: auto;
+    
+    .service-caption {
+        font-size: 1.8rem;
     }
 }
 
