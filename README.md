@@ -37,13 +37,63 @@ ____
 
 ## Overview
 
-Tailor's Thimble is a mobile-first build, responsive on screen sizes up to 2560px.  It is compatible with all major browsers.  The website is built for educational purposes, using Bootstrap and the Django Framework. It gives users the ability to register for an account, add their requirements in their profile and schedule appointments with the Master Tailor. It includes user authentication and full CRUD functionality on appointments.   
+Tailor's Thimble is a responsive mobile-first build website.  It is compatible with all current major browsers.  The website is built for educational purposes, using Bootstrap and the Django Framework. It gives users the ability to register for an account, add their requirements in their profile and schedule appointments with the Master Tailor. It includes user authentication and full CRUD functionality on appointments.   
 
 [Back To Top](#table-of-contents)
 
 ____
 
 ## Agile Methodology
+
+The plan for this project was carried out using Agile Methodology. GitHub Issues, which can be viewed [here](https://github.com/MoniPar/tailors_thimble/issues), were used to record the User Stories. These were categorised into 9 Epics/Milestones and further labelled with story points using the [Fibonacci Sequence](https://www.mathsisfun.com/numbers/fibonacci-sequence.html). 
+
+Each User Story contains Acceptance Criteria and Tasks which for lack of experience, I sometimes had to add after I did the process as I wasn't really sure what needed to be done to achieve the Acceptance Criteria needed.
+
+Since this was my first project using this methodology and the Django framework, some of the estimated story points were way off. In practice, a few of these tasks were completed quicker than anticipated while others took much longer. 
+
+The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project-framework/moscow-prioririsation.html) was also used, classifying each User Story as a 'Must Have', 'Should Have' or 'Could Have'. Some 'Could Have's didn't make it into the project and were left in the Backlog for a future date. 
+
+I tried to keep the scope as minimal as possible for this project so any extra features that I had in mind, have not been added to the User Stories. It is important to note here, that by writing only enough User Stories to reach the MVP, my iterations were not as well balanced as recommended and they mostly consisted of 'Must Have's.    
+
+<details>
+<summary>Instance of Kanban Board and examples of an Epic and User Story</summary>
+
+        Kanban Board at this Iteration
+![Kanband: Epic - Testing and Documentation](documentation/writing_docs_kanboard.png)
+
+        Epic 1 - Setup
+![Epic Setup](documentation/epic1_setup.png)
+
+        Epic 2 - First Deployment
+![Epic First Deployment](documentation/epic2_firstdep.png)
+
+        Epic 3 - Home Page
+![Epic Home Page](documentation/epic3_homep.png)
+
+        Epic 4 - Other Frontend
+![Epic Other Frontend](documentation/epic4_otherp.png)
+
+        Epic 5 - Admin Panel
+![Epic Admin Panel](documentation/epic5_admin.png)
+
+        Epic 6 - User Registration & Authentication
+![Epic User Registration & Authentication](documentation/epic6_reg%26auth.png)
+
+        Epic 7 - Profile
+![Epic Profile](documentation/epic7_profile.png)
+
+        Epic 8 - Appointments
+![Epic Appointments](documentation/epic8_appts.png)
+
+        Epic 9 - Testing & Documentation
+![Epic Testing & Documentation](documentation/)
+
+        A User Story I am working on
+![User Story Agile Process](documentation/userstory44_testuserstories.png)
+
+</details>
+
+As a whole, I found using the Agile Methodology of great benefit as it helped me organise the development of my project better.  Although I didn't give myself a specific duration for each iteration, it helped me also organise my time better. It also felt good to tick off the Tasks while working on a User Story and placing it in the 'Done' column when it was completed. 
 
 [Back To Top](#table-of-contents)
 
@@ -52,9 +102,45 @@ ____
 ## User Experience (UX)
 
 ### Strategy / Site Goals
+
+Tailor's Thimble aims to entice and onboard potential clients.  It displays information about the small tailoring business and the type of services they offer, as well as the process they take on each individual garment. It provides information about the experience of the Master Tailor and provides potential and returning clients a way to easily schedule appointments for their bespoke process. 
+
+The target audience are adults who need tailored garments for their occasions and/or for their children's occasions.  It is also aimed at business people who prefer to have original and uniquely tailored suits.  It is also suited for professionals in need of formal wear and businesses which require staff uniforms.   
+
 ### Scope / User Stories
 
-GitHub Issues were used to record the user stories. These were categorised into different Epics/Milestones and further labelled with story points and MoSCoW method of prioritisation.  
+This section aims to determine what a user would expect from interacting with the website. Each User Story was recorded in GitHub Issues as noted in the [Agile Methodology](#agile-methodology) section above.  Scenarios of actions each type of user including the business owner wishes to take are listed below. These were categorised into 9 Epics listed in the [Agile Methodoly](#agile-methodology) section, for the development of the project.
+
+**As a Business Owner**
+
+* I would like users visiting our site to land on the homepage so that they can learn about us and the services we provide.
+* I would like the homepage to have a Call to Action so that users are encouraged to schedule an appointment early on.
+* I can display some of the services we provide on the Homepage so that it gives the user an idea of the type of services we offer.
+* I can login, view customers' information and appointments scheduled so that I can contact them back for approval/dismissal.
+
+
+**As a User**
+
+* I can see the website's logo and links at the top of the page so that I can easily navigate to other parts of the website.
+* I can see contact details, shop address and social links at the bottom of the website so that I can follow/contact the business owner and the website creator.
+* I can learn about the people behind the business so that I can make up my mind if I would feel comfortable using their service.
+* I can easily navigate to the About page so that I can find more detailed information about the people behind the business and how they operate.
+* I can easily navigate to the Services page so that I can find more information about the kind of work the business caters for.
+* I can register an account so that I can make an appointment with the Master Tailor.
+* I can update my profile information so that I can change my details when necessary.
+
+**As a Returning User**
+
+* I can use my username and password so that I can login to my user account.
+* I can log out of my account so that I can keep my details secure.
+* I can login to my profile so that I can access my information and view my details.
+
+**As a Developer**
+
+* I can add a favicon to the tab with website's title so that it gives users more visual feedback when looking at their tabs on their browser. 
+* I can display success and error messages upon form submission so that the user has a better experience with the site. 
+* I can automate user profile creation upon registration so that the admin doesn't have to do it manually every time a new user is registered.
+* I can have placeholder text in the profile form so that users have a better experience filling in their forms.
 
 ### Structure / Design Choices
 ### Skeleton / Wireframes
@@ -75,6 +161,14 @@ ____
 
 ## Technologies Used
 
+### Languages
+
+* [HTML5](https://www.w3schools.com/html/)
+* [CSS3](https://www.w3schools.com/css/css_intro.asp)
+* [Python](https://www.python.org/downloads/release/python-3811/)
+
+### Libraries & Frameworks
+
 * [Django 3.2.18](https://www.djangoproject.com/) - Free and open source Python Web Framework.
 * [Gunicorn 20.1.0](https://gunicorn.org/) - A Python WSGI HTTP server compatible with Django and used to run the project on Heroku.
 * [PostgreSQL 0.5.0](https://www.postgresql.org/) - A powerful, open-source object-relational database system.
@@ -84,10 +178,20 @@ ____
 * [SQLite3](https://docs.python.org/3/library/sqlite3.html) - The database provided by Django, used during development.
 * [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - A Framework for building responsive, mobile-fist sites.
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that helps control the rendering behavior of Django forms in a very elegant and DRY way. 
+
+### Tools
+
 * [W3C Validator](https://validator.w3.org/) - A validator which checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, etc.
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - A validator which checks the validity of CSS code. 
 * [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) - Highlights syntactical and stylistic problems in Python source code.
 * [Autoprefixer CSS Online](https://autoprefixer.github.io/) - A PostCSS plugin which parses CSS and adds vendor prefixes. 
+* [Am I responsive](https://ui.dev/amiresponsive) - For responsive visuals of the website
+* [TinyPNG](https://tinypng.com/) - Compresses images to reduce the file size
+* [TinyURL](https://tinyurl.com/app/) - Shortens links
+* [Pexels](https://www.pexels.com/) - Stock Photos
+* [Unsplash](https://unsplash.com/) - Stock Photos 
+* [BrowserStack](https://www.browserstack.com/) - App and Browser Testing
+
 
 [Back To Top](#table-of-contents)
 
@@ -216,8 +320,31 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 * **Services Images**
 
     Problem: At screen sizes > 1200px images are not scaling up equally. I have checked that all images have the same classes, and tried adding some media queries with width specified, however the problem persists and can't pinpoint why this is happening.  This is effecting the images to center properly on the page. 
+    
     Possible Solution: I will need to re-write this section in order to make them scale up equally.  Possibly using flex-grow or having an image srcset to size up the images at the different screen size.
+    
     Solved: Due to another bug I noticed during responsiveness testing, I managed to solve this by giving them a larger column width at the different breakpoints and removing the 'row' element they were in.  This gave each of the columns an equal width and the images were then allowed to scale up equally.
+
+* **Horizontal Scroll**
+    
+    Problem: While testing responsiveness, I noticed that on certain devices there was some horizontal scroll on the pages which gave the navbar a wider width than the page itself.  This made the navbar-toggler and the right-side links move too much to the right. At first I thought it was a problem with the navbar, however it worked perfectly on the Home page.  So I decided that the problem must be within the pages themselves.
+
+    Solution: Using a process of elimination, I commented out one by one the divs on the About page to start with.  Eventually, I found out the culprit to this issue which was the `<div>` with the row class.  When I removed this `<div>`, the horizontal scroll vanished and the nav-toggler was back in it's rightful space.  The parent of the row `<div>` was as by Bootstrap's recommendations a `<div>` with a container class.  However, I had added a custom class with this container to add padding at the top and bottom of the container. Resulting in the following:
+
+    ![Cause of horizontal scroll](documentation/horizontal-scroll_cause.png)
+
+    I only realised this mistake after I had gone through all the pages and deleted the row `<div>`. What I should have probably done was use the bootstrap's container to add the top and bottom padding. Because of time contraints I opted to leave things as they were this time and note this here for future referral.  
+
+    **Signup redirect**
+
+    Problem: While testing User Story [#16](https://github.com/MoniPar/tailors_thimble/issues/16), I discovered that after new user gets through signup via the Schedule Appointment button, they were being directed to the Appointments Page rather than the Profile page. 
+    Solution: I tried using `ACCOUNT_SIGNUP_REDIRECT_URL = '/profile/'` in settings.py, however this didn't seem to work.  After a quick search online, I came across this [thread](https://groups.google.com/g/django-users/c/7xEk0HOj_-E), which said to change it directly from the signup template by removing the if statement from this code
+    ```
+    {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    ```
+    and substituting the value of value in the input element with `/profile/`.  This worked and users registering via the appointment button are now directed to the Profile page after submitting their signup form. 
 
 </details>
 
@@ -231,7 +358,8 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
     * Phone field validation
 
     Problem: Issue with this regex `^[+][0-9\\s]+` is that it lets more than one whitespace in so user can submit a number like this "+33     333".  
-    Temporary solution: After several searches and attempts at moving the '\\s' around, I decided to go with no white space at all and used '^[+][0-9]+'.
+    Temporary solution: After several searches and attempts at moving the '\\s' around, I decided to go with no white space at all and used `^[+][0-9]+`.
+    Re-edit: Some users reported problems submitting their Profile form because it wasn't accepting their phone number.  This was because they were not putting in the + symbol.  I eventually added a tool tip to remind them to enter the + symbol followed by the country code and phone number.  I found another phone number regex [here](https://uibakery.io/regex-library/phone-number-python) which left the + symbol as optional. I adapted it to this `^\\+?[1-9][0-9]{10,17}$` which should be enough for most European numbers and definitely for Maltese numbers.  Eventually, I will look into adding an external module for a phone number field in order to take international numbers but for now this is hopefully enough.
 
 
 </details>
@@ -448,6 +576,11 @@ The following are links to the snippets of code I borrowed and adapted (cited in
 * Clean Date function in tailoring/forms.py adapted from [Stackoverflow](https://tinyurl.com/sm6mu2bv)
 * Footer adapted from [Responsive Bootstrap Footer by idesignSMF](https://tinyurl.com/3wrta8p5)
 
+Pages I referred to a lot:
+
+* [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+* [Bootstrap Documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+
 Other pages/questions I found useful:
 
 * Active Tag on Bootstrap with Django [Stackoverflow Question](https://stackoverflow.com/questions/32931436/active-tag-on-bootstrap-with-django)
@@ -456,13 +589,13 @@ Other pages/questions I found useful:
 * Linking an anchor tag in another page[Stackoverflow Question](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
 * Dynamic Page Titles [Forge](https://www.forgepackages.com/guides/page-titles/)
 * HTML Form Enctype Attribute [GeeksForGeeks](https://www.geeksforgeeks.org/html-form-enctype-attribute/)
-
+* Django QuerySet Field Lookups[W3Schools](https://www.w3schools.com/django/django_ref_field_lookups.php)
 
 ### Media
 
 * Tailor's Thimble logo and favicon designed by [Austen Donohoe | Circle Strafe Media](https://www.circlestrafemedia.com/)
 * Home Page Hero Image [Heng Films | Unsplash](https://unsplash.com/@hengfilms)
-* About CTA Image [Анна Хазова | Pexels](https://www.pexels.com/photo/happy-friends-and-newlywed-couple-celebrating-wedding-at-night-5005252/]
+* About CTA Image [Анна Хазова | Pexels](https://www.pexels.com/photo/happy-friends-and-newlywed-couple-celebrating-wedding-at-night-5005252/)
 * Formal Suits Photo [Juan Vargas | Pexels](https://www.pexels.com/photo/man-in-gray-suit-standing-beside-woman-in-green-dress-3664688/)
 * Fancy Dress Photo [JJ Jordan | Pexels](https://www.pexels.com/photo/man-and-woman-2447192/)
 * Graduation Gown Photo Photo [RODNAE Productions | Pexels](https://www.pexels.com/photo/a-man-wearing-black-toga-holding-rolled-certificate-while-smiling-at-the-camera-7713194/)
@@ -473,12 +606,6 @@ Other pages/questions I found useful:
 * Girl in Communion Dress Photo [Becerra Govea Photo](https://www.pexels.com/photo/a-pretty-girl-in-white-dress-leaning-on-the-wall-5906115/)
 * Profile page header image [Artem Podrez | Pexels](https://www.pexels.com/photo/wrinkled-silk-cloth-7232394/)
 * Profile page header image [Anete Lusina | Pexels](https://www.pexels.com/photo/background-of-smooth-rippled-brown-silk-fabric-6331032/)
-
-### Resources
-
-This is a list of free online resources, I found useful:
-
-* [TinyPNG](https://tinypng.com/) - compress photos/images
 
 [Back To Top](#table-of-contents)
 
@@ -493,5 +620,3 @@ ____
 [Back To Top](#table-of-contents)
 
 ____
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
