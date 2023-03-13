@@ -33,15 +33,13 @@ class UserProfileForm(forms.ModelForm):
     their profile information.
     """
     phone = forms.CharField(
-                        min_length=12,
-                        max_length=15,
                         required=True,
                         widget=forms.TextInput(
                             attrs={'class': 'form-control',
-                                   'pattern': '^[+][0-9]+',
+                                   'pattern': '^\\+?[1-9][0-9]{10,17}$',
                                    'placeholder': '+xxxxxxxxxxx',
-                                   'title': 'Country code followed by phone'
-                                            ' number'}
+                                   'title': '+ symbol followed by country code'
+                                            ' and phone number'}
                         )
     )
     event = forms.CharField(
