@@ -47,7 +47,7 @@ ____
 
 The plan for this project was carried out using Agile Methodology. GitHub Issues, which can be viewed [here](https://github.com/MoniPar/tailors_thimble/issues), were used to record the User Stories. These were categorised into 9 Epics/Milestones and further labelled with story points using the [Fibonacci Sequence](https://www.mathsisfun.com/numbers/fibonacci-sequence.html). 
 
-Each User Story contains Acceptance Criteria and Tasks which for lack of experience, I sometimes had to add after I did the process as I wasn't really sure what needed to be done to achieve the Acceptance Criteria needed.
+Each User Story contains Acceptance Criteria and Tasks which for lack of experience, I sometimes had to add after I did the process as I wasn't really sure what needed to be done to achieve the Acceptance Criteria I aimed for.
 
 Since this was my first project using this methodology and the Django framework, some of the estimated story points were way off. In practice, a few of these tasks were completed quicker than anticipated while others took much longer. 
 
@@ -56,7 +56,7 @@ The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project
 I tried to keep the scope as minimal as possible for this project so any extra features that I had in mind, have not been added to the User Stories. It is important to note here, that by writing only enough User Stories to reach the MVP, my iterations were not as well balanced as recommended and they mostly consisted of 'Must Have's.    
 
 <details>
-<summary>Instance of Kanban Board and examples of an Epic and User Story</summary>
+<summary>Instance of Kanban Board, screenshots of Epics and User Story</summary>
 
         Kanban Board at this Iteration
 ![Kanband: Epic - Testing and Documentation](documentation/writing_docs_kanboard.png)
@@ -127,13 +127,16 @@ This section aims to determine what a user would expect from interacting with th
 * I can easily navigate to the About page so that I can find more detailed information about the people behind the business and how they operate.
 * I can easily navigate to the Services page so that I can find more information about the kind of work the business caters for.
 * I can register an account so that I can make an appointment with the Master Tailor.
-* I can update my profile information so that I can change my details when necessary.
 
 **As a Returning User**
 
 * I can use my username and password so that I can login to my user account.
 * I can log out of my account so that I can keep my details secure.
 * I can login to my profile so that I can access my information and view my details.
+* I can update my profile information so that I can change my details when necessary.
+* I can schedule an appointment with the Master Tailor so that I can avail of their service.
+* I can login and view my appointments so that I can check if my appointments have been approved.
+* I can delete my upcoming appointment so that I can reschedule at a later date.
 
 **As a Developer**
 
@@ -141,6 +144,7 @@ This section aims to determine what a user would expect from interacting with th
 * I can display success and error messages upon form submission so that the user has a better experience with the site. 
 * I can automate user profile creation upon registration so that the admin doesn't have to do it manually every time a new user is registered.
 * I can have placeholder text in the profile form so that users have a better experience filling in their forms.
+* I can restrict access on users' appointments so that only the logged in user and admin are able to access, update and delete said user's appointments.
 
 ### Structure / Design Choices
 ### Skeleton / Wireframes
@@ -346,6 +350,17 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
     ```
     and substituting the value of value in the input element with `/profile/`.  This worked and users registering via the appointment button are now directed to the Profile page after submitting their signup form. 
 
+    **Appointment List order**
+
+    Problem: The appointments listed on the Appointments Page were not being sorted by date.  I have written `ordering = 'date'` in the AppointmentList view in tailoring/views.py.  This code didn't seem to be working as I tested it using other fields and non-existent fields and the order of the appointments did not change, nor did it give me any errors. 
+
+    Solution: Looking back at the Django documentation, I found out that specifying the order in the inner class meta of the model in models.py is a better way of doing this.  So this code was added to the Appointment Model in tailoring/models.py which ordered the appointments by date.
+    ```
+    class Meta:
+        ordering = ['date']
+    ```
+
+
 </details>
 
 <details>
@@ -407,8 +422,7 @@ With the database created, it now needs to be connected with the project.  Certa
 
 ### Modify settings.py 
 
-It is important to make the Django project awa
-re of the env.py file and to connect the workspace to the new database. 
+It is important to make the Django project aware of the env.py file and to connect the workspace to the new database. 
 
 1. Open up the settings.py file and add the following code. The if statement acts as a safety net for the application in case it is run without the env.py file.
 ```
@@ -441,7 +455,7 @@ else:
     }
 ```
 
-**NOTE**: If at the start of the development you are using the local db.sqlite3, make sure to add it to the .gitignore file, so as not to make the mistake of pushing it to your repository. 
+**NOTE**: If at the start of the development you are using the local db.sqlite3, make sure to add it to the .gitignore file, so as not to make the mistake of pushing it to your repository.  
 
 5. Save and migrate this database structure to the newly connected postgreSQL database.  Run the migrate command in your terminal
 `python3 manage.py migrate`

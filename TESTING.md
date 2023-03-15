@@ -612,6 +612,67 @@ As a Developer, I can have placeholder text in the profile form so that users ha
 |:--------------------:|:--------:| -------- |
 | Empty fields have helpful hints to guide users | Updated | Tooltips were also added to give a little more guidance |
 
+### Epic 8 - Appointments
+
+* User Story [#25](https://github.com/MoniPar/tailors_thimble/issues/25)
+
+As a Business Owner, I can login and view appointments scheduled by my customers so that I can contact them back for approval/dismissal.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| Admin has the facility to view the Appointments table in the Admin page | Achieved | Admin/the business owner can access the admin page through the url and login using their superuser credentials |
+| Appointment table displays the appointment type, date and time, the date submitted, the state of approval and any comments left by the customer | Achieved | The appointment table also displays the customer's username | 
+| Admin can approve or dismiss appointments set by the customer | Achieved | Admin/Business owner can approve appointments or leave them unchecked |
+
+* User Story [#26](https://github.com/MoniPar/tailors_thimble/issues/26)
+
+As a Returning User, I can login and view my appointments so that I can check if my appointments have been approved.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| User can see their past and future appointments listed | Achieved | A user who has already created appointments can see them listed on the Appointments page |
+| User can check if their future appointments have been approved | Achieved | |
+
+* User Story [#27](https://github.com/MoniPar/tailors_thimble/issues/27)
+
+As a Returning User, I can schedule an appointment with the Master Tailor so that I can avail of their services.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| Logged in user can click on the Add Appointment button to book a new appointment | Achieved | |
+| Appointment form has the necessary fields to complete appointment schedule | Achieved | Appointment form has fields for Type, Date, Time, and optional Comments |
+| Form has information to guide the user on how to schedule an appointment | Achieved | Form has also link that opens in another tab on the Process guidelines | 
+| Submit button directs users to the Appointments page which shows all scheduled appointments | Achieved | | 
+
+* User Story [#28](https://github.com/MoniPar/tailors_thimble/issues/28)
+
+As a Returning User, I can update my appointment so that I can make sure of my availability
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| User is directed to the Update form when they click on the Edit appointment button | Updated | In Appointment detail view, user is directed to the Update form when they click on the Update button |
+| Appointment Update form has fields for date/time and comments | Updated | Appointment Update form has fields for Type, Date, Time and optional comments |
+| User is directed back the their Appointment page after clicking the Submit button | Achieved | |
+
+* User Story [#29](https://github.com/MoniPar/tailors_thimble/issues/29)
+
+As a Returning User, I can delete my upcoming appointment so that I can reschedule at a later date.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| User can delete an appointment from the Appointment Detail page | Achieved | |
+| When user clicks on delete button, they are directed to a confirmation page with Delete and Cancel buttons | Achieved | Delete Confirmation page asks user if they are sure they want to delete this appointment |
+| If user clicks Cancel, they are brought back to the Appointment Detail page of the current appointment | Achieved | |
+| If user clicks Delete, the appointment is deleted and user is directed back to the Appointments page | Achieved | |
+
+* User Story [#30](https://github.com/MoniPar/tailors_thimble/issues/30)
+
+As a developer, I can restrict access on users' appointments so that only the logged in user and admin are able to access, update and delete said user's appointments.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| A 403 Forbidden is thrown when users try to access, other users appointments through the URL address bar | Achieved | |
+| The 403 page is customised so that navigation and footer are included in order for the user to be able to easily navigate to other parts of the website | Achieved | | 
 
 [Back To Top](#table-of-contents)
 
