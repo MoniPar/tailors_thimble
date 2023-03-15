@@ -20,6 +20,12 @@ class Appointment(models.Model):
     submitted = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
 
+    class Meta:
+        """
+        Innerclass of Appointment model, changes the behaviour of the fields
+        """
+        ordering = ['date']
+
     def __str__(self):
         """
         Returns a string representation

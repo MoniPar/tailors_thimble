@@ -42,8 +42,6 @@ class AppointmentList(LoginRequiredMixin, ListView):
     """
     model = Appointment
     context_object_name = 'appointments'
-    ordering = ['submitted']
-    # paginate_by = 6
 
     def get_queryset(self):
         """
