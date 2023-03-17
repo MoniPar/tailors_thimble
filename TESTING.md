@@ -421,6 +421,8 @@ _____
 
 ## User Story Testing
 
+As mentioned in the Agile Methodology Section in the [README](/README.md), User Stories were created in [GitHub Issues](https://github.com/MoniPar/tailors_thimble/issues) which guide the process for this project all the way from Setup to Testing.  Epics 1, 2 and 9 are not included in this section as they define Setup, Installation and Testing.
+
 ### Epic 3 - Home Page
 
 * User Story [#6](https://github.com/MoniPar/tailors_thimble/issues/6)
@@ -519,7 +521,7 @@ As a User, I can easily navigate to the Services page so that I can find more in
 
 * User Story [#15](https://github.com/MoniPar/tailors_thimble/issues/15)
 
-As a Business Owner, I can login, view customers' info and appointments scheduled so that I can contact them back for approval/dismissal.
+As a Business Owner, I have access to the database so that I can manage customer details and appointments.
 
 | Acceptance Criteria  | Test     | Comments |
 |:--------------------:|:--------:| -------- |
@@ -612,6 +614,17 @@ As a Developer, I can have placeholder text in the profile form so that users ha
 |:--------------------:|:--------:| -------- |
 | Empty fields have helpful hints to guide users | Updated | Tooltips were also added to give a little more guidance |
 
+* User Story [#37](https://github.com/MoniPar/tailors_thimble/issues/37)
+
+As a Developer, I can direct the user to enter a country code so that they can be reached even if they live abroad.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| Phone field has a hint to let user know they need to enter the country code and phone number | Achieved | |
+| Phone field accepts a '+' sign and digits | Achieved | |
+| Form does not submit with an entry less then 10 and more than 17 characters, alpha characters and symbols other than a '+' at the start | Achieved | |
+
+
 ### Epic 8 - Appointments
 
 * User Story [#25](https://github.com/MoniPar/tailors_thimble/issues/25)
@@ -646,7 +659,7 @@ As a Returning User, I can schedule an appointment with the Master Tailor so tha
 
 * User Story [#28](https://github.com/MoniPar/tailors_thimble/issues/28)
 
-As a Returning User, I can update my appointment so that I can make sure of my availability
+As a Returning User, I can update my appointment so that I can make sure of my availability.
 
 | Acceptance Criteria  | Test     | Comments |
 |:--------------------:|:--------:| -------- |
@@ -673,6 +686,56 @@ As a developer, I can restrict access on users' appointments so that only the lo
 |:--------------------:|:--------:| -------- |
 | A 403 Forbidden is thrown when users try to access, other users appointments through the URL address bar | Achieved | |
 | The 403 page is customised so that navigation and footer are included in order for the user to be able to easily navigate to other parts of the website | Achieved | | 
+
+* User Story [#31](https://github.com/MoniPar/tailors_thimble/issues/31)
+
+As a Developer, I can add an empty default choice in the Create Appointment form so that the user is alerted when trying to submit an appointment without selecting the type and time.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| The Appointment form displays '------' as default on the Choices fields | Achieved | |
+| When user tries to submit the form without selecting an appropriate choice, they are alerted to fill in the required fields | Achieved | | 
+| The form submits successfully when all required fields are filled in | Achieved | | 
+
+* User Story [#32](https://github.com/MoniPar/tailors_thimble/issues/32)
+
+As a Developer, I can add alert messages so that user is notified if their form has been submitted or an error has occurred.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| When a user creates an appointment and submits an alert shows up on the top of the page saying "Your appointment has been created successfully!" | Achieved | |
+| When a user updates an appointment and submits an alert shows up on the top of the page saying "Your appointment has been updated successfully!" | Achieved | |
+| When a user deletes an appointment and confirms, an alert shows up on the top of the page saying "Your appointment has been deleted!" | Achieved | |
+| When an error occurs and form is not submitted, user is notified with an alert message at the top | Partially Achieved | Alert is not displayed when user fails to select a value for Type or Time |
+
+* User Story [#34](https://github.com/MoniPar/tailors_thimble/issues/34)
+
+As a Developer, I can add a modal with the Process information so that user doesn't have to navigate back from the Services page to fill in their appointment form.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| The Process link in the Appointment create form opens up a modal with the information regarding the Bespoke Process | Changed | The Process link in the Appointment Create form opens up in a new tab with the information regarding the Bespoke Process |
+| The User reads this process and closes the modal to continue filling their form | Changed | The User reads this process and clicks on Appointment Create tab to continue filling their form |
+
+* User Story [#35](https://github.com/MoniPar/tailors_thimble/issues/35)
+
+As a Developer,  I can place validations on the datefield so that users are not allowed to pick dates in the past and dates /times that have already been booked.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| User is not allowed to schedule an appointment for date in the past | Achieved | |
+| User is not allowed to schedule an appointment for Sundays or Mondays | Achieved | | 
+| User is not allowed to schedule an appointment for a date and time that has already been booked | Achieved | |
+
+* User Story [#36](https://github.com/MoniPar/tailors_thimble/issues/36)
+
+As a Developer, I can restrict users from adding an appointment before they add their profile information so that the business owner is able access the profile information before confirming their appointment.
+
+| Acceptance Criteria  | Test     | Comments |
+|:--------------------:|:--------:| -------- |
+| User is not able to add an appointment unless the fields in the Profile table are filled in | Achieved | |
+| If user tries to add an appointment, they get a message saying to finish updating their profile first | Achieved | | 
+| The message has a link to their profile page | Achieved | |
 
 [Back To Top](#table-of-contents)
 

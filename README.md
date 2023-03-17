@@ -37,7 +37,7 @@ ____
 
 ## Overview
 
-Tailor's Thimble is a responsive mobile-first build website.  It is compatible with all current major browsers.  The website is built for educational purposes, using Bootstrap and the Django Framework. It gives users the ability to register for an account, add their requirements in their profile and schedule appointments with the Master Tailor. It includes user authentication and full CRUD functionality on appointments.   
+Tailor's Thimble is a responsive mobile-first build website.  It is compatible with all current major browsers.  The website is built for educational purposes, using Bootstrap and the Django Framework. It gives users the ability to register for an account, add their requirements in their profile and schedule appointments with the Master Tailor. It includes role-based permissions and full CRUD functionality on appointments.   
 
 [Back To Top](#table-of-contents)
 
@@ -51,9 +51,7 @@ Each User Story contains Acceptance Criteria and Tasks which for lack of experie
 
 Since this was my first project using this methodology and the Django framework, some of the estimated story points were way off. In practice, a few of these tasks were completed quicker than anticipated while others took much longer. 
 
-The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project-framework/moscow-prioririsation.html) was also used, classifying each User Story as a 'Must Have', 'Should Have' or 'Could Have'. Some 'Could Have's didn't make it into the project and were left in the Backlog for a future date. 
-
-I tried to keep the scope as minimal as possible for this project so any extra features that I had in mind, have not been added to the User Stories. It is important to note here, that by writing only enough User Stories to reach the MVP, my iterations were not as well balanced as recommended and they mostly consisted of 'Must Have's.    
+The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project-framework/moscow-prioririsation.html) was also used, classifying each User Story as a 'Must Have', 'Should Have' or 'Could Have'. Some 'Could Have's didn't make it into the project and were left in the Backlog for a future iteration. It is important to note here, that by writing only enough User Stories to reach the Minimum Viable Product(MVP), 'Won't Have' weren't included at this time.    
 
 <details>
 <summary>Instance of Kanban Board, screenshots of Epics and User Story</summary>
@@ -86,7 +84,7 @@ I tried to keep the scope as minimal as possible for this project so any extra f
 ![Epic Appointments](documentation/epic8_appts.png)
 
         Epic 9 - Testing & Documentation
-![Epic Testing & Documentation](documentation/)
+![Epic Testing & Documentation](documentation/epic9_testndoc.png)
 
         A User Story I am working on
 ![User Story Agile Process](documentation/userstory44_testuserstories.png)
@@ -107,48 +105,205 @@ Tailor's Thimble aims to entice and onboard potential clients.  It displays info
 
 The target audience are adults who need tailored garments for their occasions and/or for their children's occasions.  It is also aimed at business people who prefer to have original and uniquely tailored suits.  It is also suited for professionals in need of formal wear and businesses which require staff uniforms.   
 
+___
+
 ### Scope / User Stories
 
-This section aims to determine what a user would expect from interacting with the website. Each User Story was recorded in GitHub Issues as noted in the [Agile Methodology](#agile-methodology) section above.  Scenarios of actions each type of user including the business owner wishes to take are listed below. These were categorised into 9 Epics listed in the [Agile Methodoly](#agile-methodology) section, for the development of the project.
+This section aims to determine what a user would expect from interacting with the website. Each User Story was recorded in [GitHub Issues](https://github.com/MoniPar/tailors_thimble/issues).  Scenarios of actions each type of user including the business owner wishes to take are listed below. These were categorised into 6 Epics listed in the [Agile Methodoly](#agile-methodology) section, for the development of the project. Developer User Stories were also added to this section. 
 
 **As a Business Owner**
 
-* I would like users visiting our site to land on the homepage so that they can learn about us and the services we provide.
-* I would like the homepage to have a Call to Action so that users are encouraged to schedule an appointment early on.
-* I can display some of the services we provide on the Homepage so that it gives the user an idea of the type of services we offer.
-* I can login, view customers' information and appointments scheduled so that I can contact them back for approval/dismissal.
+* I would like users visiting our site to land on the homepage so that they can learn about us and the services we provide. [#6](https://github.com/MoniPar/tailors_thimble/issues/6) 
+* I would like the homepage to have a Call to Action so that users are encouraged to schedule an appointment early on. [#9](https://github.com/MoniPar/tailors_thimble/issues/9)
+* I can display some of the services we provide on the Homepage so that it gives the user an idea of the type of services we offer. [#11](https://github.com/MoniPar/tailors_thimble/issues/11)
+* I have access to the database so that I can manage customers' details and appointments. [#15](https://github.com/MoniPar/tailors_thimble/issues/15)
+*  I can login and view appointments scheduled by my customers so that I can contact them back for approval/dismissal. [#25](https://github.com/MoniPar/tailors_thimble/issues/25)
 
 
 **As a User**
 
-* I can see the website's logo and links at the top of the page so that I can easily navigate to other parts of the website.
-* I can see contact details, shop address and social links at the bottom of the website so that I can follow/contact the business owner and the website creator.
-* I can learn about the people behind the business so that I can make up my mind if I would feel comfortable using their service.
-* I can easily navigate to the About page so that I can find more detailed information about the people behind the business and how they operate.
-* I can easily navigate to the Services page so that I can find more information about the kind of work the business caters for.
-* I can register an account so that I can make an appointment with the Master Tailor.
+* I can see the website's logo and links at the top of the page so that I can easily navigate to other parts of the website. [#7](https://github.com/MoniPar/tailors_thimble/issues/7)
+* I can see contact details, shop address and social links at the bottom of the website so that I can follow/contact the business owner and the website creator. [#8](https://github.com/MoniPar/tailors_thimble/issues/8)
+* I can learn about the people behind the business so that I can make up my mind if I would feel comfortable using their service. [#10](https://github.com/MoniPar/tailors_thimble/issues/10)
+* I can easily navigate to the About page so that I can find more detailed information about the people behind the business and how they operate. [#13](https://github.com/MoniPar/tailors_thimble/issues/13) 
+* I can easily navigate to the Services page so that I can find more information about the kind of work the business caters for. [#14](https://github.com/MoniPar/tailors_thimble/issues/14)
+* I can register an account so that I can make an appointment with the Master Tailor. [#16](https://github.com/MoniPar/tailors_thimble/issues/16)
+
 
 **As a Returning User**
 
-* I can use my username and password so that I can login to my user account.
-* I can log out of my account so that I can keep my details secure.
-* I can login to my profile so that I can access my information and view my details.
-* I can update my profile information so that I can change my details when necessary.
-* I can schedule an appointment with the Master Tailor so that I can avail of their service.
-* I can login and view my appointments so that I can check if my appointments have been approved.
-* I can delete my upcoming appointment so that I can reschedule at a later date.
+* I can use my username and password so that I can login to my user account. [#17](https://github.com/MoniPar/tailors_thimble/issues/17)
+* I can log out of my account so that I can keep my details secure. [#18](https://github.com/MoniPar/tailors_thimble/issues/18)
+* I can login to my profile so that I can access my information and view my details. [#19](https://github.com/MoniPar/tailors_thimble/issues/19)
+* I can update my profile information so that I can change my details when necessary. [#23](https://github.com/MoniPar/tailors_thimble/issues/23)
+* I can schedule an appointment with the Master Tailor so that I can avail of their service. [#27](https://github.com/MoniPar/tailors_thimble/issues/27)
+* I can view my appointments so that I can check if my appointments have been approved. [#26](https://github.com/MoniPar/tailors_thimble/issues/26)
+* I can update my appointment so that I can make sure of my availability. [#28](https://github.com/MoniPar/tailors_thimble/issues/28)
+* I can delete my upcoming appointment so that I can reschedule at a later date. [#29](https://github.com/MoniPar/tailors_thimble/issues/29)
+
+The following User Stories were used to implement features which make the website run more smoothly and give the users a better experience using the website. 
 
 **As a Developer**
 
-* I can add a favicon to the tab with website's title so that it gives users more visual feedback when looking at their tabs on their browser. 
-* I can display success and error messages upon form submission so that the user has a better experience with the site. 
-* I can automate user profile creation upon registration so that the admin doesn't have to do it manually every time a new user is registered.
-* I can have placeholder text in the profile form so that users have a better experience filling in their forms.
-* I can restrict access on users' appointments so that only the logged in user and admin are able to access, update and delete said user's appointments.
+* I can add a favicon to the tab with website's title so that it gives users more visual feedback when looking at their tabs on their browser. [#12](https://github.com/MoniPar/tailors_thimble/issues/12) 
+* I can display success and error messages upon form submission so that the user has a better experience with the site. [#22](https://github.com/MoniPar/tailors_thimble/issues/22)
+* I can automate user profile creation upon registration so that the admin doesn't have to do it manually every time a new user is registered. [#21](https://github.com/MoniPar/tailors_thimble/issues/21)
+* I can have placeholder text in the profile form so that users have a better experience filling in their forms. [#24](https://github.com/MoniPar/tailors_thimble/issues/24)
+* I can direct the user to enter a country code so that they can be reached even if they live abroad. [#37](https://github.com/MoniPar/tailors_thimble/issues/37)
+* I can restrict access on users' appointments so that only the logged in user and admin are able to access, update and delete said user's appointments. [#30](https://github.com/MoniPar/tailors_thimble/issues/30)
+* I can add an empty default choice in the Create Appointment form so that the user is alerted when trying to submit an appointment without selecting the type and time. [#31](https://github.com/MoniPar/tailors_thimble/issues/31)
+* I can place validations on the datefield so that users are not allowed to pick dates in the past and dates/times that have already been booked. [#35](https://github.com/MoniPar/tailors_thimble/issues/35)
+* I can restrict users from adding an appointment before they add their profile information so that the business owner is able access the profile information before confirming their appointment. [#36](https://github.com/MoniPar/tailors_thimble/issues/36)
+
+___
 
 ### Structure / Design Choices
+
+The website offers simplicity and consistency within its structure.  Its structure was designed to be responsive on screens from 320px up to 2560px. 
+
+The Navigation menu displays the Tailor's Thimble logo and a Hamburger button (on mobile) with links to the Home, About, Services, Registration and Login pages, for easy navigation. The Navigation menu is repeated across all pages including, the Profile Page and the Appointment Booking Pages. 
+
+The Footer displays social media links which open in a separate tab for ease of use. It also displays the shop's address, the opening hours and other means of contact. The footer is also repeated across all pages to keep the design uniform and for ease of access.
+
+The Home Page clearly delineates the purpose of the site with a large Hero which consists of the name of the business, a slogan and a call to action button.  Other information on the page is concise and links to the other pages of the website. 
+
+The About Page gives a more detailed description of the Master Tailor and the process he uses for his craft.  Images are used to illustrate the information specified in a neat and organised manner. Likewise, the Services Page, illustrates the types of services the business offers and redirects the users to the About Page for detailed information on the process used. Another call to action is displayed on both pages to encourage users to use the service.
+
+The Registration & Authentication Pages, also accessed through the Navigation Menu, welcome the users to the service and are simple, clear and conform with the standards used across the web. 
+
+The Profile Page, which is only available to registered users, acts also as a dashboard, where users can view and update their information.  It links up with the users Appointments Page via the Appointments button.
+
+The Appointments Page, can be reached through the Profile Page or through the Schedule Appointment button on the Home, About and Services Pages.  It lists the Appointments scheduled by the user.  It also has an Add Appointment button which links to the Create Appointment form. Each appointment is displayed as a card, with information about the appointment and a button for a more detailed view.  The detailed view provides means to update and delete the appointment.  
+
+<details>
+<summary>The Database Schema used for this project</summary>
+
+![Entity Relationship Diagram](documentation/erd.jpeg)
+
+Two custom models have been implemented in this project. 
+
+* **The Profile Model** has a one-to-one relationship with the Django's User Model and consists of:
+
+    - profile_id (PK)
+    - user_id (FK)
+    - first_name
+    - last_name
+    - email
+    - phone
+    - event
+    - event_date
+    - outfit_type
+
+* **The Appointment Model** has a one-to-many relationship with the Django's User Model and consists of:
+
+    - appointment_id (PK)
+    - user_id (FK)
+    - type
+    - date
+    - time
+    - comments
+    - submitted
+    - approved
+
+</details>
+
+___
+
 ### Skeleton / Wireframes
+
+Wireframes were first sketched with pen and paper. This method helped me with brainstorming, deciding the most essential parts for the website and getting a feel for the website as a whole. They were then wireframed in [Balsamiq](https://balsamiq.com/wireframes/) to give a closer indication of the design.  Through the design phase some elements were changed to allow for a better user experience.
+
+<details>
+
+<summary>Balsamiq Wireframes</summary>
+
+**Home**
+
+![Home mobile](documentation/wireframe-mobile_home.png)
+
+![Home desktop](documentation/wireframes-desktop_home.png)
+
+**About**
+
+![About mobile](documentation/wireframe-mobile_about.png)
+
+![About desktop](documentation/wireframes-desktop_about.png)
+
+**Services**
+
+![Services mobile](documentation/wireframe-mobile_services.png)
+
+![Services desktop](documentation/wireframes-desktop_services.png)
+
+**Register**
+
+![Register](documentation/wireframe-mobile_register.png)
+
+**Login**
+
+![Login](documentation/wireframe-mobile_login.png)
+
+**Logout**
+
+![Logout](documentation/wireframe-mobile_logout.png)
+
+**Profile**
+
+![Profile](documentation/wireframe-mobile_profile.png)
+
+**Appointments Page**
+
+![Appointments List mobile](documentation/wireframe-mobile_apptlist.png)
+
+![Appointments List desktop](documentation/wireframes-desktop_apptlist.png)
+
+**Create Appointment**
+
+![Appointment Form](documentation/wireframe-mobile_apptform.png)
+
+**Read Appointment/Appointment Detail**
+
+![Appointment Detail](documentation/wireframe-mobile_apptdetail.png)
+
+**Delete Appointment**
+
+![Appointment Delete](documentation/wireframe-mobile_apptdelete.png)
+
+</details>
+
+
+[Right click for Mobile Wireframes pdf](documentation/wireframes_mobile.pdf)
+
+[Right click for Desktop Wireframes pdf](documentation/wireframes_laptop.pdf)
+
+___
+
 ### Surface
+
+This section defines the visual language of the website.
+
+* Colour Scheme
+
+A Champagne and Black colour palette was chosen for this website. The combination with hues of brown and the sophistication of white is used to create a stylish look that gives the feel of luxury.  
+
+![Champagne and Black colour palette](documentation/colour-palette.png)
+
+[Canva](https://www.canva.com/colors/color-palette-generator/) was used to generate the above palette.
+
+The shade of black was used for the footer and the text.  It was also used to create contrast for the Bespoke Process Menu links on the About page.
+
+Pewter was used for the Navigation. It is a very light and pretty shade of gray which created good contrast against the hero image on the Home page.
+
+Champagne and hues of brown were used for the buttons, making them jump out against the darker images and the white background of the cards respectively.
+
+* Typography
+
+[Google Fonts](https://fonts.google.com/) Barlow and Titillium Web were used to create this website.  They are both sans-serif fonts and offer high-readability.
+
+* Icons
+
+[Font Awesome](https://fontawesome.com/) social media icons were used for the Footer.  They are used as interactive links and have an aria-label which gives the relevant information to screen readers to read out to the users. 
+
 
 [Back To Top](#table-of-contents)
 
@@ -157,6 +312,8 @@ ____
 ## Features
 
 ### Existing Features
+
+
 ### Future Features
 
 [Back To Top](#table-of-contents)
@@ -173,27 +330,37 @@ ____
 
 ### Libraries & Frameworks
 
-* [Django 3.2.18](https://www.djangoproject.com/) - Free and open source Python Web Framework.
-* [Gunicorn 20.1.0](https://gunicorn.org/) - A Python WSGI HTTP server compatible with Django and used to run the project on Heroku.
-* [PostgreSQL 0.5.0](https://www.postgresql.org/) - A powerful, open-source object-relational database system.
-* [Pyscopg2 2.9.5](https://www.psycopg.org/docs/) - A PostgreSQL database adapter for Python.
-* [Cloudinary](https://cloudinary.com/) - A persistent file store for media.
-* [Heroku](https://www.heroku.com) - A cloud platform as a service.
-* [SQLite3](https://docs.python.org/3/library/sqlite3.html) - The database provided by Django, used during development.
-* [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - A Framework for building responsive, mobile-fist sites.
-* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that helps control the rendering behavior of Django forms in a very elegant and DRY way. 
+* [Django 3.2.18](https://www.djangoproject.com/) - Free and open source Python Web Framework
+* [Gunicorn 20.1.0](https://gunicorn.org/) - A Python WSGI HTTP server compatible with Django and used to run the project on Heroku
+* [PostgreSQL 0.5.0](https://www.postgresql.org/) - A powerful, open-source object-relational database system
+* [Pyscopg2 2.9.5](https://www.psycopg.org/docs/) - A PostgreSQL database adapter for Python
+* [Cloudinary](https://cloudinary.com/) - A persistent file store for media
+* [Heroku](https://www.heroku.com) - A cloud platform as a service
+* [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL database hosting service
+* [SQLite3](https://docs.python.org/3/library/sqlite3.html) - The database provided by Django
+* [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - A Framework for building responsive, mobile-fist sites
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that helps control the rendering behavior of Django forms in a very elegant and DRY way 
 
 ### Tools
 
+* [GitPod](https://www.gitpod.io/) - Cloud development environment used
+* [GitHub](https://github.com/) - Cloud based git repository used
 * [W3C Validator](https://validator.w3.org/) - A validator which checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, etc.
-* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - A validator which checks the validity of CSS code. 
-* [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) - Highlights syntactical and stylistic problems in Python source code.
-* [Autoprefixer CSS Online](https://autoprefixer.github.io/) - A PostCSS plugin which parses CSS and adds vendor prefixes. 
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - A validator which checks the validity of CSS code
+* [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) - Highlights syntactical and stylistic problems in Python source code
+* [Chrome DevTools and Lighthouse](https://developer.chrome.com/docs/devtools/) - Web Developer Tools
+* [Autoprefixer CSS Online](https://autoprefixer.github.io/) - A PostCSS plugin which parses CSS and adds vendor prefixes 
 * [Am I responsive](https://ui.dev/amiresponsive) - For responsive visuals of the website
+* [CanIUse](https://caniuse.com/) - Browser support tables for modern web technologies
 * [TinyPNG](https://tinypng.com/) - Compresses images to reduce the file size
 * [TinyURL](https://tinyurl.com/app/) - Shortens links
 * [Pexels](https://www.pexels.com/) - Stock Photos
 * [Unsplash](https://unsplash.com/) - Stock Photos 
+* [Canva](https://www.canva.com/colors/color-palette-generator/) - Colour Palette Generator
+* [Google Fonts](https://fonts.google.com/) - Fonts
+* [Font Awesome](https://fontawesome.com/) - Icons
+* [Balsamiq](https://balsamiq.com/wireframes/) - Low Fidelity Wireframes
+* [LucidChart](https://www.lucidchart.com/) - Entity Relationship Diagram
 * [BrowserStack](https://www.browserstack.com/) - App and Browser Testing
 
 
@@ -373,9 +540,16 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
     * Phone field validation
 
     Problem: Issue with this regex `^[+][0-9\\s]+` is that it lets more than one whitespace in so user can submit a number like this "+33     333".  
+    
     Temporary solution: After several searches and attempts at moving the '\\s' around, I decided to go with no white space at all and used `^[+][0-9]+`.
-    Re-edit: Some users reported problems submitting their Profile form because it wasn't accepting their phone number.  This was because they were not putting in the + symbol.  I eventually added a tool tip to remind them to enter the + symbol followed by the country code and phone number.  I found another phone number regex [here](https://uibakery.io/regex-library/phone-number-python) which left the + symbol as optional. I adapted it to this `^\\+?[1-9][0-9]{10,17}$` which should be enough for most European numbers and definitely for Maltese numbers.  Eventually, I will look into adding an external module for a phone number field in order to take international numbers but for now this is hopefully enough.
+    
+    Re-edit: Some users reported problems submitting their Profile form because it wasn't accepting their phone number.  This was because they were not putting in the + symbol.  I eventually added a tool tip to remind them to enter the + symbol followed by the country code and phone number.  I found another phone number regex [here](https://uibakery.io/regex-library/phone-number-python) which left the + symbol as optional. I adapted it to this `^\\+?[1-9][0-9]{10,17}$` which should be enough for most European numbers and definitely for Maltese numbers.  Eventually, I will look into adding an external module for a phone number field in order to take international numbers.
 
+    * Choices Field no error messages
+
+    Problem: An alert message at the top of the page is not being triggered when user tries to submit the Appointment Create form without selecting a value for the Type and/or Time fields. 
+
+    Temporary solution: Due to time constraints, this bug has not yet been resolved. At the moment validation prevents user from submitting the form and displays a tooltip pointing out that an item from the list must be selected.     
 
 </details>
 

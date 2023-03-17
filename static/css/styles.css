@@ -101,7 +101,7 @@ a { text-decoration: none; }
 }
 
 .btn-secondary {
-    background-color: #e4b795; 
+    background-color: #f7e7ce; 
     color: #201A1E;
     border: none;
     padding: .75em 1em;
@@ -112,14 +112,14 @@ a { text-decoration: none; }
 .btn-secondary:focus,
 .btn-secondary.focus {
     background-color: #201A1E;
-    color: #e4b795;
+    color: #f7e7ce;
     border: none;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active {
     -webkit-box-shadow: 0 0 0 .2rem rgba(209, 127, 64, .5);
             box-shadow: 0 0 0 .2rem rgba(209, 127, 64, .5);
-    background-color: #e4b795;
+    background-color: #f7e7ce;
     color:  #201A1E;
     border: none;
 }
