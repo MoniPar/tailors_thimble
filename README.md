@@ -313,8 +313,585 @@ ____
 
 ### Existing Features
 
+**Header & Navigation**
+
+Featured on all pages, the fully responsive header includes:
+
+* A link on the Logo which brings the user to the home page.
+* A hamburger button on mobile which opens up a navigation list with links to the Home, About, Services, Register and Login pages. This helps reduce the clutter on the header by keeping the page links neatly stowed away until the user navigates to the hamburger button. The links have a hover and focus effect to help the user identify them as links.
+* Links to the Home, About, Services, Register and Login pages on tablet and desktop which help the user to easily navigate from page to page without having to revert back to the previous page via the back button. The link to the current page is darker to help the user identify the page they are on.
+* The last two links change depending on the user's status. If the user is not logged, in the Register and Login links are displayed, while the Profile and Logout links are displayed if the user is logged in.
+* The header is fixed to the top so that the user always has access to the navigation links.
+
+<details>
+
+<summary>Click to view screenshots of Navigation features</summary>
+
+        Navigation closed on mobile  
+![Header on mobile closed](documentation/nav_closed-mobile.png)
+
+        Navigation open on mobile
+![Header on mobile open](documentation/nav_open_mobile.png)
+
+        Navigation open for logged user mobile
+![Header on mobile logged user](documentation/nav_open-logged-mobile.png)
+
+        Navigation on tablets & desktops
+![Header on tablet](documentation/nav_tablet.png)
+
+        Navigation for logged user on tablets & desktops
+![Header on tablet logged user](documentation/nav-logged_tablet.png)
+
+</details>
+
+<br>
+
+**Footer**
+
+Featured on all pages, the responsive footer is valuable to the users as it encourages them to get in touch via phone or email if they prefer that method of contact and it also allows the users to keep connected via social media. It includes:
+* The business's address and a small table with opening hours.
+* Contact details are links which direct user to the relevant apps. On mobile the telephone number when clicked will bring up a call feature, while the email address will open up an email app on tablet or desktop as well.
+* Social links open in a new tab so that users are not directed away from the website. 
+* Copyright has a link to the creator's LinkedIn page, which also opens in a new tab.
+* All links have a hover and focus effect to help users identify them as links.
+* All links are labelled so that Screen readers are able to read them.
+
+<details>
+
+<summary>Click to view screenshots of Footer features</summary>
+
+        Footer on mobile with hover on phone number
+![Footer on mobile](documentation/footer-mobile.png)
+
+        Footer on iPhone 6S with call feature
+![Footer on mobile call](documentation/footer-call_mobile.jpg)
+
+        Footer on tablet with focus on facebook and hover on twitter icons
+![Footer on tablet with focus and hover effects](documentation/footer-tablet_hoverfocus.png)
+
+        Footer on desktop with focus on email and hover on copyright link
+![Footer on desktop with focus and hover effects](documentation/footer-desktop_hoverfocus.png)
+
+</details>
+
+<br>
+
+**The Landing Page**
+
+The Home page hero on the landing page takes up more than half the viewport of any screen size. It includes a background image of a model wearing a suit with a an overlay of the business name and a slogan which captures the essence of the tailoring business.  It also acts a Call to Action(CTA) as it includes a bright button inviting the user to schedule an appointment.  The button has a hover and focus effect as demonstrated below. 
+
+<details>
+
+<summary>Click to view screenshots Landing page features</summary>
+
+        Landing page on mobile
+![Landing page on mobile](documentation/landing_mobile.png)
+
+        Landing page on tablet with hover effect
+![Landing page on tablet](documentation/landing_tablet_hover.png)
+
+        Landing page on desktop with focus effect
+![Landing page on desktop](documentation/landing_desktop_focus.png)
+
+</details>
+
+<br>
+
+**Home Page Content**
+
+The Home page displays further content which gives the user an outline of what this business is about. It includes:
+* Information on the Philosophy of the business with a mission statement.
+* A brief introduction to the Master Tailor with an image for tablets and desktops.
+* A sample of the services the business caters for with images corresponding to the type of service.
+* Links to find out more about the Master Tailor and the services offered are also included which direct the user to the About and the Services pages respectively. These links become underlined when in focus or are hovered on, in order to let the user know that they are links.
+
+<details>
+
+<summary>Click to view screenshots of other Home page content</summary>
+
+        Home content on mobile
+![Home articles on mobile](documentation/home_mobile.png)
+
+        Home content on tablet
+![Home articles on tablet](documentation/home_tablet.png)
+
+        Home content on laptop
+![Home articles on laptop](documentation/home_laptop.png)
+
+</details>
+
+<br>
+
+**About Page**
+
+The responsive About page, is reachable via the About link in the navigation bar as well as the link on the Home page 'Established' section. It includes the following:
+* More detailed information about the Master Tailor and an image of him in his workshop.  This helps a potential customer find out the level of experience the craftsman has.  It helps build a level of trust in the tailor's ability to complete a very well accomplished service.
+* A section on the process that the Tailor takes for every individual garment. The 6 steps of the process are accessible through an interactive menu which displays each step at a time. Each display includes an image and a paragraph on what happens at step of the process. This feature is valuable to the user as it demonstrates the order for the appointments to be scheduled in order to complete a bespoke outfit.
+* A CTA with a celebratory background image, inviting text and a champagne coloured button to entice the user to schedule an appointment.
+
+<details>
+
+<summary>Click to view screenshots of the About page</summary>
+
+        About section on mobile
+![About the master tailor on mobile](documentation/about-about_mobile.png)
+
+        The Bespoke Process section on mobile
+![Bespoke process on mobile](documentation/about-process_mobile.png)
+
+        CTA on mobile
+![Call to action on mobile](documentation/about-cta_mobile.png)
+
+        About section on tablet
+![About the master tailor on tablet](documentation/about-about_tablet.png)
+
+        Process and CTA on tablet
+![Bespoke process and CTA on tablet](documentation/about-processcta_tablet.png)
+
+        About page on laptop
+![About page on laptop](documentation/about_laptop.png)
+
+</details>
+
+<br>
+
+**Services Page**
+
+The responsive Services page is reachable via the Services link in the navigation as well as via the 'Our Services' section on the Home page.  It includes the following:
+* A section on some of the services provided by the business, displayed with images and titles. This gives the user proof of the variety of outfits the tailor can craft. They can admire his work through the images.
+* A brief section on how the service works with a link to the Bespoke Proceess on the About page. Once again the user is informed on the process taken for each outfit. It is briefly repeated here in case they missed it on the About page. This section also includes a highlighted note which urges customers to book their first appointment early.  
+* A CTA with a celebratory background image, inviting text and a champagne coloured button to entice the user to schedule an appointment.
+
+<details>
+
+<summary>Click to view screenshots of the Services page</summary>
+
+        Our Services on mobile
+![Our services section on mobile](documentation/services-services_mobile.png)
+
+        How the service works on mobile
+![How the service works section on mobile](documentation/services-cta_mobile.png)
+
+        Our Services on tablet
+![Our services section on tablet](documentation/services-services_tablet.png)
+
+        How the service works on tablet
+![How the service works section on tablet](documentation/services-cta_tablet.png)
+
+        Services page on desktop
+![Services page on desktop](documentation/services_desktop.png)
+
+</details>
+
+<br>
+
+**Registration**
+
+The website has the functionality for a user to register for an account.  
+* The fully responsive registration form can be accessed through the navigation bar or through the Schedule Appointment button on the Home, About and Services pages.  
+* It includes a small welcome message and reminds the first time user of the free consultation appointment. 
+* At the bottom it also has a link to the Login form for users who have already registered for an account. The link has a focus and hover effect. 
+* It uses django-allauth to provide all the settings for user authentication and includes the fields below.  The form was extended to also include fields for first and last name.
+
+    - Email
+    - Username (unique)
+    - First Name
+    - Last Name
+    - Password
+    - Password repeat
+
+* The Register page's styles are consistent with the rest of the website.  The form is submitted via the Register button at the bottom of the form. This button provides good contrast against the white background of the form.
+* When the users click on the Register button they are directed to the Profile page.
+* An alert message is displayed on the screen giving the user feedback about their registration.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![Registration Form](documentation/registration_tablet.png)
+
+![Successful sign in alert](documentation/successful-signin_tablet.png)
+
+</details>
+
+<br>
+
+**Login**
+
+A returning user can access the login form through the navigation bar or through the Schedule Appointment button on the Home, About and Services pages.  
+* It includes a small welcome back message and a link to the Registration form for users who have not yet registered for an account.
+* It uses django-allauth to provide all the settings for user authentication and includes the following fields:  
+
+    - Username
+    - Password
+
+* The responsive Login page is styled in a consistent manner with the rest of the website.  The form is submitted via the Login button at the bottom of the form. This button provides good contrast against the white background of the form.
+* When users click on the Login button they are directed to the Profile page.
+* An alert message is displayed at the top of the page giving the user feedback on their login.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![Login Form](documentation/login_phone.png)
+
+![Successful Log in alert](documentation/successful-login_tablet.png)
+
+</details>
+
+<br>
+
+**Logout**
+
+The website has functionality for a logged in user to log out.
+* The Logout form can only be accessed from the navigation bar and only when the user is logged in.
+* It confirms with the logged in user that they want to log out.
+* Its style is consistent with the rest of the webpage and it is fully responsive.
+* The Log Out button logs out the users and directs them back to the Home page. An alert message is displayed on the screen giving the user feedback on their logout. 
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![Logout Page on tablet](documentation/logout_tablet.png)
+
+![Successful logout alert](documentation/successful-signout_mobile.png)
+
+</details>
+
+<br>
+
+**Profile**
+
+The website gives the user the functionality to add information about their request through the Profile page.
+* A user must be logged in to access the Profile page.  The link is displayed on the navigation bar for the logged in user.
+* The Profile page lists information already gathered from the registration form. 
+* The style is consistent with the rest of the webpage and it is fully responsive.
+* It also consists of a form which has required fields for the following:
+    
+    - phone
+    - event
+    - event date
+    - outfit type
+
+* All fields have placeholders to guide the users in filling in the correct information.
+* The phone field has some basic validation which only accepts digits and a + symbol. It also has a tooltip to aid the user in filling in their phone number in the correct format.
+* The date field only accepts dates 30 days from today in order to allow enough time for the Bespoke process.
+* If the information entered does not pass validation, the Update button directs the user back to the Profile page.  Error messages or tooltips point out the fields not passed and an error alert is displayed on the top of the screen. 
+* If the information entered passes validation, the Update button directs the user back to the Home page. An alert message is displayed on the screen giving the user feedback on their successful update.
+* The next time the returning user visits their Profile page, the fields are pre-populated with the information they have entered and updated previously.
+* Logged in users can access their Appointments by clicking the Appointments button at the bottom of the Profile page.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Profile Page on tablet
+![Profile Page](documentation/profile_tablet.png)
+
+        Profile unsuccessful alert 
+![Profile unsuccessful alert message](documentation/unsuccessful-profile_tablet.png)
+
+        Phonefield invalid tooltip
+![Tooltip showing correct format](documentation/phonefield-validation.png)
+
+        Datefield invalid error message
+![Error message on Datefield](documentation/datefield_validation.png)
+
+        Profile updated success alert
+![Profile updated success alert message](documentation/successful-profile.png)
+
+        Profile Page Pre-populated for returning users
+![Profile page with pre-populated fields](documentation/profile-prepop_mobile.png)
+
+</details>
+
+<br>
+
+**Appointments**
+
+The website gives the user the functionality to create, view, update and delete appointments. All appointments are listed on the Appointments page.
+* A user must be logged in to access the Appointments page. If a user who is not logged in, clicks on the Schedule Appointment button on the Home, About, and Services pages, they are directed to the login page.
+* A logged in user can access the Appointments page through the Schedule Appointment button on the Home, About, and Services pages.  They can also access this page via the Appointments button on the Profile page. 
+* The style for the Appointment page is consistent with the rest of the webpage and it is fully responsive.
+* A logged in user who has not yet created an appointment will have a welcoming message with some information on how to add an appointment.
+* Appointment cards are displayed in order of date of appointment for users who have already scheduled appointments. 
+* The Appointments page has an Add Appointment button which will open the Create Appointment form.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Appointments page with no appointments
+![Welcoming message on appointments page with no appointments](documentation/appts-noappts_phone.png)
+
+        Appointments page with appointments on phone
+![Appointment cards in appointments page](documentation/appts_phone.png)
+
+        Appointments page with appointments on tablet
+![Appointment cards in appointments page tablet](documentation/appts_tablet.png)
+
+        Appointments page with appointments on desktop
+![Appointment cards in appointments page desktop](documentation/appts_desktop.png)
+
+</details>
+
+<br>
+
+**Appointment Create**
+
+The website gives the user the functionality to create an appointment via the Add Appointment button on the Appointments page.
+* A user must be logged in to access the Appointment Create page.
+* If a logged in user tries to add an appointment without first filling in the Profile form, they will get a notice directing them to first fill in the request form on their Profile page.  A link to their Profile page is included in the notice.  
+* The Appointment Create page includes some information and a link to the Bespoke Process defined on the About page. This opens in a new tab, so that the user is not led away from the Appointment Create page. 
+* The style is consistent with the rest of the webpage and it is fully responsive.
+* The form on the page consists of required fields for the following:
+    
+    - Type
+    - Date
+    - Time
+    - Comments (optional)
+
+* The Type and Time fields are dropdown fields, from which the user can select a value.
+* The Type field lists the 6 types of appointments needed to complete the Bespoke Process. 
+* The Date field only accepts dates later than 24 hours from now, dates that fall on Tuesdays, Wednesdays, Thursdays and Saturdays and dates that haven't already been booked out.
+* The Time field lists the 5 available times and is also validated along with the Date field so that it doesn't accept double bookings.
+* If the information entered does not pass validation, the Submit button directs the user back to the form.  Error messages point out the fields not passed and an error alert is displayed on the top of the screen. 
+* If the information entered passes validation, the Submit button directs the user back to the Appointments page, where they can view their newly created appointment. An alert message is displayed on the screen giving the user feedback on their successful creation.
+* The Appointments Create page also features a Back to Appointments button which directs the user back to the Appointments page.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        No profile information notice with hovered on link
+![Notice for no profile information](documentation/appts-noprofile_tablet.png)
+
+        Appointment Create Page
+![Appointment Create page with form](documentation/appt-create_tablet.png)
+
+        Datefield Validation - at least 24hrs 
+![Datefield error choose a date and time at least 24hrs from now](documentation/datetime_validation.png)
+
+        Datefield Validation - only Tue - Sat
+![Datefield error open only Tuesday to Saturday](documentation/datetime_validation-sunmon.png)
+
+        DateTime Validation - already booked
+![DateTime error this slot is already booked](documentation/time_validation.png)
+
+        Appointment create - error alert
+![Error alert displayed if Appointment is not created](documentation/unsuccessful-appt_mobile.png)
+
+        Appointment create - success alert
+![Success alert displayed if Appointment is created](documentation/successful-appt_mobile.png)
+
+</details>
+
+<br>
+
+**Appointment Detail**
+
+The website gives the user the functionality to read more details about their appointments via the View Appointment button on each appointment card in the Appointments page.
+* A user must be logged in to access the Appointment Detail page.
+* If a logged in user tries to access some other appointment that is not theirs through the URL, they get a 'Forbidden 403' page or an 'Error 404' if the appointment has been deleted.
+* When the user clicks on the View Appointment button on the appointment card in the Appointments page, they are directed to that specific Appointment's Detail page.
+* This consists of a card and a Back to Appointments button which directs the user back to the Appointment page. 
+* The Appointment Detail card includes:
+  - the Appointment Type, 
+  - the Date & Time of appointment, 
+  - some information about its approval, 
+  - a message about rescheduling, 
+  - an Update and a Delete button.
+* The information on the appointments approval changes between approved or not yet approved. View screenshots below for details. 
+* The style is consistent with the rest of the webpage and it is fully responsive.  All buttons have focus and hover effects.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Hovered View Appointment button on Appointment Card
+![Appointment card displaying the hovered view appointment button](documentation/appt-view.png)
+
+        Appointment Detail card not yet approved
+![Appointment detail card with no approval](documentation/appt-detail-notapproved_tablet.png)
+
+        Appointment Detail card approved
+![Appointment detail card with approval](documentation/appt-detail-approved_mobile.png)
+
+</details>
+
+<br>
+
+**Appointment Update**
+
+The website gives the user the functionality to edit an appointment via the Update button on the Appointment Detail card.
+* A user must be logged in to access the Appointment Update page.
+* If a logged in user tries to update somebody else's appointment, they will get a 'Forbidden 403' page.  
+* The Appointment Update page contains the Edit Appointment form and a Back to Appointments button.
+* The style is consistent with the rest of the webpage and it is fully responsive.
+* The form on the page consists of pre-populated required fields for the following:
+    
+    - Type
+    - Date
+    - Time
+    - Comments (optional)
+
+* The Type and Time fields are dropdown fields, from which the user can select a value.
+* The Type field lists the 6 types of appointments needed to complete the Bespoke Process. 
+* The Date field only accepts dates later than 24 hours from now, dates that fall on Tuesdays, Wednesdays, Thursdays and Saturdays and dates that haven't already been booked out.
+* The Time field lists the 5 available times and is also validated along with the Date field so that it doesn't accept double bookings.
+* If the information entered does not pass validation, the Update button directs the user back to the form.  Error messages point out the fields not passed and an error alert is displayed on the top of the screen. 
+* If the information entered passes validation, the Update button directs the user back to the Appointments page, where they can view their newly updated appointment. An alert message is displayed on the screen giving the user feedback on their successful update.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Appointment Update Page on mobile
+![Pre-populated Appointment update form](documentation/appt-update_mobile.png)
+
+        Datefield Validation - at least 24hrs 
+![Datefield error choose a date and time at least 24hrs from now](documentation/datetime_validation.png)
+
+        Datefield Validation - only Tue - Sat
+![Datefield error open only Tuesday to Saturday](documentation/datetime_validation-sunmon.png)
+
+        DateTime Validation - already booked
+![DateTime error this slot is already booked](documentation/time_validation.png)
+
+        Appointment update - error alert
+![Error alert displayed if Appointment is not updated](documentation/unsuccessful-appt-update_mobile.png)
+
+        Appointment update - success alert
+![Success alert displayed if Appointment is updated](documentation/successful-appt-update_mobile.png)
+
+</details>
+
+<br>
+
+**Appointment Delete**
+
+The website gives the user the functionality to delete an appointment via the Delete button on the Appointment Detail card.
+* A user must be logged in to access the Appointment Delete page.
+* If a logged in user tries to delete somebody else's appointment, they will get a 'Forbidden 403' page.  
+* The Appointment Delete page contains the Delete Appointment Card.
+* The style is consistent with the rest of the webpage and it is fully responsive.
+* The user is asked to confirm if they want to delete the appointment.
+* They can confirm deletion by clicking the Yes, Delete button which redirects them back to the Appointments Page.  A message is displayed telling the user that their appointment has been successfully deleted.
+* Or they can cancel the deletion by clicking on the Cancel button which will bring them back to the Appointment Detail page.  
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Appointment Delete Page
+![Card asking user to confirm deleting an appointment](documentation/appt-delete_mobile.png)
+
+        Appointment Deletion Alert Message
+![Alert message for successful deletion](documentation/successful-appt-delete_mobile.png)
+
+</details>
+
+<br>
+
+**Admin Panel**
+
+The website offers the business owner the functionality to view and interact with the database in the Django Admin panel.
+* The panel is reachable by typing `/admin/` at the end of the website's URL in the URL bar.
+* This brings the user to the Django Administration Login Page, where the user is asked for their Username and Password.  Only users with Superuser status and staff status are given permissions to login. 
+* The Superuser has permissions to add, change, delete and view everything while the user with the status of staff has only certain permissions granted by the Superuser.
+* The Tailor has been granted the Superuser status for now, in order to have full access of the Admin's Panel. 
+* The registered project's models can be viewed in the Admin Interface where tables for Appointments and Profiles are listed under the relevant app names. Accounts and Authentication & Authorisation list tables with information gathered through registration.  
+
+* The Superuser is able to search the Profile table by:
+        
+    - username (typing in any string of letters in the right order will give a match e.g. "min" will bring up Admin, HarryRosmini etc.) 
+
+    - date (searched in this format yyyy-mm-dd. e.g. "2024" will bring up all profiles with event dates for 2024, "2024-01" will bring up all profiles with event dates for January 2024 etc.) 
+        
+* Using the menu on the far right, the Superuser is also able to filter this table by:
+
+    - username
+    - event
+    - event date
+
+* The Superuser is able to search the Appointments table by:
+
+    - username (same as above)
+    - type (the type of appointment is searched by its constant:
+        - "con" for consultation
+        - "dd" for details & design
+        - "fab" for fabrics
+        - "ff" for first fitting
+        - "sf" for second fitting
+        - "pu" for pickup)
+
+    - date (this is the date scheduled for the appointment and is searched in this format like above: yyyy-mm-dd)
+
+* Using the menu on the far right, the Superuser is also able to filter this table by:
+
+    - date
+    - type
+    - approved
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Reaching the Admin Panel
+![URL to reach the Admin panel of the website](documentation/admin-url.png)
+
+        Django Administration Login Page
+![Django Admin login page](documentation/admin-login_tablet.png)
+
+        Django Administration Interface
+![Django Admin interface](documentation/admin-interface.png)
+
+        Django Administration Interface for Appointments
+![Full Admin interface with appointments table](documentation/admin-appts.png)
+
+</details>
+
+<br>
+
+**403, 404, 500 Pages**
+
+These templates were added to this project in order to give the user the functionality to return to the website by using the links in the navigation bar or the Back to Homepage button at the bottom of the page.
+* They are triggered when a user tries to access:
+    
+    - information that is not theirs - 403,
+    - information that does not exist anymore - 404,
+    - or if something has gone wrong with the server and cannot retrieve database - 500
+
+* The styles are consistent with the rest of the website and are also responsive.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+        Forbidden 403 page
+![Forbidden 403 page](documentation/403_mobile.png)
+
+        Error 404 page
+![Error 404 page](documentation/404_mobile.png)
+
+</details>
+
+<br>
+
+[Back To Top](#table-of-contents)
+____
 
 ### Future Features
+
+* Validation on Appointment Type field - At the moment a user can select any type of appointment in the wrong order and each type can be selected more than once. This will need to be set up so that users can only select each type once and in the right order for every Bespoke process.
+* Pagination on Appointments Page - This will need to be revisited depending on how the Business owner decides to deal with completed processes.  At the moment all appointments are listed in the Appointments page and ordered by date.  
+* Change Profile to Request or Dashboard - Some users found the Profiel page confusing as its functionality is not exactly the kind that they are used to. 
+* Add Testimonials Section - Give the users the functionality to add Testimonials to the page, preferably with images, so that other users can read them and get a better idea of the standard of work the business offers.
+* A Contact Page with contact form.
+* Email or phone verification
+* Forgot/Reset password functionality
+* Welcome, appointment reminder, texts or emails.
 
 [Back To Top](#table-of-contents)
 
