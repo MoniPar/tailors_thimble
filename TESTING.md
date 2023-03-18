@@ -548,7 +548,7 @@ As a Business Owner, I have access to the database so that I can manage customer
 
 | Acceptance Criteria  | Test     | Comments |
 |:--------------------:|:--------:| -------- |
-| Admin has the facility to login to the Admin Panel | Achieved | Business owner can access the Admin panel via url |
+| Admin has the functionality to login to the Admin Panel | Achieved | Business owner can access the Admin panel via url |
 | Admin can view, update and delete customers' details and appointments | Achieved | | 
 | Admin can approve or dismiss appointments set by the customer | Achieved | Admin can approve appointments. If customer has set the wrong appointment they are contacted by email or phone |  
 
@@ -791,9 +791,7 @@ Each feature listed in the [README.md](README.md) has been manually tested on th
 
 <details>
 
-<summary>Click to view Feature Testing tables</summary>
-
-**Header & Navigation**
+<summary>Header & Navigation</summary>
 
 * Unregistered / Not logged in User
 
@@ -819,8 +817,13 @@ Each feature listed in the [README.md](README.md) has been manually tested on th
 
 ALL TESTS PASS
 
+</details>
 
-**Footer**
+<br>
+
+<details>
+
+<summary>Footer</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -835,8 +838,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Landing Page**
+<br>
+
+<details>
+
+<summary>Landing Page</summary>
 
 * Unregistered User
 
@@ -855,8 +863,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Home Page Content**
+<br>
+
+<details>
+
+<summary>Home Page Content</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -870,8 +883,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**About Page**
+<br>
+
+<details>
+
+<summary>About Page</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -897,8 +915,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Services Page**
+<br>
+
+<details>
+
+<summary>Services Page</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -923,8 +946,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Registration**
+<br>
+
+<details>
+
+<summary>Registration</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -939,8 +967,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Login**
+<br>
+
+<details>
+
+<summary>Login</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -954,8 +987,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Logout**
+<br>
+
+<details>
+
+<summary>Logout</summary>
 
 * Logged in User
 
@@ -968,8 +1006,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Profile**
+<br>
+
+<details>
+
+<summary>Profile</summary>
 
 * Logged in User
 
@@ -991,8 +1034,13 @@ ALL TESTS PASS
 
 ALL TESTS PASS
 
+</details>
 
-**Appointments**
+<br>
+
+<details>
+
+<summary>Appointments</summary>
 
 * Logged in User
 
@@ -1018,8 +1066,13 @@ ALL TESTS PASS
 
 ALL TESTS PASSED
 
+</details>
 
-**Create Appointment**
+<br>
+
+<details>
+
+<summary>Create Appointment</summary>
 
 * Logged in User without Profile
 
@@ -1048,14 +1101,19 @@ ALL TESTS PASSED
 
 ALL TESTS PASSED
 
+</details>
 
-**View Appointment**
+<br>
+
+<details>
+
+<summary>View Appointment</summary>
 
 * Logged in User
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
-| View Appointment button on appointment card in Appointments page | click / tap / directs to View Appointment page with that appointment's card detail |
+| View Appointment button on appointment card in Appointments page | click / tap | directs to View Appointment page with that appointment's card detail |
 | Unauthorised viewing          | in the URL bar type in a different integer instead of the one present then hit enter | if id is not one of current logged in user's appointments a 403 or 404 page will be thrown |
 | View Appointment page displays appointment card and a Back to Appointments button | view | Displays same appointment with some extra text, an Update and a Delete button and a Back to Appointments button underneath the card |
 | Back to Appointments button   | hover on      | text colour changes, background colour changes, address shows appointments page |
@@ -1067,8 +1125,13 @@ ALL TESTS PASSED
 
 ALL TESTS PASSED
 
+</details>
 
-**Update Appointment**
+<br>
+
+<details>
+
+<summary>Update Appointment</summary>
 
 * Logged in User
 
@@ -1089,8 +1152,13 @@ ALL TESTS PASSED
 
 ALL TESTS PASSED
 
+</details>
 
-**Delete Appointment**
+<br>
+
+<details>
+
+<summary>Delete Appointment</summary>
 
 * Logged in User
 
@@ -1107,8 +1175,13 @@ ALL TESTS PASSED
 
 ALL TESTS PASSED
 
+</details>
 
-**Admin Panel**
+<br>
+
+<details>
+
+<summary>Admin Panel</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |
@@ -1125,8 +1198,13 @@ ALL TESTS PASSED
 
 ALL TESTS PASSED
 
+</details>
 
-**403, 404, 500 pages**
+<br>
+
+<details>
+
+<summary>403, 404, 500 pages</summary>
 
 | Feature                       | Action        | Effect                |
 | ----------------------------- | ------------- | --------------------- |

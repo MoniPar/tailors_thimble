@@ -3,7 +3,7 @@
 
 Tailor's Thimble is a full-stack, responsive website built for a fictional tailoring business for educational purposes only.    
 
-It provides the user value in learning about the business and the services it provides.  It has a booking facility which allows users to create an account, schedule, view, edit and delete appointments.  
+It provides the user value in learning about the business and the services it provides.  It has a booking facility which allows users to create an account and then schedule, view, edit and delete appointments.  
 
 ![Am I responsive image](documentation/site-responsiveness.png)
 
@@ -36,7 +36,7 @@ ____
 
 ## Overview
 
-Tailor's Thimble is a responsive mobile-first build website.  It is compatible with all current major browsers.  The website is built for educational purposes, using Bootstrap and the Django Framework. It gives users the ability to register for an account, add their requirements in their profile and schedule appointments with the Master Tailor. It includes role-based permissions and full CRUD functionality on appointments.   
+Tailor's Thimble is a responsive, mobile-first build website.  It is compatible with all current major browsers.  The website is built for educational purposes, using Bootstrap and the Django Framework. It gives users the ability to register for an account, add their requirements in their profile, and schedule appointments with the Master Tailor. It includes role-based permissions and full CRUD functionality on appointments.   
 
 [Back To Top](#table-of-contents)
 
@@ -46,11 +46,11 @@ ____
 
 The plan for this project was carried out using Agile Methodology. GitHub Issues, which can be viewed [here](https://github.com/MoniPar/tailors_thimble/issues), were used to record the User Stories. These were categorised into 9 Epics/Milestones and further labelled with story points using the [Fibonacci Sequence](https://www.mathsisfun.com/numbers/fibonacci-sequence.html). 
 
-Each User Story contains Acceptance Criteria and Tasks which for lack of experience, I sometimes had to add after I did the process as I wasn't really sure what needed to be done to achieve the Acceptance Criteria I aimed for.
+Each User Story contains Acceptance Criteria and Tasks which I sometimes had to add after I did the process, as I wasn't yet sure what needed to be done to achieve the Acceptance Criteria I aimed for.
 
-Since this was my first project using this methodology and the Django framework, some of the estimated story points were way off. In practice, a few of these tasks were completed quicker than anticipated while others took much longer. 
+Since this was my first project using this methodology and the Django framework, some of the estimated story points were way off. In practice, a few of these tasks were completed faster than anticipated, while others took much longer. 
 
-The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project-framework/moscow-prioririsation.html) was also used, classifying each User Story as a 'Must Have', 'Should Have' or 'Could Have'. Some 'Could Have's didn't make it into the project and were left in the Backlog for a future iteration. It is important to note here, that by writing only enough User Stories to reach the Minimum Viable Product(MVP), 'Won't Have' weren't included at this time.    
+The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project-framework/moscow-prioririsation.html) was also used, classifying each User Story as a 'Must Have', 'Should Have' or 'Could Have'. Some 'Could Have's didn't make it into the project and were left in the Backlog for a future iteration. It is important to note here, that by writing only enough User Stories to reach the Minimum Viable Product(MVP), 'Won't Have' wasn't included as a category at this time.    
 
 <details>
 <summary>Instance of Kanban Board, screenshots of Epics and User Story</summary>
@@ -90,7 +90,7 @@ The [MoSCoW Method of Prioritisation](https://www.agilebusiness.org/dsdm-project
 
 </details>
 
-As a whole, I found using the Agile Methodology of great benefit as it helped me organise the development of my project better.  Although I didn't give myself a specific duration for each iteration, it helped me also organise my time better. It also felt good to tick off the Tasks while working on a User Story and placing it in the 'Done' column when it was completed. 
+As a whole, I found using the Agile Methodology of great benefit as it helped me to better organise the development of my project.  Although I didn't give myself a specific duration for each iteration, it helped me to also manage my time better. It also felt good to tick off the Tasks while working on a User Story and placing it in the 'Done' column when it was completed. 
 
 [Back To Top](#table-of-contents)
 
@@ -102,13 +102,13 @@ ____
 
 Tailor's Thimble aims to entice and onboard potential clients.  It displays information about the small tailoring business and the type of services they offer, as well as the process they take on each individual garment. It provides information about the experience of the Master Tailor and provides potential and returning clients a way to easily schedule appointments for their bespoke process. 
 
-The target audience are adults who need tailored garments for their occasions and/or for their children's occasions.  It is also aimed at business people who prefer to have original and uniquely tailored suits.  It is also suited for professionals in need of formal wear and businesses which require staff uniforms.   
+The target audience are adults who need tailored garments for their occasions and/or for their children's occasions. It is also suited for professionals in need of formal wear and businesses which require staff uniforms.   
 
 ___
 
 ### Scope / User Stories
 
-This section aims to determine what a user would expect from interacting with the website. Each User Story was recorded in [GitHub Issues](https://github.com/MoniPar/tailors_thimble/issues).  Scenarios of actions each type of user including the business owner wishes to take are listed below. These were categorised into 6 Epics listed in the [Agile Methodoly](#agile-methodology) section, for the development of the project. Developer User Stories were also added to this section. 
+This section aims to determine what a user would expect from interacting with the website. Each User Story was recorded in [GitHub Issues](https://github.com/MoniPar/tailors_thimble/issues).  Scenarios of actions each type of user, including the business owner, wishes to take are listed below. These were categorised into 6 Epics listed in the [Agile Methodology](#agile-methodology) section, for the development of the project. Developer User Stories were also added to this section. 
 
 **As a Business Owner**
 
@@ -133,7 +133,7 @@ This section aims to determine what a user would expect from interacting with th
 
 * I can use my username and password so that I can login to my user account. [#17](https://github.com/MoniPar/tailors_thimble/issues/17)
 * I can log out of my account so that I can keep my details secure. [#18](https://github.com/MoniPar/tailors_thimble/issues/18)
-* I can login to my profile so that I can access my information and view my details. [#19](https://github.com/MoniPar/tailors_thimble/issues/19)
+* I can log in to my profile so that I can access my information and view my details. [#19](https://github.com/MoniPar/tailors_thimble/issues/19)
 * I can update my profile information so that I can change my details when necessary. [#23](https://github.com/MoniPar/tailors_thimble/issues/23)
 * I can schedule an appointment with the Master Tailor so that I can avail of their service. [#27](https://github.com/MoniPar/tailors_thimble/issues/27)
 * I can view my appointments so that I can check if my appointments have been approved. [#26](https://github.com/MoniPar/tailors_thimble/issues/26)
@@ -152,7 +152,7 @@ The following User Stories were used to implement features which make the websit
 * I can restrict access on users' appointments so that only the logged in user and admin are able to access, update and delete said user's appointments. [#30](https://github.com/MoniPar/tailors_thimble/issues/30)
 * I can add an empty default choice in the Create Appointment form so that the user is alerted when trying to submit an appointment without selecting the type and time. [#31](https://github.com/MoniPar/tailors_thimble/issues/31)
 * I can place validations on the datefield so that users are not allowed to pick dates in the past and dates/times that have already been booked. [#35](https://github.com/MoniPar/tailors_thimble/issues/35)
-* I can restrict users from adding an appointment before they add their profile information so that the business owner is able access the profile information before confirming their appointment. [#36](https://github.com/MoniPar/tailors_thimble/issues/36)
+* I can restrict users from adding an appointment before they add their profile information so that the business owner is able to access the profile information before confirming their appointment. [#36](https://github.com/MoniPar/tailors_thimble/issues/36)
 
 ___
 
@@ -175,6 +175,7 @@ The Profile Page, which is only available to registered users, acts also as a da
 The Appointments Page, can be reached through the Profile Page or through the Schedule Appointment button on the Home, About and Services Pages.  It lists the Appointments scheduled by the user.  It also has an Add Appointment button which links to the Create Appointment form. Each appointment is displayed as a card, with information about the appointment and a button for a more detailed view.  The detailed view provides means to update and delete the appointment.  
 
 <details>
+
 <summary>The Database Schema used for this project</summary>
 
 ![Entity Relationship Diagram](documentation/erd.jpeg)
@@ -206,6 +207,7 @@ Two custom models have been implemented in this project.
 
 </details>
 
+<br>
 ___
 
 ### Skeleton / Wireframes
@@ -250,7 +252,7 @@ Wireframes were first sketched with pen and paper. This method helped me with br
 
 ![Profile](documentation/wireframe-mobile_profile.png)
 
-**Appointments Page**
+**Appointments**
 
 ![Appointments List mobile](documentation/wireframe-mobile_apptlist.png)
 
@@ -260,7 +262,7 @@ Wireframes were first sketched with pen and paper. This method helped me with br
 
 ![Appointment Form](documentation/wireframe-mobile_apptform.png)
 
-**Read Appointment/Appointment Detail**
+**View Appointment**
 
 ![Appointment Detail](documentation/wireframe-mobile_apptdetail.png)
 
@@ -289,7 +291,7 @@ A Champagne and Black colour palette was chosen for this website. The combinatio
 
 [Canva](https://www.canva.com/colors/color-palette-generator/) was used to generate the above palette.
 
-The shade of black was used for the footer and the text.  It was also used to create contrast for the Bespoke Process Menu links on the About page.
+Black was used for the footer and the text.  It was also used to create contrast for the Bespoke Process Menu links on the About page.
 
 Pewter was used for the Navigation. It is a very light and pretty shade of gray which created good contrast against the hero image on the Home page.
 
@@ -318,7 +320,7 @@ Featured on all pages, the fully responsive header includes:
 
 * A link on the Logo which brings the user to the home page.
 * A hamburger button on mobile which opens up a navigation list with links to the Home, About, Services, Register and Login pages. This helps reduce the clutter on the header by keeping the page links neatly stowed away until the user navigates to the hamburger button. The links have a hover and focus effect to help the user identify them as links.
-* Links to the Home, About, Services, Register and Login pages on tablet and desktop which help the user to easily navigate from page to page without having to revert back to the previous page via the back button. The link to the current page is darker to help the user identify the page they are on.
+* Links to the Home, About, Services, Register and Login pages on tablet and desktop which help the user to navigate easily from page to page, without having to revert back to the previous page via the back button. The link to the current page is darker to help the user identify the page they are on.
 * The last two links change depending on the user's status. If the user is not logged, in the Register and Login links are displayed, while the Profile and Logout links are displayed if the user is logged in.
 * The header is fixed to the top so that the user always has access to the navigation links.
 
@@ -349,7 +351,7 @@ Featured on all pages, the fully responsive header includes:
 
 Featured on all pages, the responsive footer is valuable to the users as it encourages them to get in touch via phone or email if they prefer that method of contact and it also allows the users to keep connected via social media. It includes:
 * The business's address and a small table with opening hours.
-* Contact details are links which direct user to the relevant apps. On mobile the telephone number when clicked will bring up a call feature, while the email address will open up an email app on tablet or desktop as well.
+* Contact details are links which direct the user to the relevant apps. On mobile, the telephone number when clicked will bring up a call feature, while the email address will open up an email app on tablet or desktop as well.
 * Social links open in a new tab so that users are not directed away from the website. 
 * Copyright has a link to the creator's LinkedIn page, which also opens in a new tab.
 * All links have a hover and focus effect to help users identify them as links.
@@ -375,9 +377,9 @@ Featured on all pages, the responsive footer is valuable to the users as it enco
 
 <br>
 
-**The Landing Page**
+**Landing Page**
 
-The Home page hero on the landing page takes up more than half the viewport of any screen size. It includes a background image of a model wearing a suit with a an overlay of the business name and a slogan which captures the essence of the tailoring business.  It also acts a Call to Action(CTA) as it includes a bright button inviting the user to schedule an appointment.  The button has a hover and focus effect as demonstrated below. 
+The Home page hero on the Landing page takes up more than half the viewport of any screen size. It includes a background image of a model wearing a suit with a an overlay of the business name and a slogan which captures the essence of the tailoring business.  It also acts a Call to Action(CTA) as it includes a bright button inviting the user to schedule an appointment.  The button has a hover and focus effect as demonstrated below. 
 
 <details>
 
@@ -423,9 +425,9 @@ The Home page displays further content which gives the user an outline of what t
 
 **About Page**
 
-The responsive About page, is reachable via the About link in the navigation bar as well as the link on the Home page 'Established' section. It includes the following:
+The responsive About page is reachable via the About link in the navigation bar as well as the link on the Home page 'Established' section. It includes the following:
 * More detailed information about the Master Tailor and an image of him in his workshop.  This helps a potential customer find out the level of experience the craftsman has.  It helps build a level of trust in the tailor's ability to complete a very well accomplished service.
-* A section on the process that the Tailor takes for every individual garment. The 6 steps of the process are accessible through an interactive menu which displays each step at a time. Each display includes an image and a paragraph on what happens at step of the process. This feature is valuable to the user as it demonstrates the order for the appointments to be scheduled in order to complete a bespoke outfit.
+* A section on the process that the Tailor takes for every individual garment. The 6 steps of the process are accessible through an interactive menu which displays each step at a time. Each display includes an image and a paragraph on what happens at every step of the process. This feature is valuable to the user as it demonstrates the order for the appointments to be scheduled in order to complete a bespoke outfit.
 * A CTA with a celebratory background image, inviting text and a champagne coloured button to entice the user to schedule an appointment.
 
 <details>
@@ -458,7 +460,7 @@ The responsive About page, is reachable via the About link in the navigation bar
 
 The responsive Services page is reachable via the Services link in the navigation as well as via the 'Our Services' section on the Home page.  It includes the following:
 * A section on some of the services provided by the business, displayed with images and titles. This gives the user proof of the variety of outfits the tailor can craft. They can admire his work through the images.
-* A brief section on how the service works with a link to the Bespoke Proceess on the About page. Once again the user is informed on the process taken for each outfit. It is briefly repeated here in case they missed it on the About page. This section also includes a highlighted note which urges customers to book their first appointment early.  
+* A brief section on how the service works with a link to the Bespoke Process on the About page. Once again the user is informed on the process taken for each outfit. It is briefly repeated here in case they missed it on the About page. This section also includes a highlighted note which urges customers to book their first appointment early.  
 * A CTA with a celebratory background image, inviting text and a champagne coloured button to entice the user to schedule an appointment.
 
 <details>
@@ -885,8 +887,9 @@ ____
 
 * Validation on Appointment Type field - At the moment a user can select any type of appointment in the wrong order and each type can be selected more than once. This will need to be set up so that users can only select each type once and in the right order for every Bespoke process.
 * Pagination on Appointments Page - This will need to be revisited depending on how the Business owner decides to deal with completed processes.  At the moment all appointments are listed in the Appointments page and ordered by date.  
-* Change Profile to Request or Dashboard - Some users found the Profiel page confusing as its functionality is not exactly the kind that they are used to. 
+* Change Profile to Request or Dashboard - Some users found the Profile page confusing as its functionality is not exactly the kind that they are used to. 
 * Add Testimonials Section - Give the users the functionality to add Testimonials to the page, preferably with images, so that other users can read them and get a better idea of the standard of work the business offers.
+* Add modal to Process link on Create Appointment page.
 * A Contact Page with contact form.
 * Email or phone verification
 * Forgot/Reset password functionality
@@ -1044,7 +1047,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
         Problem: In order to override the ModelForm for the CreateView in `forms.py` to make the Custom AppointmentCreate form, the constants/sequences for the 'type' and 'time' choicefields had to be passed to `forms.py`. Various ways were tried in doing so: First, by copying and pasting the sequences into the `forms.py` file. This worked but there was a lot of repeated code between the `models.py` and `forms.py` files.  A second attempt was tried by removing them from the `models.py` file altogether and doing migrations again without the `choices=CHOICES` argument in the 'type'and 'time' fields.  This also worked, however I wasn't too sure this was the correct way of doing things especially when [Django Documentation](https://docs.djangoproject.com/en/4.1/ref/models/fields/#field-choices) recommends that they should be defined in the Model Class.
 
-        Solution: Eventually, I came about a solution in [this Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1676326871471269), which recommended to create a `constants.py` file and adding the constants to it then importing them to wherever they were needed.     
+        Solution: Eventually, I came across a solution in [this Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1676326871471269), which recommended creating a `constants.py` file and adding the constants to it, then importing them to wherever they were needed.     
 
 
     * **Navbar**
@@ -1053,7 +1056,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
         Problem: The navbar active class was not working.  The active class should be applied to each link when clicked but I could see in devTools that it was stuck on home. 
         
-        Solution: From the search I conducted I understood that because we are requesting the page as a url in django, we need to specify this request. The best way I found that made sense to me was to use 'if statements' in the base template itself.  This [Stackoverflow question](https://stackoverflow.com/questions/32931436/active-tag-on-bootstrap-with-django) suggested to check if the URL matches using `request.resolver_match.url_name`.  This is not a very DRY solution but it worked.  The following code shows how to add it to the home page link - it needs to be done so for each link in the navbar.
+        Solution: From the search I conducted I understood that because we are requesting the page as a url in django, we need to specify this request. The best way I found that made sense to me was to use 'if statements' in the base template itself.  This [Stackoverflow question](https://stackoverflow.com/questions/32931436/active-tag-on-bootstrap-with-django) suggested to check if the URL matches using `request.resolver_match.url_name`.  This is not a very DRY solution but it worked.  The following code shows how to add it to the home page link - it needs to be done like so for each link in the navbar.
         ```
         <li class="nav-item {% if request.resolver_match.url_name == 'home-page' %}active{% endif %}">
             <a class="nav-link" href="{% url 'home-page' %}">Home<span class="sr-only">(current)</span></a>
@@ -1067,9 +1070,9 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 * **Services Images**
 
-    Problem: At screen sizes > 1200px images are not scaling up equally. I have checked that all images have the same classes, and tried adding some media queries with width specified, however the problem persists and can't pinpoint why this is happening.  This is effecting the images to center properly on the page. 
+    Problem: At screen sizes > 1200px images are not scaling up equally. I have checked that all images have the same classes, and tried adding some media queries with width specified, however the problem persists and can't pinpoint why this is happening.  This is stopping the images from centering properly on the page. 
     
-    Possible Solution: I will need to re-write this section in order to make them scale up equally.  Possibly using flex-grow or having an image srcset to size up the images at the different screen size.
+    Possible Solution: I will need to re-write this section in order to make them scale up equally, possibly using flex-grow or having an image srcset to size up the images at the different screen size.
     
     Solved: Due to another bug I noticed during responsiveness testing, I managed to solve this by giving them a larger column width at the different breakpoints and removing the 'row' element they were in.  This gave each of the columns an equal width and the images were then allowed to scale up equally.
 
@@ -1077,11 +1080,11 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
     
     Problem: While testing responsiveness, I noticed that on certain devices there was some horizontal scroll on the pages which gave the navbar a wider width than the page itself.  This made the navbar-toggler and the right-side links move too much to the right. At first I thought it was a problem with the navbar, however it worked perfectly on the Home page.  So I decided that the problem must be within the pages themselves.
 
-    Solution: Using a process of elimination, I commented out one by one the divs on the About page to start with.  Eventually, I found out the culprit to this issue which was the `<div>` with the row class.  When I removed this `<div>`, the horizontal scroll vanished and the nav-toggler was back in it's rightful space.  The parent of the row `<div>` was as by Bootstrap's recommendations a `<div>` with a container class.  However, I had added a custom class with this container to add padding at the top and bottom of the container. Resulting in the following:
+    Solution: Using the process of elimination, I commented out one by one the divs on the About page to start with.  Eventually, I found out the culprit to this issue which was the `<div>` with the row class.  When I removed this `<div>`, the horizontal scroll vanished and the nav-toggler was back in its rightful space.  The parent of the row `<div>` was as by Bootstrap's recommendations a `<div>` with a container class.  However, I had added a custom class with this container to add padding at the top and bottom of the container. Resulting in the following:
 
     ![Cause of horizontal scroll](documentation/horizontal-scroll_cause.png)
 
-    I only realised this mistake after I had gone through all the pages and deleted the row `<div>`. What I should have probably done was use the bootstrap's container to add the top and bottom padding. Because of time contraints I opted to leave things as they were this time and note this here for future referral.  
+    I only realised this mistake after I had gone through all the pages and deleted the row `<div>`. What I should probably have done was use the Bootstrap container class to add the top and bottom padding. Because of time contraints I opted to leave things as they were this time and note this here for future reference.  
 
     **Signup redirect**
 
@@ -1103,7 +1106,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
     class Meta:
         ordering = ['date']
     ```
-
 
 </details>
 
