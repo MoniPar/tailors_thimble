@@ -5,7 +5,7 @@
 * [Responsiveness](#responsiveness-testing)
 * [Browser Compatibility](#browser-compatibilty-testing)
 * [User Stories](#user-story-testing)
-* [Other Features](#other-features-testing)
+* [Features](#features-testing)
 
 _____
 
@@ -47,23 +47,23 @@ HTML code was tested using the [W3C Validator](https://validator.w3.org/) via te
 
 ![No Errors or Warnings to show](documentation/html-val-logout.png)
 
-**APPOINTMENTS LIST**
+**APPOINTMENTS**
 
 ![No Errors or Warnings to show](documentation/html-val-appts.png)
 
-**APPOINTMENT CREATE**
+**CREATE APPOINTMENT**
 
 ![No Errors or Warnings to show](documentation/html-val-createappt.png)
 
-**APPOINTMENT READ**
+**VIEW APPOINTMENT**
 
 ![No Errors or Warnings to show](documentation/html-val-viewappt.png)
 
-**APPOINTMENT UPDATE**
+**UPDATE APPOINTMENT**
 
 ![No Errors or Warnings to show](documentation/html-val-updateappt.png)
 
-**APPOINTMENT DELETE**
+**DELETE APPOINTMENT**
 
 ![No Errors or Warnings to show](documentation/html-val-deleteappt.png)
 
@@ -77,6 +77,8 @@ HTML code was tested using the [W3C Validator](https://validator.w3.org/) via te
 
 </details>
 
+<br>
+
 [Back To Top](#table-of-contents)
 
 _____
@@ -86,6 +88,7 @@ _____
 CSS code was tested using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) via text input. 
 
 <details>
+
 <summary>Screenshot with results for the styles.css file</summary>
 
 **styles.css**
@@ -97,9 +100,9 @@ CSS code was tested using the [W3C CSS Validation Service](https://jigsaw.w3.org
 * 12 warnings due to vendor extension prefixes.  The CSS file was run through [Autoprefixer CSS Online](https://autoprefixer.github.io/) for browser support.
 * 3 warnings due to having the same `background-color` and `border-color` on the same element.  This is essential since I am overriding Bootstrap's button classes.  A solution to this would be to use different class names for my custom buttons but because of time constraints this was not implemented at this time. 
 
-<br>
-
 </details>
+
+<br>
 
 [Back To Top](#table-of-contents)
 
@@ -110,6 +113,7 @@ _____
 Python code was tested using [Code Institute's Python Linter](https://pep8ci.herokuapp.com/).
 
 <details>
+
 <summary>Screenshots and results for all python files</summary>
 
 Long lines in `settings.py` and `env.py` were cleared using `# noqa`. These were values by the Django generated AUTH_PASSWORD_VALIDATORS, the values for STATICFILES_STORAGE and DEFAULT_FILE_STORAGE and the values for DATABASE_URL and CLOUDINARY_URL in the `env.py` file which were giving errors when separated into two lines.
@@ -182,9 +186,9 @@ Long lines in `settings.py` and `env.py` were cleared using `# noqa`. These were
 
 ![All clear, no errors found](documentation/python-val-env.py.png)
 
-<br>
-
 </details>
+
+<br>
 
 [Back To Top](#table-of-contents)
 
@@ -196,7 +200,6 @@ _____
 
 <details>
 <summary>Screenshots and results for all pages</summary>
-<br>
 
 **HOME**
 
@@ -281,18 +284,20 @@ The following are the results for the Appointment pages
 |                               | desktop | 100 | 100 | 100 | 100 |
 | Appointments w/o profile | mobile  |  94 | 100 | 100 |  96 |
 |                          | desktop | 100 | 100 | 100 | 100 |
-| Appointments List        | mobile  |  95 | 100 | 100 |  97 |
+| Appointments             | mobile  |  95 | 100 | 100 |  97 |
 |                          | desktop | 100 | 100 | 100 | 100 |
-| Appointment Create       | mobile  |  94 | 100 |  92 |  98 |
+| Create Appointment       | mobile  |  94 | 100 |  92 |  98 |
 |                          | desktop | 100 | 100 |  92 | 100 |
-| Appointment Read         | mobile  |  98 | 100 | 100 |  97 |
+| View Appointment         | mobile  |  98 | 100 | 100 |  97 |
 |                          | desktop |  99 | 100 | 100 | 100 |
-| Appointment Update       | mobile  |  98 | 100 | 100 |  98 |
+| Update Appointment       | mobile  |  98 | 100 | 100 |  98 |
 |                          | desktop | 100 | 100 | 100 | 100 |
-| Appointment Delete       | mobile  |  98 | 100 | 100 |  97 |
+| Delete Appointment       | mobile  |  98 | 100 | 100 |  97 |
 |                          | desktop |  99 | 100 | 100 | 100 |
-<br>
+
 </details>
+
+<br>
 
 [Back To Top](#table-of-contents)
 
@@ -303,6 +308,7 @@ _____
 The website is responsive for screens with a mininum width of 320px and a maximum width of 2560px. Friends and family tested the website on their devices and all reported no issues with responsiveness.  Further manual tests were done using Chrome's DevTools.
 
 <details>
+
 <summary>Screenshots of website at different screen sizes.</summary>
 
 **NAVBAR & HOME HERO**
@@ -383,17 +389,19 @@ The website is responsive for screens with a mininum width of 320px and a maximu
 
 All other pages have been tested with DevTools and results have been recorded in the table below which checks if the cards are clear and visible on mobile and if they are horizontally aligned on Tablet and Desktop.
 
-| Page | Mobile | Tablet | Desktop |
-| ---- | ------ | ------ | ------- |
-| Register | Yes | Yes | Yes |
-| Login | Yes | Yes | Yes |
-| Logout | Yes | Yes | Yes | 
-| Appt Detail | Yes | Yes | Yes |
-| Appt Create | Yes | Yes | Yes |
-| Appt Update | Yes | Yes | Yes |
-| Appt Delete | Yes | Yes | Yes |
-<br>
+| Page                  | Mobile | Tablet | Desktop |
+| --------------------- | ------ | ------ | ------- |
+| Register              | Yes    | Yes    | Yes     |
+| Login                 | Yes    | Yes    | Yes     |
+| Logout                | Yes    | Yes    | Yes     | 
+| View Appointment      | Yes    | Yes    | Yes     |
+| Create Appointment    | Yes    | Yes    | Yes     |
+| Update Appointment    | Yes    | Yes    | Yes     |
+| Delete Appointment    | Yes    | Yes    | Yes     |
+
 </details>
+
+<br>
 
 [Back To Top](#table-of-contents)
 
@@ -404,16 +412,19 @@ _____
 Website was tested on current Chrome, Firefox, Edge, Brave for compatibility.  It was also tested on Safari on an iPad running on iOS 12.5.7 and an iPhone on the latest iOS.  
 
 <details>
+
 <summary>Table of the results.</summary>
 
-| Intended | Chrome | Firefox | Edge | Brave | Safari iOS 12 | Safari iOS 15 |
-| -------- | ------ | ------- | ---- | ----- | ------------- | ------------- |
-| Appearance | Good | Good | Good | Good | Poor | Good |
-| Responsiveness | Good | Good | Good | Good | Fair | Good |
+| Intended      | Chrome | Firefox | Edge | Brave | Safari iOS 12 | Safari iOS 15 |
+| ------------- | ------ | ------- | ---- | ----- | ------------- | ------------- |
+| Appearance    | Good   | Good    | Good | Good  | Poor          | Good          |
+| Responsiveness| Good   | Good    | Good | Good  | Fair          | Good          |
 
 The issue with using Safari on iOS 12 is that it doesn't support webp images, therefore all webP images were not visible.
 
 </details>
+
+<br>
 
 [Back To Top](#table-of-contents)
 
@@ -421,9 +432,11 @@ _____
 
 ## User Story Testing
 
-As mentioned in the Agile Methodology Section in the [README](/README.md), User Stories were created in [GitHub Issues](https://github.com/MoniPar/tailors_thimble/issues) which guide the process for this project all the way from Setup to Testing.  Epics 1, 2 and 9 are not included in this section as they define Setup, Installation and Testing.
+As mentioned in the Agile Methodology Section in the [README](/README.md), User Stories were created in [GitHub Issues](https://github.com/MoniPar/tailors_thimble/issues) which guide the process for this project all the way from Setup to Testing.  Epics 1, 2 and 9 are not included in this section as they define Setup, Installation and Testing. Each User Story has been manually tested and the results have been collected in the tables below.
 
-### Epic 3 - Home Page
+<details>
+
+<summary>Epic 3 - Home Page</summary>
 
 * User Story [#6](https://github.com/MoniPar/tailors_thimble/issues/6)
 
@@ -485,8 +498,13 @@ As a Business Owner, I can display some of the services we provide on the Homepa
 | Icons or images to give a bit of visual feedback | Achieved | |
 | A read more link that links to the Services page | Achieved | |
 
+</details>
 
-## Epic 4 - Other Frontend
+<br>
+
+<details>
+
+<summary>Epic 4 - Other Frontend</summary>
 
 * User Story [#12](https://github.com/MoniPar/tailors_thimble/issues/12)
 
@@ -516,8 +534,13 @@ As a User, I can easily navigate to the Services page so that I can find more in
 | A short note about the duration of the process uring clients to book their appointments early | Achieved | | 
 | A call to action with link to Appointment form | Achieved | Link directs logged in users to the Appointments Page which has a button to the Appointment Form |
 
+</details>
 
-### Epic 5 - Admin Panel
+<br>
+
+<details>
+
+<summary>Epic 5 - Admin Panel</summary>
 
 * User Story [#15](https://github.com/MoniPar/tailors_thimble/issues/15)
 
@@ -529,7 +552,13 @@ As a Business Owner, I have access to the database so that I can manage customer
 | Admin can view, update and delete customers' details and appointments | Achieved | | 
 | Admin can approve or dismiss appointments set by the customer | Achieved | Admin can approve appointments. If customer has set the wrong appointment they are contacted by email or phone |  
 
-### Epic 6 - User Registration & Authentication
+</details>
+
+<br>
+
+<details>
+
+<summary>Epic 6 - User Registration & Authentication</summary>
 
 * User Story [#16](https://github.com/MoniPar/tailors_thimble/issues/16)
 
@@ -572,7 +601,13 @@ As a developer, I can display success and error messages upon form submission so
 | Success or error alerts are displayed at the top of the page whenever user submits a form | Achieved | |
 | These alerts are colour coded and clear | Achieved | | 
 
-### Epic 7 - User Profile
+</details>
+
+<br>
+
+<details>
+
+<summary>Epic 7 - User Profile</summary> 
 
 * User Story [#20](https://github.com/MoniPar/tailors_thimble/issues/20)
 
@@ -624,8 +659,13 @@ As a Developer, I can direct the user to enter a country code so that they can b
 | Phone field accepts a '+' sign and digits | Achieved | |
 | Form does not submit with an entry less then 10 and more than 17 characters, alpha characters and symbols other than a '+' at the start | Achieved | |
 
+</details>
 
-### Epic 8 - Appointments
+<br>
+
+<details>
+
+<summary>Epic 8 - Appointments</summary>
 
 * User Story [#25](https://github.com/MoniPar/tailors_thimble/issues/25)
 
@@ -737,12 +777,369 @@ As a Developer, I can restrict users from adding an appointment before they add 
 | If user tries to add an appointment, they get a message saying to finish updating their profile first | Achieved | | 
 | The message has a link to their profile page | Achieved | |
 
+</details>
+
+<br>
+
 [Back To Top](#table-of-contents)
 
 _____
 
-## Other Features Testing
+## Features Testing
 
+Each feature listed in the [README.md](README.md) has been manually tested on the browsers listed in [Browser Compatibility Testing](#browser-compatibilty-testing) and the results are listed in the tables below.
+
+<details>
+
+<summary>Click to view Feature Testing tables</summary>
+
+**Header & Navigation**
+
+* Unregistered / Not logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Logo                          | hover over    | address shows as home |
+|                               | click / tap   | directs to Home page  |
+| Hamburger button on mobile    | hover over    | gets border           |
+|                               | click / tap   | toggles menu          |
+| Home, About & Services links  | hover over    | change colour & address shows as home, about, services respectively |
+|                               | click / tap   | directs to Home, About, Services pages respectively |
+| *Register, Login links         | hover over    | change colour & address shows as accounts/signup & accounts/login respectively |
+|                               | click / tap   | directs to Register, Login pages respectively |
+| Active link                   | click / tap different link | link takes bold colour depending on the current page |
+| fixed on top                  | scroll page down | navigation stays visible on top |
+
+* Registered / Logged in user 
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| *Profile, Logout links         | hover over    | change colour & address shows as profile & accounts/logout respectively |
+|                               | click / tap   | directs to Profile, Logout pages respectively |
+
+ALL TESTS PASS
+
+
+**Footer**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Telephone number              | hover over    | brightens & underlined, address shows phone number |
+|                               | click / tap   | opens new tab / asks to open or switch app |
+| Email address                 | hover over    | brightens & underlined, address shows mailto:... |
+|                               | click / tap   | opens outlook, mail, gmail or asks how to open or switch app  |
+| Social links                  | hover over    | brightens, address shows relevant address to icon hovered on |
+|                               | click / tap   | relevant website opens in a new tab |
+| Copyright link                | hover over    | underlined, address shows LinkedIn page |
+|                               | click / tap   | LinkedIn page opens in a new tab |
+
+ALL TESTS PASS
+
+
+**Landing Page**
+
+* Unregistered User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Large Hero                    | view          | displays large background image, Tailor's Timble For All Your Bespoke Tailoring Needs and Schedule Appointment button |
+| *Schedule Appointment button  | hover over    | changes colour and background colour, address shows appointments |
+|                               | click / tap   | directs to Login Page |
+
+* Logged In User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| *Schedule Appointment button  | hover over    | changes colour and background colour, address shows appointments |
+|                               | click / tap   | directs to Appointments Page |
+
+ALL TESTS PASS
+
+
+**Home Page Content**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Our Philosophy                | view          | displayed with heading and paragraph with mission statement |
+| Intro to Master Tailor        | view          | displayed with 'Established 1977' heading and paragraph, image visible on screens > 768px |
+| Find out more link            | hover over    | gets underline, address shows about page |
+|                               | click / tap   | directs to About page |
+| Sample of services            | view          | displayed with 'Our Services' heading, short paragraph, 3 images with relevant captions |
+| More services link            | hover over    | address shows services page |
+|                               | click / tap   | directs to Services page |
+
+ALL TESTS PASS
+
+
+**About Page**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Image of Master Tailor        | view          | displayed image of the Master Tailor in workshop clearly and responsively |
+| More About information        | view          | displayed with no grammatical or spelling errors |
+| Bespoke Process               | view          | displayed responsively with heading, paragraphs, grammar/spelling errors free | 
+| Process menu links            | hover over    | slightly darker background, address shows relevant id e.g. #list-ff |
+|                               | click / tap   | black background, image and paragraph change to relevant menu title |
+| CTA                           | view          | displays background image with The Perfect Fit For all your occasions and Schedule Appointment button |
+| *Schedule Appointment button  | hover over    | changes colour and background-colour, address shows appointments page |
+
+* Unregistered / Not logged in user
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| *Schedule Appointment button  | click / tap   | directs to Login page |
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| *Schedule Appointment button  | click / tap   | directs to Appointments page |
+
+ALL TESTS PASS
+
+
+**Services Page**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Our Services                  | view          | displays responsively with 'Our Services' heading, short paragraph, 6 images with relevant captions |
+| How our service works         | view          | displays responsively with 'How our service works' heading, paragraph, clear highlighted note and link |
+| More info on our Bespoke Process here link | hover on | gets underline, address shows about/#process |
+|                               | click / tap   | directs to About page Bespoke Process menu | 
+| CTA                           | view          | displays background image with The Perfect Fit For all your occasions and Schedule Appointment button |
+| *Schedule Appointment button  | hover over    | changes colour and background-colour, address shows appointments page |
+
+* Unregistered / Not logged in user
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| *Schedule Appointment button  | click / tap   | directs to Login page |
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| *Schedule Appointment button  | click / tap   | directs to Appointments page |
+
+ALL TESTS PASS
+
+
+**Registration**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Navigation bar Register link  | click / tap   | directs to Register page |
+| Schedule Appointment button   | click / tap   | directs to Login page |
+| Login page -> Register link   | click / tap   | directs to Register page |
+| Invalid registration          | fill fields with invalid/empty values then click/tap Register button | tooltips or error messages are displayed at relevant field |
+| Register button               | hover over    | background colour changes, colour changes |
+| Login link                    | hover over    | colour changes, gets underline, address shows accounts/login |
+| Valid registration            | Fill fields with valid values then click/tap Register button | directs to Profile page |
+| Success alert                 | view          | displayed on top of the Profile page |
+
+ALL TESTS PASS
+
+
+**Login**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Navigation bar Login link     | click / tap   | directs to Login page |
+| Schedule Appointment button   | click / tap   | directs to Login page |
+| Register link                 | hover over    | colour changes, gets underline, address shos accounts/signup |
+|                               | click / tap   | directs to Registration page |
+| Invalid login                 | fill fields with invalid details then click/tap Login button | tooltips are displayed at relevant field |
+| Valid login                   | fill fields with valid details then click/tap Login button | directed to Profile page |      
+| Success alert                 | view          | displayed on top of the Profile page |
+
+ALL TESTS PASS
+
+
+**Logout**
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Navigation bar Logout link    | click / tap   | directs to Logout page|
+| Logout button                 | hover over    | background colour changes, colour changes | 
+|                               | click / tap   | redirects to Home page|
+| Success alert                 | view          | displayed on top of the Home page |
+
+ALL TESTS PASS
+
+
+**Profile**
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Navigation bar Profile link   | click / tap   | directs to Profile page |
+| Username, First & Last Name, email address printed | view | The correct username, first & last name and email address are printed underneath the banner image |
+| Placeholders in fields        | view          | placeholders with examples of values are displayed in each field |
+| Astericks showing required fields | view      | all fields have astericks showing that they are required fields |
+| Invalid phone                 | type in anything but digits then click/tap Update button | a tooltip is displayed with help text on how to fill in field |
+| Invalid date                  | select a date in the past or < 30 days from today then click/tap Update button | error message with hint is displayed next to field, error alert is displayed on top of the page |
+| Invalid form                  | leave a field empty | tooltip is displayed next to relevant field reminding you to fill out this field |
+| Update button                 | hover over    | background colour changes, colour changes |
+| Valid form                    | fill form with valid values then click/tap the Update button | redirects back to Home page |
+| Success alert                 | view          | displayed at the top of the Home page |
+| Pre-populated fields          | navigate back to the Profile page | all fields are pre-populated with the information previously entered and updated | 
+| Appointments button           | hover on      | background colour changes, colour changes, address shows appointments page |
+|                               | click / tap   | directs to the Appointments page |
+
+ALL TESTS PASS
+
+
+**Appointments**
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Appointments button on Profile page | click / tap | directs to Appointments page |
+| Schedule Appointment button on Home, About, Services pages | click / tap | directs to Appointments page |
+| Username's Appointments heading | view        | displays current logged in username in the heading |
+| Add Appointment button        | hover on      | background-colour changes, text colour changes, address shows appointments/new |
+|                               | click / tap   | directs to Create Appointment page |
+
+* Logged in User with no appointments yet set
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Welcome card with logged in user's first and last name in heading | view | displays welcome card with current logged in user's first and last name in heading |
+
+* Logged in User with an or some apointments set
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Appointment cards displayed in order of date of appointment | view | one appointment card is displayed or if more than one, appointments are displayed in order of date of appointment oldest first | 
+
+ALL TESTS PASSED
+
+
+**Create Appointment**
+
+* Logged in User without Profile
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Add Appointment button on Appointments page | click / tap | directs to Create Appointment page with highlighted note instead of Create form |
+| Note's heading has current user's username | view | displays current logged in user's username in heading |
+| Profile page link             | hover on      | changes colour, address shows profile page |
+|                               | click / tap   | redirects to current logged in user's Profile page |
+
+* Logged in User with Profile
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Create Appointment page features Schedule an Appointment form and Back to Appointments button | view | displays Schedule an Appointment card with helpful information on how to fill in the form below, a Back to Appointments button below the card |
+| Back to Appointments button   | hover on      | text colour changes, background colour changes, address shows appointments page |
+| Process link on card          | hover on      | colour changes, gets underline, address shows about/#process |
+|                               | click / tap   | opens in a new tab, directs to About page --> Bespoke Process Menu |
+| Submit button                 | hover on      | text colour changes, background colour changes |
+| Type field validation         | leave unselected & click/tap Submit button | tooltip displayed to remind you to select item on the list |
+| Date field validation         | select date in the past, today or a Sunday or a Monday then click/tap Submit button | if other required fields are valid an error message is displayed next to date field with helpful hint |
+| Time field validation         | leave unselected & click/tap Submit button | if other fields are valid, tooltip is displayed to remind you to select item in the list |
+| Date and Time field validation | select valid date and time from list then click/tap Submit button | if there is already an appointment scheduled for same date and time, error message displays next to field with helpful hint, error alert is displayed at the top of the page |
+| Valid form                    | fill in fields with valid data then click/tap Submit button | redirected to Appointments page where you can view newly created Appointment card |
+| Success alert                 | view          | displayed at the top of the Appointments page |
+
+ALL TESTS PASSED
+
+
+**View Appointment**
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| View Appointment button on appointment card in Appointments page | click / tap / directs to View Appointment page with that appointment's card detail |
+| Unauthorised viewing          | in the URL bar type in a different integer instead of the one present then hit enter | if id is not one of current logged in user's appointments a 403 or 404 page will be thrown |
+| View Appointment page displays appointment card and a Back to Appointments button | view | Displays same appointment with some extra text, an Update and a Delete button and a Back to Appointments button underneath the card |
+| Back to Appointments button   | hover on      | text colour changes, background colour changes, address shows appointments page |
+| Middle section is different for approved appointments and for appointments waiting for approval | view        | displays text notification saying "we will be in touch ..." when appointment not approved OR displays text with current logged in user's first name and address of appointment if appointment is approved |
+| Update button                 | hover on      | text colour change, background colour change, address shows appointments/`id`/update |
+|                               | click / tap   | directs to Update Appointment page |
+| Delete button                 | hover on      | text colour change, backgound colour change, address shows appointments/`id`/delete |
+|                               | click / tap   | directs to Delete Appointment page |
+
+ALL TESTS PASSED
+
+
+**Update Appointment**
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Update button on appointment card in View Appointment page | click / tap | directs to Update Appointment page |
+| Unauthorised updating         | in the URL bar type in a different integer instead of the one present then hit enter | if id is not one of current logged in user's appointments a 403 or 404 page will be thrown |
+| Update Appointment page displays an Edit Appointment form and a Back to Appointments button | view    | Displays a card with Edit Appointment form with 4 fields and Update button, a Back to Appointments button at the bottom of the card |
+| Back to Appointments button   | hover on      | text colour changes, background colour changes, address shows appointments page |
+|                               | click / tap   | directs to Appointments page |
+| Edit Appointment form fields are pre-populated with user's previously created info | view | displays fields pre-populated with logged in user's current appointment's info |
+| All fields can be updated as per validation in Create Appointment table above | change field values then click/tap Update button | if fields are not validated, tool tips, error messages and error alert are displayed else ... |
+| Update button                 | hover on      | text colour change, background colour change |
+|                               | click / tap   | redirects to Appointments page |
+| Success alert                 | view          | displayed at the top of Appointments page |
+
+**Note**:- If the Update button is clicked without changing any of the fields of this form, it will throw an error on the Time field.  This is due to the fact that the set date and time are still set in the database.  The user will need to select a different time, update then head back and change to the previously set time again or cancel out of the update altogether by clicking on the Back to Appointments button.
+
+ALL TESTS PASSED
+
+
+**Delete Appointment**
+
+* Logged in User
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Delete button on appointment card in View Appointment page | click / tap | directs to Delte Appointment page |
+| Unauthorised deleting         | in the URL bar type in a different integer instead of the one present then hit enter | if id is not one of current logged in user's appointments, a 403 or 404 page will be thrown |
+| Delete Appointment page displays a Delete Appointment card with two buttons | view | Displays a Delete Appointment card with a Yes, Delete and a Cancel button |
+| Cancel button                 | hover on      | text colour changes, background colour changes, address shows appointments/`id`/ |
+|                               | click / tap   | redirects to the View Appointment page of the current appointment |
+| Yes, Delete button            | hover on      | text colour changes, background changes |
+|                               | click / tap   | redirects to the Appointments page where you can see that the appointment has been deleted |
+| Success alert                 | view          | displayed on the top of the Appointments page |
+
+ALL TESTS PASSED
+
+
+**Admin Panel**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Access the Admin Panel        | type `/admin/` at the end of the website's URL in the URL bar | displays the Django Administration log in page |
+| Superuser login               | type in the Username and password used when creating SuperUser | displays the Django Administration Interface with full permissions|
+| Tailor login                  | type in the Username and password given by the SuperUser/Admin | displays the Django Administration Interface with full permissions |
+| Staff login                   | type in the Username and password given by the Admin/Tailor | displays the Django Administration Interface with limited permissions |
+| User login                    | type in any user's Username and password | access is denied |
+| Admin & Tailor has viewing access to all tables | click and view all tables | data for Emails, Users, Appointments and Profiles is displayed |
+| Admin & Tailor can add and update data in database | add user, give user first & last name and email address | success alerts are displayed for creation and change |
+| Admin & Tailor can search database | type username of user created in search bar | User created is found and displayed |
+| Admin & Tailor can delete database entries | tick the checkbox beside user created and select 'Delete selected user' from the dropdown Action field, click go and confirm deletion | successfully deleted 1 user is displayed | 
+| Admin & Tailor can logout from Admin Panel | Click on Log out (top right) | redirects to Website's Home page with Register and Login links in the Navigation bar |
+
+ALL TESTS PASSED
+
+
+**403, 404, 500 pages**
+
+| Feature                       | Action        | Effect                |
+| ----------------------------- | ------------- | --------------------- |
+| Styles are consistent with the rest of the website | view | displays website's navigation bar and footer, a card with error heading and informative text and Back to Home Page button |
+| Back to Home Page button      | hover on      | styles change, address shows home |
+|                               | click / tap   | redirects back to the Home page |
+
+ALL TESTS PASSED
+
+</details>
+
+<br>
 
 [Back To Top](#table-of-contents)
 
+[Back to README.md](README.md)

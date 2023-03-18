@@ -23,8 +23,7 @@ It provides the user value in learning about the business and the services it pr
     * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
-    * [Development Bugs](#development-bugs)
-    * [Bugs Remaining](#bugs-remaining)
+* [Bugs](#bugs)
 * [Deployment](#deployment)
     * [Forking the GitHub Repository](#forking-the-github-repository)
     * [Creating a Local Clone](#creating-a-local-clone)
@@ -638,7 +637,7 @@ The website gives the user the functionality to create, view, update and delete 
 
 <br>
 
-**Appointment Create**
+**Create Appointment**
 
 The website gives the user the functionality to create an appointment via the Add Appointment button on the Appointments page.
 * A user must be logged in to access the Appointment Create page.
@@ -689,7 +688,7 @@ The website gives the user the functionality to create an appointment via the Ad
 
 <br>
 
-**Appointment Detail**
+**View Appointment**
 
 The website gives the user the functionality to read more details about their appointments via the View Appointment button on each appointment card in the Appointments page.
 * A user must be logged in to access the Appointment Detail page.
@@ -722,7 +721,7 @@ The website gives the user the functionality to read more details about their ap
 
 <br>
 
-**Appointment Update**
+**Update Appointment**
 
 The website gives the user the functionality to edit an appointment via the Update button on the Appointment Detail card.
 * A user must be logged in to access the Appointment Update page.
@@ -769,7 +768,7 @@ The website gives the user the functionality to edit an appointment via the Upda
 
 <br>
 
-**Appointment Delete**
+**Delete Appointment**
 
 The website gives the user the functionality to delete an appointment via the Delete button on the Appointment Detail card.
 * A user must be logged in to access the Appointment Delete page.
@@ -861,7 +860,7 @@ These templates were added to this project in order to give the user the functio
     
     - information that is not theirs - 403,
     - information that does not exist anymore - 404,
-    - or if something has gone wrong with the server and cannot retrieve database - 500
+    - something has gone wrong with the server and cannot retrieve database - 500
 
 * The styles are consistent with the rest of the website and are also responsive.
 
@@ -915,6 +914,7 @@ ____
 * [Heroku](https://www.heroku.com) - A cloud platform as a service
 * [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL database hosting service
 * [SQLite3](https://docs.python.org/3/library/sqlite3.html) - The database provided by Django
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication and registration
 * [Bootstrap 4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - A Framework for building responsive, mobile-fist sites
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Provides a |crispy filter and {% crispy %} tag that helps control the rendering behavior of Django forms in a very elegant and DRY way 
 
@@ -953,7 +953,7 @@ All testing information can be found in [TESTING.md](TESTING.md).
 
 ____
 
-## Bugs
+### Bugs
 
 <details>
 <summary>First Deployment Bug</summary>
@@ -1345,16 +1345,23 @@ Pages I referred to a lot:
 
 * [Django Documentation](https://docs.djangoproject.com/en/3.2/)
 * [Bootstrap Documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
 
-Other pages/questions I found useful:
+Other pages, questions, fellow student's projects I found useful:
 
 * Active Tag on Bootstrap with Django [Stackoverflow Question](https://stackoverflow.com/questions/32931436/active-tag-on-bootstrap-with-django)
 * Change button active colour in Bootstrap 4 [Stackoverflow Question](https://stackoverflow.com/questions/49911051/how-to-change-button-active-color-in-bootstrap-4)
 * Validating Date 30 days into the future [Stackoverflow Question](https://tinyurl.com/yc6fcep4)
-* Linking an anchor tag in another page[Stackoverflow Question](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
+* Linking an anchor tag in another page [Stackoverflow Question](https://stackoverflow.com/questions/31643670/link-a-div-in-another-page-in-url-with-an-anchor-tag-django)
 * Dynamic Page Titles [Forge](https://www.forgepackages.com/guides/page-titles/)
 * HTML Form Enctype Attribute [GeeksForGeeks](https://www.geeksforgeeks.org/html-form-enctype-attribute/)
-* Django QuerySet Field Lookups[W3Schools](https://www.w3schools.com/django/django_ref_field_lookups.php)
+* Django QuerySet Field Lookups [W3Schools](https://www.w3schools.com/django/django_ref_field_lookups.php)
+* Adding Profile for Existing Users [DevHandBook](https://www.devhandbook.com/django/user-profile/)
+* Student Project [sweet-treats - Amy Delaney](https://github.com/AmyDelaney94/sweet-treats)
+* Student Project [booking-system - Renata Lantos](https://github.com/renatalantos/booking-system)
+* Student Project [PortfolioProjectFour - Dirk Ornee](https://github.com/DOdrums/PortfolioProjectFour)
+* Student Project [la-cocina-del-diablo - Alan Bushell](https://github.com/Alan-Bushell/la-cocina-del-diablo)
+
 
 ### Media
 
