@@ -1387,10 +1387,14 @@ ____
 
 ## Acknowledgements
 
+I would like to thank the following people who inspired, motivated, guided, helped and supported me along this Portfolio Project 4 journey.
+* My amazing cohort and our facilitator Iris Smok for all the enlightening stand-ups.  
+* My mentor Samantha Dartnall for the guidance and the encouragement. 
+* John Dolan and the nice people on Slack, for helping me out of a few messes I got into and for teaching me a few tricks along the way. 
+* My father (a Master Tailor), who inspired me to build this website.
+* My partner Austen Donohoe, without whom I wouldn't have made it through in one piece!
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-
 [Back To Top](#table-of-contents)
-
 ____
