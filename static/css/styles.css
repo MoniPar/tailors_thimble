@@ -101,6 +101,8 @@ a { text-decoration: none; }
 }
 
 .btn-secondary {
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(32, 26, 30, 0.6);
+            box-shadow: 4px 4px 5px 0px rgba(32, 26, 30, 0.6);
     background-color: #f7e7ce; 
     color: #201A1E;
     border: none;
@@ -225,6 +227,12 @@ a { text-decoration: none; }
     margin-right: 1em;
 }
 
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    border: 1px solid rgba(59, 19, 46, 0.705);
+    border-radius: 5px; 
+}
+
 .navbar-collapse {
     text-align: center;
 }
@@ -233,7 +241,8 @@ a { text-decoration: none; }
     color: rgb(77, 21, 58);
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
     color: rgba(77, 21, 58, .6);
 }
 
